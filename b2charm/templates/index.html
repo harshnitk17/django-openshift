@@ -15,25 +15,34 @@
 </head>
 
 <body>
-    <h3>FILTERS</h3>
     <div class="container-fluid">
         <form id="filter_form" method="POST">
+            {% csrf_token %}
             <div class="row">
-                {% csrf_token %}
-                {% for field in form %}
-                <div class="form-group col-4">
-                    <label class="col-12">{{ field.label }}</label>
-                    {{ field }}
-                </div>
-                {% endfor %}
+                <aside class="col-sm-3">
+                    <div class="card" style="height: 300px; overflow-y: scroll;">
+                        <article class="card-group-item">
+                            <header class="card-header">
+                                <h6 class="title">Filter 1 </h6>
+                            </header>
+                            <div class="filter-content">
+                                <div class="card-body">
+                                    {% for field in form %}
+                                    <label class="form-check">
+                                        {{ field.label }}
+                                        <span class="form-check-label">
+                                            {{ field }}
+                                        </span></label>
+                                    {% endfor %}
 
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <input type="submit" class="btn btn-primary" value="Submit" />
-                </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </aside>
             </div>
         </form>
+
     </div>
     <br>
     <hr>
@@ -68,8 +77,6 @@
             </div>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -79,19 +86,20 @@
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function () {
-            $('#filter_form').on('submit', function (event) {
-                event.preventDefault();
-                console.log("form submitted!")  // sanity check
-                console.log("getting data") // sanity check
+            $('.initialform').on('change', function (event) {
+                $("#filter_form").submit(function (e) {
+                    return false;
+                });
+                console.log("form submitted!")
+                console.log("getting data")
                 var serializedData = $('#filter_form').serialize();
                 $.ajax({
-                    url: "{% url 'post_form' %}",// the endpoint
-                    type: "POST", // http method
-                    data: serializedData, // data sent with the post request
-                    // handle a successful response
+                    url: "{% url 'post_form' %}",
+                    type: "POST",
+                    data: serializedData,
                     success: function (json_response) {
-                        console.log(json_response); // log the returned json to the console
-                        console.log("success"); // another sanity check
+                        console.log(json_response);
+                        console.log("success");
                         $('#table1').DataTable({
                             data: JSON.parse(json_response),
                             stateSave: true,
@@ -105,11 +113,8 @@
 
                         });
                     },
-                    // handle a non-successful response
                     error: function (xhr, errmsg, err) {
-                        /*$('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
-                            " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom */
-                        console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+                        console.log(xhr.status + ": " + xhr.responseText);
                     }
                 });
             });

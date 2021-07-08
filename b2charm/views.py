@@ -1,17 +1,16 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from django.core import serializers
 from .models import Parameters
-from .forms import FilterForm
+from .forms import FilterFormInitial
 import json
 
 def index(request):
-    form = FilterForm()
+    form = FilterFormInitial()
     return render(request, "index.html", {'form':form })
 
 def post_form(request):
     if request.is_ajax and request.method == "POST":
-        form = FilterForm(request.POST)
+        form = FilterFormInitial(request.POST)
         if form.is_valid():
             initial = form.cleaned_data.get('initial')
             results = Parameters.objects.all()
