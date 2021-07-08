@@ -10,7 +10,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <style>
+        span {
+            cursor: pointer;
+        }
 
+
+
+        .minus,
+        .plus {
+            width: 30px;
+            height: 30px;
+            background: #f2f2f2;
+            border-radius: 4px;
+            padding: 8px 5px 8px 5px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .charminput {
+            height: 34px;
+            width: 40px;
+            text-align: center;
+            font-size: 26px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
     <title>B2CHARM</title>
 </head>
 
@@ -21,7 +51,7 @@
                 <form id="filter_form" method="POST">
                     {% csrf_token %}
                     <div class="col-4">
-                        <div class="card" style="height: 300px; overflow-y: scroll;width: 200px;">
+                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                             <article class="card-group-item">
                                 <header class="card-header">
                                     <h6 class="title">Filter 1 </h6>
@@ -37,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card" style="height: 300px; overflow-y: scroll;width: 200px;">
+                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                             <article class="card-group-item">
                                 <header class="card-header">
                                     <h6 class="title">Filter 2 </h6>
@@ -47,6 +77,85 @@
                                         <label>Type of observable</label>
                                         <button id="btnobs">Clear Selection</button>
                                         {{ form.observable }}
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
+                            <article class="card-group-item">
+                                <header class="card-header">
+                                    <h6 class="title">Filter 3 (Charm Mesons) </h6>
+                                </header>
+                                <div class="filter-content">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D0</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.D0 }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D+</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dplus }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Ds }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D*0</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Ds0 }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D*+</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dsplus }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds*</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D**</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dsss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds**</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dssss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </article>
@@ -96,6 +205,24 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 0 ? 0 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+        });
+    </script>
     <script>
         $(document).ready(function () {
             function formsubmit() {

@@ -13,11 +13,11 @@ class FilterForm(forms.Form):
     other_particles = ['D0', 'D+', 'Ds', 'D*0', 'D*+', 'Ds*', 'D**', 'Ds**', 'Jpsi', 'psi2S', 'etac', 'chic', 'ccbar', 'X3872', 'Pc', 'XYZ',
                        'p', 'n', 'Lambda', 'Sigma', 'Xi', 'Omega', 'baryon', 'Lambdac', 'Sigmac', 'Xic', 'cbaryon',
                        'K', 'K0', 'K*+', 'K*0', 'phi', 'kaon', 'pi', 'pi0', 'rho+', 'rho0', 'eta', 'omega', 'light', 'lepton', 'photon']
-    D0 = forms.IntegerField(required=False, label="D0")
-    Dplus = forms.IntegerField(required=False, label="D+")
-    Ds = forms.IntegerField(required=False, label="Ds")
-    Ds0 = forms.IntegerField(required=False, label="D*0")
-    Dsplus = forms.IntegerField(required=False, label="D*+")
-    Dss = forms.IntegerField(required=False, label="Ds*")
-    Dsss = forms.IntegerField(required=False, label="D**")
-    Dssss = forms.IntegerField(required=False, label="Ds**")
+    D0 = forms.IntegerField(required=False, label="D0",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Dplus = forms.IntegerField(required=False, label="D+",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Ds = forms.IntegerField(required=False, label="Ds",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Ds0 = forms.IntegerField(required=False, label="D*0",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Dsplus = forms.IntegerField(required=False, label="D*+",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Dss = forms.IntegerField(required=False, label="Ds*",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Dsss = forms.IntegerField(required=False, label="D**",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
+    Dssss = forms.IntegerField(required=False, label="Ds**",widget=forms.TextInput(attrs={'class': 'charminput', 'value': 0}))
