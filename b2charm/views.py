@@ -23,6 +23,8 @@ def post_form(request):
                 if 'filter' in dic[item].keys():
                     if str(initial) in dic[item]['filter']:
                         result_json.append(dic[item])
+            del results
+            del dic
             return JsonResponse(json.dumps(result_json), safe = False, content_type="application/json", status=200)
         else:
             return JsonResponse(json.dumps({"some error"}),
