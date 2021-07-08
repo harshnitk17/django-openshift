@@ -16,33 +16,45 @@
 
 <body>
     <div class="container-fluid">
-        <form id="filter_form" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <aside class="col-sm-3">
-                    <div class="card" style="height: 300px; overflow-y: scroll;">
-                        <article class="card-group-item">
-                            <header class="card-header">
-                                <h6 class="title">Filter 1 </h6>
-                            </header>
-                            <div class="filter-content">
-                                <div class="card-body">
-                                    {% for field in form %}
-                                    <label class="form-check">
-                                        {{ field.label }}
-                                        <span class="form-check-label">
-                                            {{ field }}
-                                        </span></label>
-                                    {% endfor %}
-
+        <div class="row">
+            <div class="col-12">
+                <form id="filter_form" method="POST">
+                    {% csrf_token %}
+                    <div class="col-4">
+                        <div class="card" style="height: 300px; overflow-y: scroll;width: 200px;">
+                            <article class="card-group-item">
+                                <header class="card-header">
+                                    <h6 class="title">Filter 1 </h6>
+                                </header>
+                                <div class="filter-content">
+                                    <div class="card-body">
+                                        <label> Initial particles</label>
+                                        <button id="btnini">Clear Selection</button>
+                                        {{ form.initial }}
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
-                </aside>
+                    <div class="col-4">
+                        <div class="card" style="height: 300px; overflow-y: scroll;width: 200px;">
+                            <article class="card-group-item">
+                                <header class="card-header">
+                                    <h6 class="title">Filter 2 </h6>
+                                </header>
+                                <div class="filter-content">
+                                    <div class="card-body">
+                                        <label>Type of observable</label>
+                                        <button id="btnobs">Clear Selection</button>
+                                        {{ form.observable }}
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-
+        </div>
     </div>
     <br>
     <hr>
@@ -86,7 +98,7 @@
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function () {
-            $('.initialform').on('change', function (event) {
+            function formsubmit() {
                 $("#filter_form").submit(function (e) {
                     return false;
                 });
@@ -117,6 +129,19 @@
                         console.log(xhr.status + ": " + xhr.responseText);
                     }
                 });
+            }
+            $('.formbtn').on('change', function (event) {
+                formsubmit();
+            });
+
+            $('#btnini').on('click', function (event) {
+                $('input[name=initial]').prop('checked', false);
+                formsubmit();
+            });
+
+            $('#btnobs').on('click', function (event) {
+                $('input[name=observable]').prop('checked', false);
+                formsubmit();
             });
         });
 
