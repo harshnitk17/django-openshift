@@ -4,6 +4,26 @@ from .models import Parameters
 from .forms import FilterForm
 import json
 
+var_particle_map ={
+    "D0":'D0' ,
+    "Dplus":'D+',
+    "Ds":'Ds',
+    "Ds0":'D*0',
+    "Dsplus":'D*+',
+    "Dss":'Ds*',
+    "Dsss":'D**', 
+    "Dssss":'Ds**',
+}
+def build_config(data):
+    config={}
+    if data['initial']:
+        config[str(data['initial'])] = 1
+    if data['observable']:
+        config[str(data['observable'])] = 1
+    for particle in var_particle_map:
+        if data[str(particle)]!= 0:
+            config[str(var_particle_map[particle])] = data[str(particle)]
+    return config
 
 def index(request):
     form = FilterForm()
@@ -14,14 +34,7 @@ def post_form(request):
     if request.is_ajax and request.method == "POST":
         form = FilterForm(request.POST)
         if form.is_valid():
-            try:
-                initial = form.cleaned_data.get('initial')
-            except:
-                initial = None
-            try:
-                observable = form.cleaned_data.get('observable')
-            except:
-                observable = None
+            config = build_config(form.cleaned_data)
             results = Parameters.objects.all()
             dic = {}
             result_json = []
@@ -29,16 +42,15 @@ def post_form(request):
                 dic[str(obj.id)] = obj.data
             for item in dic:
                 if 'filter' in dic[item].keys():
-                    if initial and observable and str(initial) in dic[item]['filter'] and str(observable) in dic[item]['filter']:
-                        result_json.append(dic[item])
-                    elif initial and not observable and str(initial) in dic[item]['filter']:
-                        result_json.append(dic[item])
-                    elif not initial and observable and str(observable) in dic[item]['filter']:
+                    if config.items() <= dic[item]['filter'].items():
                         result_json.append(dic[item])
 
             del results
             del dic
+            del config
             return JsonResponse(json.dumps(result_json), safe=False, content_type="application/json", status=200)
         else:
-            return JsonResponse(json.dumps({"some error"}),
+            return JsonResponse(json.dumps({"error": "some form error"}),
                                 content_type="application/json", status=400)
+
+

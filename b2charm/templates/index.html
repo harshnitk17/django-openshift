@@ -11,12 +11,6 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <style>
-        span {
-            cursor: pointer;
-        }
-
-
-
         .minus,
         .plus {
             width: 30px;
@@ -50,7 +44,7 @@
             <div class="col-12">
                 <form id="filter_form" method="POST">
                     {% csrf_token %}
-                    <div class="col-4">
+                    <div class="col-3" style="display: inline-block;">
                         <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                             <article class="card-group-item">
                                 <header class="card-header">
@@ -66,7 +60,7 @@
                             </article>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3" style="display: inline-block;">
                         <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                             <article class="card-group-item">
                                 <header class="card-header">
@@ -82,14 +76,16 @@
                             </article>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3" style="display: inline-block;">
                         <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                             <article class="card-group-item">
                                 <header class="card-header">
                                     <h6 class="title">Filter 3 (Charm Mesons) </h6>
                                 </header>
                                 <div class="filter-content">
-                                    <div class="card-body">
+                                    <div class="card-body ">
+                                        <button id="btncharm">Reset fields</button>
+                                        <div class="charminput2">
                                         <ul>
                                             <li>
                                                 <div class="number">
@@ -156,6 +152,7 @@
                                                 </div>
                                             </li>
                                         </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </article>
@@ -176,7 +173,10 @@
 
                             <th>Latex</th>
                             <th>Value</th>
-                            <th>ID</th>
+                            <th>P</th>
+                            <th>Unit Exp</th>
+                            <th>NDF</th>
+                            <th>CHI2</th>
 
 
 
@@ -187,7 +187,10 @@
 
                             <th>Latex</th>
                             <th>Value</th>
-                            <th>ID</th>
+                            <th>P</th>
+                            <th>Unit Exp</th>
+                            <th>NDF</th>
+                            <th>CHI2</th>
 
                         </tr>
                     </tfoot>
@@ -205,24 +208,6 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.minus').click(function () {
-                var $input = $(this).parent().find('input');
-                var count = parseInt($input.val()) - 1;
-                count = count < 0 ? 0 : count;
-                $input.val(count);
-                $input.change();
-                return false;
-            });
-            $('.plus').click(function () {
-                var $input = $(this).parent().find('input');
-                $input.val(parseInt($input.val()) + 1);
-                $input.change();
-                return false;
-            });
-        });
-    </script>
     <script>
         $(document).ready(function () {
             function formsubmit() {
@@ -247,7 +232,10 @@
                             columns: [
                                 { data: 'latex' },
                                 { data: 'value' },
-                                { data: 'id' },
+                                { data: 'p' },
+                                { data: 'unit_exp'},
+                                { data: 'ndf'},
+                                { data: 'chi2'},    
                             ],
 
                         });
@@ -268,6 +256,28 @@
 
             $('#btnobs').on('click', function (event) {
                 $('input[name=observable]').prop('checked', false);
+                formsubmit();
+            });
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 0 ? 0 : count;
+                $input.val(count);
+                $input.change();
+                formsubmit();
+
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                formsubmit();
+
+            });
+            $('#btncharm').on('click', function (event) {
+                $('.charminput2 input[type="text"]').each(function () {
+                    $(this).val(0);
+                });
                 formsubmit();
             });
         });
