@@ -43,11 +43,13 @@ def post_form(request):
             for item in dic:
                 if 'filter' in dic[item].keys():
                     if config.items() <= dic[item]['filter'].items():
-                        result_json.append(dic[item])
+                        dic[item]['latex'] = "$"+str(dic[item]['latex'])+"$"
+                        result_json.append(dic[item])                        
 
             del results
             del dic
             del config
+
             return JsonResponse(json.dumps(result_json), safe=False, content_type="application/json", status=200)
         else:
             return JsonResponse(json.dumps({"error": "some form error"}),

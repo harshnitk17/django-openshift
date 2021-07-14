@@ -86,72 +86,72 @@
                                     <div class="card-body ">
                                         <button id="btncharm">Reset fields</button>
                                         <div class="charminput2">
-                                        <ul>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D0</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.D0 }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D+</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dplus }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Ds }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D*0</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Ds0 }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D*+</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dsplus }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds*</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D**</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dsss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds**</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dssss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                            <ul>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>D0</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.D0 }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>D+</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Dplus }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>Ds</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Ds }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>D*0</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Ds0 }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>D*+</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Dsplus }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>Ds*</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Dss }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>D**</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Dsss }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="number">
+                                                        <span>Ds**</span>
+                                                        <span class="minus">-</span>
+                                                        {{ form.Dssss }}
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -229,24 +229,34 @@
                             stateSave: true,
                             responsive: true,
                             bDestroy: true,
+                            drawCallback: function () {
+                                $('.paginate_button', this.api().table().container())
+                                    .on('click', function () {
+                                        MathJax.typeset();
+                                    });
+                            },
                             columns: [
                                 { data: 'latex' },
                                 { data: 'value' },
                                 { data: 'p' },
-                                { data: 'unit_exp'},
-                                { data: 'ndf'},
-                                { data: 'chi2'},    
+                                { data: 'unit_exp' },
+                                { data: 'ndf' },
+                                { data: 'chi2' },
                             ],
 
                         });
+                        MathJax.typeset();
                     },
                     error: function (xhr, errmsg, err) {
                         console.log(xhr.status + ": " + xhr.responseText);
                     }
                 });
+
+
             }
             $('.formbtn').on('change', function (event) {
                 formsubmit();
+
             });
 
             $('#btnini').on('click', function (event) {
@@ -284,6 +294,9 @@
 
 
     </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
 
 </body>
 
