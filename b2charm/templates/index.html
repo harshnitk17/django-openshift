@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .minus,
         .plus {
@@ -34,6 +35,63 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+
+        .radio_initial input[type="radio"] {
+            opacity: 0;
+            position: fixed;
+            width: 0;
+        }
+
+        .radio_initial label {
+            background-color: #ddd;
+            padding: 5px 5px;
+            font-family: sans-serif, Arial;
+            font-size: 15px;
+            border: 2px solid #444;
+            border-radius: 4px;
+        }
+
+        .radio_initial label:hover {
+            background-color: #dfd;
+        }
+
+        .radio_initial input[type="radio"]:focus+label {
+            border: 2px dashed #444;
+        }
+
+        .radio_initial input[type="radio"]:checked+label {
+            background-color: #bfb;
+            border-color: #4c4;
+        }
+
+        .radio_obs input[type="radio"] {
+            opacity: 0;
+            position: fixed;
+            width: 0;
+        }
+
+        .radio_obs label {
+            background-color: #ddd;
+            padding: 5px 5px;
+            font-family: sans-serif, Arial;
+            font-size: 15px;
+            border: 2px solid #444;
+            border-radius: 4px;
+        }
+
+        .radio_obs label:hover {
+            background-color: #dfd;
+        }
+
+        .radio_obs input[type="radio"]:focus+label {
+            border: 2px dashed #444;
+        }
+
+        .radio_obs input[type="radio"]:checked+label {
+            background-color: #bfb;
+            border-color: #4c4;
+        }
     </style>
     <title>B2CHARM</title>
 </head>
@@ -41,126 +99,145 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <form id="filter_form" method="POST">
-                    {% csrf_token %}
-                    <div class="col-3" style="display: inline-block;">
-                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
-                            <article class="card-group-item">
-                                <header class="card-header">
-                                    <h6 class="title">Filter 1 </h6>
-                                </header>
-                                <div class="filter-content">
-                                    <div class="card-body">
-                                        <label> Initial particles</label>
-                                        <button id="btnini">Clear Selection</button>
-                                        {{ form.initial }}
-                                    </div>
-                                </div>
-                            </article>
+            <form id="filter_form" method="POST">
+                {% csrf_token %}
+
+                <div class="col-md-2" style="display: inline-block;margin-right: 30px;">
+                    <div class="card" style="height: 250px; overflow-y: scroll;width: 160px;">
+                        <div class="card-header">
+                            <h6>Initial particles </h6>
+                        </div>
+                        <div class="card-body">
+                            <i class="fa fa-close" id="btnini" style="font-size:20px"></i>
+                            <div class="radio_initial">
+                                <input type="radio" name="initial" value="Bd" class="formbtn" id="id_initial_0">
+                                <label for="id_initial_0">$B^0$</label>
+                                <input type="radio" name="initial" value="Bu" class="formbtn" id="id_initial_1">
+                                <label for="id_initial_1">$B^+$</label>
+                                <input type="radio" name="initial" value="B" class="formbtn" id="id_initial_2">
+                                <label for="id_initial_2">$B^0+B^+$</label>
+                                <input type="radio" name="initial" value="Bs" class="formbtn" id="id_initial_3">
+                                <label for="id_initial_3">$B_s^0$</label>
+                                <input type="radio" name="initial" value="Bc" class="formbtn" id="id_initial_4">
+                                <label for="id_initial_4">$B_c^+$</label>
+                                <input type="radio" name="initial" value="Lambdab" class="formbtn" id="id_initial_5">
+                                <label for="id_initial_5">$\Lambda_b$</label>
+                                <input type="radio" name="initial" value="Xib" class="formbtn" id="id_initial_6">
+                                <label for="id_initial_6">$\Xi_b$</label>
+                                <input type="radio" name="initial" value="Omegab" class="formbtn" id="id_initial_7">
+                                <label for="id_initial_7">$\Omega_b$</label>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3" style="display: inline-block;">
-                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
-                            <article class="card-group-item">
-                                <header class="card-header">
-                                    <h6 class="title">Filter 2 </h6>
-                                </header>
-                                <div class="filter-content">
-                                    <div class="card-body">
-                                        <label>Type of observable</label>
-                                        <button id="btnobs">Clear Selection</button>
-                                        {{ form.observable }}
-                                    </div>
-                                </div>
-                            </article>
+                </div>
+
+                <div class="col-md-2" style="display: inline-block;margin-right: 55px;">
+                    <div class="card" style="height: 250px; overflow-y: scroll;width: 190px;">
+                        <div class="card-header">
+                            <h6>Type of observable</h6>
+                        </div>
+                        <div class="card-body">
+                            <i class="fa fa-close" id="btnobs" style="font-size:20px"></i>
+                            <div class="radio_obs">
+                                <input type="radio" name="observable" value="BR" class="formbtn" id="id_observable_0">
+                                <label for="id_observable_0">Branching fraction</label>
+                                <input type="radio" name="observable" value="ACP" class="formbtn" id="id_observable_1">
+                                <label for="id_observable_1">CP asymmetry</label>
+                                <input type="radio" name="observable" value="polarization" class="formbtn"
+                                    id="id_observable_2">
+                                <label for="id_observable_2">Polarization</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3" style="display: inline-block;">
-                        <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
-                            <article class="card-group-item">
-                                <header class="card-header">
-                                    <h6 class="title">Filter 3 (Charm Mesons) </h6>
-                                </header>
-                                <div class="filter-content">
-                                    <div class="card-body ">
-                                        <button id="btncharm">Reset fields</button>
-                                        <div class="charminput2">
-                                            <ul>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>D0</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.D0 }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>D+</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Dplus }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>Ds</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Ds }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>D*0</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Ds0 }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>D*+</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Dsplus }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>Ds*</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Dss }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>D**</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Dsss }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="number">
-                                                        <span>Ds**</span>
-                                                        <span class="minus">-</span>
-                                                        {{ form.Dssss }}
-                                                        <span class="plus">+</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                </div>
+
+                <div class="col-md-2" style="display: inline-block;">
+                    <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
+                        <article class="card-group-item">
+                            <header class="card-header">
+                                <h6 class="title">Charm Mesons</h6>
+                            </header>
+                            <div class="filter-content">
+                                <div class="card-body ">
+                                    <button id="btncharm">Reset fields</button>
+                                    <div class="charminput2">
+                                        <ul>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D0</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.D0 }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D+</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dplus }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Ds }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D*0</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Ds0 }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D*+</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dsplus }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds*</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>D**</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dsss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="number">
+                                                    <span>Ds**</span>
+                                                    <span class="minus">-</span>
+                                                    {{ form.Dssss }}
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </article>
-                        </div>
+                            </div>
+                        </article>
                     </div>
-                </form>
-            </div>
+                </div>
+
+            </form>
         </div>
+    </div>
     </div>
     <br>
     <hr>
@@ -174,7 +251,7 @@
                             <th>Latex</th>
                             <th>Unit</th>
                             <th>Value and Error</th>
-                            
+
 
 
 
@@ -186,7 +263,7 @@
                             <th>Latex</th>
                             <th>Unit</th>
                             <th>Value and Error</th>
-                            
+
 
                         </tr>
                     </tfoot>
@@ -236,7 +313,7 @@
                                 { data: 'latex' },
                                 { data: 'unit' },
                                 { data: 'value' },
-                                
+
                             ],
 
                         });
@@ -249,18 +326,25 @@
 
 
             }
-            $('.formbtn').on('change', function (event) {
+            $('.formbtn').on('click', function (event) {
                 formsubmit();
 
             });
+            /*$('label').click(function () {
+                $('label').css("background-color", "lightgrey");
+                $(this).css("background-color", "lightgreen");
+                
+            });*/
 
             $('#btnini').on('click', function (event) {
                 $('input[name=initial]').prop('checked', false);
+                //$('label').css("background-color", "lightgrey");
                 formsubmit();
             });
 
             $('#btnobs').on('click', function (event) {
                 $('input[name=observable]').prop('checked', false);
+                // $('label').css("background-color", "lightgrey");
                 formsubmit();
             });
             $('.minus').click(function () {

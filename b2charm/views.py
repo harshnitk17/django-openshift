@@ -4,26 +4,29 @@ from .models import Parameters
 from .forms import FilterForm
 import json
 
-var_particle_map ={
-    "D0":'D0' ,
-    "Dplus":'D+',
-    "Ds":'Ds',
-    "Ds0":'D*0',
-    "Dsplus":'D*+',
-    "Dss":'Ds*',
-    "Dsss":'D**', 
-    "Dssss":'Ds**',
+var_particle_map = {
+    "D0": 'D0',
+    "Dplus": 'D+',
+    "Ds": 'Ds',
+    "Ds0": 'D*0',
+    "Dsplus": 'D*+',
+    "Dss": 'Ds*',
+    "Dsss": 'D**',
+    "Dssss": 'Ds**',
 }
+
+
 def build_config(data):
-    config={}
+    config = {}
     if data['initial']:
         config[str(data['initial'])] = 1
     if data['observable']:
         config[str(data['observable'])] = 1
     for particle in var_particle_map:
-        if data[str(particle)]!= 0:
+        if data[str(particle)] != 0:
             config[str(var_particle_map[particle])] = data[str(particle)]
     return config
+
 
 def index(request):
     form = FilterForm()
@@ -58,11 +61,13 @@ def post_form(request):
                                 error.append(float(dic[item]['error']))
                             else:
                                 error = None
-                        dic_final[item]['latex'] = "$"+str(dic[item]['latex'])+"$"
+                        dic_final[item]['latex'] = "$" + \
+                            str(dic[item]['latex'])+"$"
                         dic_final[item]['unit'] = "$"+f'10^{str(unit)}'+"$"
-                        dic_final[item]['value'] = "$"+ str(latex_result_index(unit,digits,value,error))+"$"
+                        dic_final[item]['value'] = "$" + \
+                            str(latex_result_index(unit, digits, value, error))+"$"
                         result_json.append(dic_final[item])
-                        del dic_final,unit,digits,value,error                        
+                        del dic_final, unit, digits, value, error
 
             del results
             del dic
@@ -73,13 +78,15 @@ def post_form(request):
             return JsonResponse(json.dumps({"error": "some form error"}),
                                 content_type="application/json", status=400)
 
+
 def latex_error(unit, digits, error):
     """Return latex code for an uncertainty."""
 
-    if len(error)==1 or (round(error[0]/10**(unit), digits) == -round(error[1]/10**(unit), digits)):
+    if len(error) == 1 or (round(error[0]/10**(unit), digits) == -round(error[1]/10**(unit), digits)):
         return f' \\pm{error[0]/10**(unit):.{digits}f}'
     else:
         return f'\,^{{+{error[0]/10**(unit):.{digits}f}}}_{{{error[1]/10**(unit):.{digits}f}}}'
+
 
 def latex_result_index(unit, digits, value, error):
     """Return latex code for a measurement/average result in the given unit with "digits" digits after the dot."""
@@ -90,5 +97,3 @@ def latex_result_index(unit, digits, value, error):
     result = f'{(value/10**(unit)):.{digits}f}'
     result += latex_error(unit, digits, error)
     return result
-
-
