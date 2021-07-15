@@ -172,11 +172,9 @@
                         <tr>
 
                             <th>Latex</th>
-                            <th>Value</th>
-                            <th>P</th>
-                            <th>Unit Exp</th>
-                            <th>NDF</th>
-                            <th>CHI2</th>
+                            <th>Unit</th>
+                            <th>Value and Error</th>
+                            
 
 
 
@@ -186,11 +184,9 @@
                         <tr>
 
                             <th>Latex</th>
-                            <th>Value</th>
-                            <th>P</th>
-                            <th>Unit Exp</th>
-                            <th>NDF</th>
-                            <th>CHI2</th>
+                            <th>Unit</th>
+                            <th>Value and Error</th>
+                            
 
                         </tr>
                     </tfoot>
@@ -229,6 +225,7 @@
                             stateSave: true,
                             responsive: true,
                             bDestroy: true,
+                            "sDom": '<"top"flp>rt<"bottom"i><"clear">',
                             drawCallback: function () {
                                 $('.paginate_button', this.api().table().container())
                                     .on('click', function () {
@@ -237,11 +234,9 @@
                             },
                             columns: [
                                 { data: 'latex' },
+                                { data: 'unit' },
                                 { data: 'value' },
-                                { data: 'p' },
-                                { data: 'unit_exp' },
-                                { data: 'ndf' },
-                                { data: 'chi2' },
+                                
                             ],
 
                         });

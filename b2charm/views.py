@@ -44,7 +44,25 @@ def post_form(request):
                 if 'filter' in dic[item].keys():
                     if config.items() <= dic[item]['filter'].items():
                         dic[item]['latex'] = "$"+str(dic[item]['latex'])+"$"
-                        result_json.append(dic[item])                        
+                        dic_final = {}
+                        dic_final[item] = {}
+                        unit = int(dic[item]['unit_exp'])
+                        digits = int(dic[item]['digits'])
+                        value = float(dic[item]['value'])
+                        error = []
+                        if 'error_pos' in dic[item].keys():
+                            error.append(float(dic[item]['error_pos']))
+                            error.append(float(dic[item]['error_neg']))
+                        else:
+                            if 'error' in dic[item].keys():
+                                error.append(float(dic[item]['error']))
+                            else:
+                                error = None
+                        dic_final[item]['latex'] = "$"+str(dic[item]['latex'])+"$"
+                        dic_final[item]['unit'] = "$"+f'10^{str(unit)}'+"$"
+                        dic_final[item]['value'] = "$"+ str(latex_result_index(unit,digits,value,error))+"$"
+                        result_json.append(dic_final[item])
+                        del dic_final,unit,digits,value,error                        
 
             del results
             del dic
@@ -54,5 +72,23 @@ def post_form(request):
         else:
             return JsonResponse(json.dumps({"error": "some form error"}),
                                 content_type="application/json", status=400)
+
+def latex_error(unit, digits, error):
+    """Return latex code for an uncertainty."""
+
+    if len(error)==1 or (round(error[0]/10**(unit), digits) == -round(error[1]/10**(unit), digits)):
+        return f' \\pm{error[0]/10**(unit):.{digits}f}'
+    else:
+        return f'\,^{{+{error[0]/10**(unit):.{digits}f}}}_{{{error[1]/10**(unit):.{digits}f}}}'
+
+def latex_result_index(unit, digits, value, error):
+    """Return latex code for a measurement/average result in the given unit with "digits" digits after the dot."""
+
+    digits = max(0, digits)
+    if error is None:
+        return f'< {value/10**(unit):.{digits}f}'
+    result = f'{(value/10**(unit)):.{digits}f}'
+    result += latex_error(unit, digits, error)
+    return result
 
 
