@@ -92,18 +92,32 @@
             background-color: #bfb;
             border-color: #4c4;
         }
+        .box_particle button {
+            background-color: #ddd;
+            padding: 5px 5px;
+            font-family: sans-serif, Arial;
+            font-size: 15px;
+            border: 2px solid #444;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .box_particle button:hover {
+            background-color: #dfd;
+        }
+
     </style>
     <title>B2CHARM</title>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <form id="filter_form" method="POST">
                 {% csrf_token %}
 
-                <div class="col-md-2" style="display: inline-block;margin-right: 30px;">
-                    <div class="card" style="height: 250px; overflow-y: scroll;width: 160px;">
+                <div class="col-sm">
+                    <div class="card">
                         <div class="card-header">
                             <h6>Initial particles </h6>
                         </div>
@@ -132,8 +146,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-2" style="display: inline-block;margin-right: 55px;">
-                    <div class="card" style="height: 250px; overflow-y: scroll;width: 190px;">
+                <div class="col-sm">
+                    <div class="card">
                         <div class="card-header">
                             <h6>Type of observable</h6>
                         </div>
@@ -151,8 +165,110 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm">
+                    </div>
+                <div class="col-sm">
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6>Charm Mesons</h6>
+                            </div>
+                            <div class="card-body">
+                                <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                                <div class="box_particle">
+                                    <button>$D^0$</button>
+                                    <button>$D^{\\pm}$</button>
+                                    <button>$D_s^{\\pm}$</button>
+                                    <button>$D^{*0}$</button>
+                                    <button>$D^{*\\pm}$</button>
+                                    <button>$D_s^{*\\pm}$</button>
+                                    <button>exited $D$</button>
+                                    <button>exited $D_s$</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>Charmonium and Exotic states</h6>
+                        </div>
+                        <div class="card-body">
+                            <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                            <div class="box_particle">
+                                <button>$J/\\psi$</button>
+                                <button>$\\psi(2S)$</button>
+                                <button>$\\eta_c$</button>
+                                <button>$\\chi_c$</button>
+                                <button>other charmonium</button>
+                                <button>$X(3872)$</button>
+                                <button>$P_c$</button>
+                                <button>$XYZ$ states</button>
+                            </div>
+                        </div>
+                    </div> </div>
+                    <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>Baryons</h6>
+                        </div>
+                        <div class="card-body">
+                            <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                            <div class="box_particle">
+                                <button>$p$</button>
+                                <button>$n$</button>
+                                <button>$\\Lambda$</button>
+                                <button>$\\Sigma$</button>
+                                <button>$\\Xi$</button>
+                                <button>$\\Omega$</button>
+                                <button>other light baryons</button>
+                                <button>$\\Lambda_c$</button>
+                                <button>$\\Sigma_c$</button>
+                                <button>$\\Xi_c$</button>
+                                <button>other charm baryons</button>
+                            </div>
+                        </div>
+                    </div> </div>
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6>Strange particles</h6>
+                            </div>
+                            <div class="card-body">
+                                <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                                <div class="box_particle">
+                                    <button>$K^{\\pm}$</button>
+                                    <button>$K^0_{(S/L)}$</button>
+                                    <button>$K^{*\\pm}$</button>
+                                    <button>$K^{*0}$</button>
+                                    <button>$\\phi$</button>
+                                    <button>other kaons</button>
+                                </div>
+                            </div>
+                        </div> </div>
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Light particles</h6>
+                                </div>
+                                <div class="card-body">
+                                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                                    <div class="box_particle">
+                                        <button>$\\pi^{\\pm}$</button>
+                                        <button>$\\pi^0$</button>
+                                        <button>$\\rho^{\\pm}$</button>
+                                        <button>$\\rho^0$</button>
+                                        <button>$\\eta^{(\\prima)}$</button>
+                                        <button>$\\omega$</button>
+                                        <button>other light mesons</button>
+                                        <button>leptons</button>
+                                        <button>$\\gamma$</button>
+                                    </div>
+                                </div>
+                            </div> </div>
+                </div>
 
-                <div class="col-md-2" style="display: inline-block;">
+               <!-- <div class="col-md-2" style="display: inline-block;">
                     <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
                         <article class="card-group-item">
                             <header class="card-header">
@@ -233,17 +349,17 @@
                             </div>
                         </article>
                     </div>
-                </div>
+                </div>-->
 
             </form>
         </div>
     </div>
-    </div>
+    
     <br>
     <hr>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-sm">
                 <table cellpadding="0" cellspacing="0" border="0" class="table" id="table1" align="center">
                     <thead>
                         <tr>

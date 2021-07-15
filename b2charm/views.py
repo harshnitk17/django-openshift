@@ -23,7 +23,7 @@ def build_config(data):
     if data['observable']:
         config[str(data['observable'])] = 1
     for particle in var_particle_map:
-        if data[str(particle)] != 0:
+        if data[str(particle)] != None and data[str(particle)] != 0  :
             config[str(var_particle_map[particle])] = data[str(particle)]
     return config
 
