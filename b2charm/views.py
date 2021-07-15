@@ -45,7 +45,7 @@ def post_form(request):
                 dic[str(obj.id)] = obj.data
             for item in dic:
                 if 'filter' in dic[item].keys():
-                    if config.items() <= dic[item]['filter'].items():
+                    if config and config.items() <= dic[item]['filter'].items():
                         dic[item]['latex'] = "$"+str(dic[item]['latex'])+"$"
                         dic_final = {}
                         dic_final[item] = {}

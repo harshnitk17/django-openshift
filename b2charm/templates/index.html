@@ -132,7 +132,7 @@
             box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
             height: 200px;
             overflow-y: scroll;
-            width: 200px;
+            width: 220px;
             display: inline-block;
             background: lightpink;
         }
@@ -174,9 +174,9 @@
                 <div class="text">
                     <h6>Initial particles </h6>
                     <i class="fa fa-close" id="btnini" style="font-size:20px"></i>
-                    <div class="radio_initial" >
-                        <input type="radio" name="initial" value="Bd" class="formbtn" id="id_initial_0" >
-                        <label for="id_initial_0" >$B^0$</label>
+                    <div class="radio_initial">
+                        <input type="radio" name="initial" value="Bd" class="formbtn" id="id_initial_0">
+                        <label for="id_initial_0">$B^0$</label>
                         <input type="radio" name="initial" value="Bu" class="formbtn" id="id_initial_1">
                         <label for="id_initial_1">$B^+$</label>
                         <input type="radio" name="initial" value="B" class="formbtn" id="id_initial_2">
@@ -212,17 +212,15 @@
             <article class="card3">
                 <div class="text">
                     <h6>Charm Mesons</h6>
-
-                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
                     <div class="box_particle">
-                        <button>$D^0$</button>
-                        <button>$D^{\\pm}$</button>
-                        <button>$D_s^{\\pm}$</button>
-                        <button>$D^{*0}$</button>
-                        <button>$D^{*\\pm}$</button>
-                        <button>$D_s^{*\\pm}$</button>
-                        <button>exited $D$</button>
-                        <button>exited $D_s$</button>
+                        <button id="D0_bt">$D^0$</button>
+                        <button id="Dplus_bt">$D^{\\pm}$</button>
+                        <button id="Ds_bt">$D_s^{\\pm}$</button>
+                        <button id="Ds0_bt">$D^{*0}$</button>
+                        <button id="Dsplus_bt">$D^{*\\pm}$</button>
+                        <button id="Dss_bt">$D_s^{*\\pm}$</button>
+                        <button id="Dsss_bt">exited $D$</button>
+                        <button id="Dssss_bt">exited $D_s$</button>
                     </div>
                 </div>
             </article>
@@ -231,7 +229,7 @@
                 <div class="text">
                     <h6>Charmonium and Exotic states</h6>
 
-                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                    
                     <div class="box_particle">
                         <button>$J/\\psi$</button>
                         <button>$\\psi(2S)$</button>
@@ -249,7 +247,6 @@
                 <div class="text">
                     <h6>Baryons</h6>
 
-                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
                     <div class="box_particle">
                         <button>$p$</button>
                         <button>$n$</button>
@@ -270,7 +267,7 @@
                 <div class="text">
                     <h6>Strange particles</h6>
 
-                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                    
                     <div class="box_particle">
                         <button>$K^{\\pm}$</button>
                         <button>$K^0_{(S/L)}$</button>
@@ -286,7 +283,7 @@
                 <div class="text">
                     <h6>Light particles</h6>
 
-                    <i class="fa fa-close" id="btncharm" style="font-size:20px"></i>
+                    
                     <div class="box_particle">
                         <button>$\\pi^{\\pm}$</button>
                         <button>$\\pi^0$</button>
@@ -303,130 +300,91 @@
             <article class="card2">
                 <div class="text">
                     <h6>Daughter Particle Numbers</h6>
-                
-                <div class="particle_list">
 
-                </div>
+                    <div class="particle_list">
+                        <div id="D0" style="display: none;">
+
+                            <span class="minus">-</span>
+                            <input type="text" name="D0" class="charminput" value="0" id="id_D0">
+                            <span class="plus">+</span>
+                            <label for="id_D0">$D^0$</label>
+                        </div>
+                        <div id="Dplus" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Dplus" class="charminput" value="0" id="id_Dplus">
+                            <span class="plus">+</span>
+                            <label for="id_Dplus">$D^{\\pm}$</label>
+                        </div>
+                        <div id="Ds" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Ds" class="charminput" value="0" id="id_Ds">
+                            <span class="plus">+</span>
+                            <label for="id_Ds">$D_s^{\\pm}$</label>
+                        </div>
+                        <div id="Ds0" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Ds0" class="charminput" value="0" id="id_Ds0">
+                            <span class="plus">+</span>
+                            <label for="id_Ds0">$D^{*0}$</label>
+                        </div>
+                        <div id="Dsplus" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Dsplus" class="charminput" value="0" id="id_Dsplus">
+                            <span class="plus">+</span>
+                            <label for="id_Dsplus">$D^{*\\pm}$</label>
+                        </div>
+                        <div id="Dss" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Dss" class="charminput" value="0" id="id_Dss">
+                            <span class="plus">+</span>
+                            <label for="id_Dss">$D_s^{*\\pm}$</label>
+                        </div>
+                        <div id="Dsss" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Dsss" class="charminput" value="0" id="id_Dsss">
+                            <span class="plus">+</span>
+                            <label for="id_Dsss">exited $D$</label>
+                        </div>
+                        <div id="Dssss" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Dssss" class="charminput" value="0" id="id_Dssss">
+                            <span class="plus">+</span>
+                            <label for="id_Dssss">exited $D_s$</label>
+                        </div>
+
+                    </div>
                 </div>
             </article>
         </form>
     </main>
 
-    <!-- <div class="col-md-2" style="display: inline-block;">
-                    <div class="card" style="height: 300px; overflow-y: scroll;width: 300px;">
-                        <article class="card-group-item">
-                            <header class="card-header">
-                                <h6 class="title">Charm Mesons</h6>
-                            </header>
-                            <div class="filter-content">
-                                <div class="card-body ">
-                                    <button id="btncharm">Reset fields</button>
-                                    <div class="charminput2">
-                                        <ul>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D0</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.D0 }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D+</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dplus }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Ds }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D*0</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Ds0 }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D*+</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dsplus }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds*</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>D**</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dsss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="number">
-                                                    <span>Ds**</span>
-                                                    <span class="minus">-</span>
-                                                    {{ form.Dssss }}
-                                                    <span class="plus">+</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>-->
-
-
     <br>
     <hr>
-    
-                <table cellpadding="0" cellspacing="0" border="0" class="table" id="table1" align="center">
-                    <thead>
-                        <tr>
 
-                            <th>Latex</th>
-                            <th>Unit</th>
-                            <th>Value and Error</th>
+    <table cellpadding="0" cellspacing="0" border="0" class="table" id="table1" align="center">
+        <thead>
+            <tr>
 
+                <th>Latex</th>
+                <th>Unit</th>
+                <th>Value and Error</th>
 
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
 
+                <th>Latex</th>
+                <th>Unit</th>
+                <th>Value and Error</th>
 
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
+            </tr>
+        </tfoot>
+        <tbody>
 
-                            <th>Latex</th>
-                            <th>Unit</th>
-                            <th>Value and Error</th>
+        </tbody>
+    </table>
 
-
-                        </tr>
-                    </tfoot>
-                    <tbody>
-
-                    </tbody>
-                </table>
-          
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -483,27 +441,20 @@
                 formsubmit();
 
             });
-            /*$('label').click(function () {
-                $('label').css("background-color", "lightgrey");
-                $(this).css("background-color", "lightgreen");
-                
-            });*/
 
             $('#btnini').on('click', function (event) {
                 $('input[name=initial]').prop('checked', false);
-                //$('label').css("background-color", "lightgrey");
                 formsubmit();
             });
 
             $('#btnobs').on('click', function (event) {
                 $('input[name=observable]').prop('checked', false);
-                // $('label').css("background-color", "lightgrey");
                 formsubmit();
             });
             $('.minus').click(function () {
                 var $input = $(this).parent().find('input');
                 var count = parseInt($input.val()) - 1;
-                count = count < 0 ? 0 : count;
+                count = count < 1 ? 1 : count;
                 $input.val(count);
                 $input.change();
                 formsubmit();
@@ -516,11 +467,128 @@
                 formsubmit();
 
             });
-            $('#btncharm').on('click', function (event) {
-                $('.charminput2 input[type="text"]').each(function () {
-                    $(this).val(0);
-                });
-                formsubmit();
+            $('#D0_bt').click(function(){
+                var counter = $('#id_D0').val();
+                if (counter == "0"){
+                    $("#D0").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_D0').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#D0").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_D0').val("0");
+                    formsubmit();
+                }
+                return false;
+            });
+            $('#Dplus_bt').click(function(){
+                var counter = $('#id_Dplus').val();
+                if (counter == "0"){
+                    $("#Dplus").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Dplus').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Dplus").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Dplus').val("0");
+                    formsubmit();
+                }
+                return false;
+            });$('#Ds_bt').click(function(){
+                var counter = $('#id_Ds').val();
+                if (counter == "0"){
+                    $("#Ds").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Ds').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Ds").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Ds').val("0");
+                    formsubmit();
+                }
+                return false;
+            });$('#Ds0_bt').click(function(){
+                var counter = $('#id_Ds0').val();
+                if (counter == "0"){
+                    $("#Ds0").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Ds0').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Ds0").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Ds0').val("0");
+                    formsubmit();
+                }
+                return false;
+            });$('#Dsplus_bt').click(function(){
+                var counter = $('#id_Dsplus').val();
+                if (counter == "0"){
+                    $("#Dsplus").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Dsplus').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Dsplus").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Dsplus').val("0");
+                    formsubmit();
+                }
+                return false;
+            });$('#Dss_bt').click(function(){
+                var counter = $('#id_Dss').val();
+                if (counter == "0"){
+                    $("#Dss").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Dss').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Dss").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Dss').val("0");
+                    formsubmit();
+                }
+                return false;
+            });$('#Dsss_bt').click(function(){
+                var counter = $('#id_Dsss').val();
+                if (counter == "0"){
+                    $("#Dsss").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Dsss').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Dsss").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Dsss').val("0");
+                    formsubmit();
+                }
+                return false;
+            });
+            $('#Dssss_bt').click(function(){
+                var counter = $('#id_Dssss').val();
+                if (counter == "0"){
+                    $("#Dssss").css({"display":"block"});
+                    $(this).css({"background-color":"#bfb"});
+                    $('#id_Dssss').val("1");
+                    formsubmit();
+                }
+                else {
+                    $("#Dssss").css({"display":"none"});
+                    $(this).css({"background-color":"#ddd"});
+                    $('#id_Dssss').val("0");
+                    formsubmit();
+                }
+                return false;
             });
         });
 
