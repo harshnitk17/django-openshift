@@ -123,6 +123,7 @@
             width: 150px;
             display: inline-block;
             background: lightyellow;
+
         }
 
         .card2 {
@@ -160,6 +161,27 @@
             color: white;
             padding: 10px;
             width: 100%;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: blue orange;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: lightsalmon;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: blue;
+            border-radius: 20px;
+            border: 2px solid lightsalmon;
         }
     </style>
     <title>B2CHARM</title>
@@ -214,11 +236,11 @@
                     <h6>Charm Mesons</h6>
                     <div class="box_particle">
                         <button id="D0_bt">$D^0$</button>
-                        <button id="Dplus_bt">$D^{\\pm}$</button>
-                        <button id="Ds_bt">$D_s^{\\pm}$</button>
+                        <button id="Dplus_bt">$D^{\pm}$</button>
+                        <button id="Ds_bt">$D_s^{\pm}$</button>
                         <button id="Ds0_bt">$D^{*0}$</button>
-                        <button id="Dsplus_bt">$D^{*\\pm}$</button>
-                        <button id="Dss_bt">$D_s^{*\\pm}$</button>
+                        <button id="Dsplus_bt">$D^{*\pm}$</button>
+                        <button id="Dss_bt">$D_s^{*\pm}$</button>
                         <button id="Dsss_bt">exited $D$</button>
                         <button id="Dssss_bt">exited $D_s$</button>
                     </div>
@@ -229,12 +251,12 @@
                 <div class="text">
                     <h6>Charmonium and Exotic states</h6>
 
-                    
+
                     <div class="box_particle">
-                        <button>$J/\\psi$</button>
-                        <button>$\\psi(2S)$</button>
-                        <button>$\\eta_c$</button>
-                        <button>$\\chi_c$</button>
+                        <button>$J/\psi$</button>
+                        <button>$\psi(2S)$</button>
+                        <button>$\eta_c$</button>
+                        <button>$\chi_c$</button>
                         <button>other charmonium</button>
                         <button>$X(3872)$</button>
                         <button>$P_c$</button>
@@ -250,14 +272,14 @@
                     <div class="box_particle">
                         <button>$p$</button>
                         <button>$n$</button>
-                        <button>$\\Lambda$</button>
-                        <button>$\\Sigma$</button>
-                        <button>$\\Xi$</button>
-                        <button>$\\Omega$</button>
+                        <button>$\Lambda$</button>
+                        <button>$\Sigma$</button>
+                        <button>$\Xi$</button>
+                        <button>$\Omega$</button>
                         <button>other light baryons</button>
-                        <button>$\\Lambda_c$</button>
-                        <button>$\\Sigma_c$</button>
-                        <button>$\\Xi_c$</button>
+                        <button>$\Lambda_c$</button>
+                        <button>$\Sigma_c$</button>
+                        <button>$\Xi_c$</button>
                         <button>other charm baryons</button>
                     </div>
                 </div>
@@ -267,13 +289,13 @@
                 <div class="text">
                     <h6>Strange particles</h6>
 
-                    
+
                     <div class="box_particle">
-                        <button>$K^{\\pm}$</button>
+                        <button>$K^{\pm}$</button>
                         <button>$K^0_{(S/L)}$</button>
-                        <button>$K^{*\\pm}$</button>
+                        <button>$K^{*\pm}$</button>
                         <button>$K^{*0}$</button>
-                        <button>$\\phi$</button>
+                        <button>$\phi$</button>
                         <button>other kaons</button>
                     </div>
                 </div>
@@ -283,17 +305,17 @@
                 <div class="text">
                     <h6>Light particles</h6>
 
-                    
+
                     <div class="box_particle">
-                        <button>$\\pi^{\\pm}$</button>
-                        <button>$\\pi^0$</button>
-                        <button>$\\rho^{\\pm}$</button>
-                        <button>$\\rho^0$</button>
-                        <button>$\\eta^{(\\prima)}$</button>
-                        <button>$\\omega$</button>
+                        <button>$\pi^{\pm}$</button>
+                        <button>$\pi^0$</button>
+                        <button>$\rho^{\pm}$</button>
+                        <button>$\rho^0$</button>
+                        <button>$\eta^{(\prima)}$</button>
+                        <button>$\omega$</button>
                         <button>other light mesons</button>
                         <button>leptons</button>
-                        <button>$\\gamma$</button>
+                        <button>$\gamma$</button>
                     </div>
                 </div>
             </article>
@@ -467,124 +489,124 @@
                 formsubmit();
 
             });
-            $('#D0_bt').click(function(){
+            $('#D0_bt').click(function () {
                 var counter = $('#id_D0').val();
-                if (counter == "0"){
-                    $("#D0").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#D0").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_D0').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#D0").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#D0").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_D0').val("0");
                     formsubmit();
                 }
                 return false;
             });
-            $('#Dplus_bt').click(function(){
+            $('#Dplus_bt').click(function () {
                 var counter = $('#id_Dplus').val();
-                if (counter == "0"){
-                    $("#Dplus").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Dplus").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Dplus').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Dplus").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Dplus").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Dplus').val("0");
                     formsubmit();
                 }
                 return false;
-            });$('#Ds_bt').click(function(){
+            }); $('#Ds_bt').click(function () {
                 var counter = $('#id_Ds').val();
-                if (counter == "0"){
-                    $("#Ds").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Ds").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Ds').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Ds").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Ds").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Ds').val("0");
                     formsubmit();
                 }
                 return false;
-            });$('#Ds0_bt').click(function(){
+            }); $('#Ds0_bt').click(function () {
                 var counter = $('#id_Ds0').val();
-                if (counter == "0"){
-                    $("#Ds0").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Ds0").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Ds0').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Ds0").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Ds0").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Ds0').val("0");
                     formsubmit();
                 }
                 return false;
-            });$('#Dsplus_bt').click(function(){
+            }); $('#Dsplus_bt').click(function () {
                 var counter = $('#id_Dsplus').val();
-                if (counter == "0"){
-                    $("#Dsplus").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Dsplus").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Dsplus').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Dsplus").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Dsplus").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Dsplus').val("0");
                     formsubmit();
                 }
                 return false;
-            });$('#Dss_bt').click(function(){
+            }); $('#Dss_bt').click(function () {
                 var counter = $('#id_Dss').val();
-                if (counter == "0"){
-                    $("#Dss").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Dss").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Dss').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Dss").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Dss").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Dss').val("0");
                     formsubmit();
                 }
                 return false;
-            });$('#Dsss_bt').click(function(){
+            }); $('#Dsss_bt').click(function () {
                 var counter = $('#id_Dsss').val();
-                if (counter == "0"){
-                    $("#Dsss").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Dsss").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Dsss').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Dsss").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Dsss").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Dsss').val("0");
                     formsubmit();
                 }
                 return false;
             });
-            $('#Dssss_bt').click(function(){
+            $('#Dssss_bt').click(function () {
                 var counter = $('#id_Dssss').val();
-                if (counter == "0"){
-                    $("#Dssss").css({"display":"block"});
-                    $(this).css({"background-color":"#bfb"});
+                if (counter == "0") {
+                    $("#Dssss").css({ "display": "block" });
+                    $(this).css({ "background-color": "#bfb" });
                     $('#id_Dssss').val("1");
                     formsubmit();
                 }
                 else {
-                    $("#Dssss").css({"display":"none"});
-                    $(this).css({"background-color":"#ddd"});
+                    $("#Dssss").css({ "display": "none" });
+                    $(this).css({ "background-color": "#ddd" });
                     $('#id_Dssss').val("0");
                     formsubmit();
                 }
