@@ -67,6 +67,7 @@ def post_form(request):
                         dic_final[item]['value'] = "$" + \
                             str(latex_result_index(unit, digits, value, error))+"$"
                         result_json.append(dic_final[item])
+                        dic_final[item]['id'] = str(dic[item]['id'])
                         del dic_final, unit, digits, value, error
 
             del results
@@ -97,3 +98,7 @@ def latex_result_index(unit, digits, value, error):
     result = f'{(value/10**(unit)):.{digits}f}'
     result += latex_error(unit, digits, error)
     return result
+
+def view_detail(request,id):
+    par = Parameters.objects.filter(data__id=id).first()
+    return render(request, "detail.html", {'title': id, 'id': id})
