@@ -6,7 +6,7 @@ def run():
     present_path = pathlib.Path().resolve()
     present_path = str(present_path).rstrip("/hflav")
     html_path = present_path + "/b2charm/html"
-    dest = str(pathlib.Path().resolve()) + "/media/images"
+    dest = str(pathlib.Path().resolve()) + "/b2charm/static/b2charm/images"
     try:
         rmtree(dest)
         os.mkdir(dest)
