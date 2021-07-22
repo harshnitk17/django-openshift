@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Parameters
+from .models import Parameters, user_plots
 from .forms import FilterForm
 import json
 from decimal import Decimal
@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from datetime import date
 from copy import deepcopy
 import os
+import uuid
+import pathlib
 
 
 var_particle_map = {
@@ -72,7 +74,8 @@ def post_form(request):
                         dic_final[item]['latex'] = "$" + \
                             str(dic[item]['latex'])+"$"
                         dic_final[item]['value'] = "$" + \
-                            str(latex_result_index(unit, digits, value, error))+" \\times "+"10^{"+str(unit)+"}$"
+                            str(latex_result_index(unit, digits, value,
+                                error))+" \\times "+"10^{"+str(unit)+"}$"
                         dic_final[item]['id'] = str(dic[item]['id'])
                         result_json.append(dic_final[item])
                         del dic_final, unit, digits, value, error
@@ -203,8 +206,8 @@ def view_detail(request, id):
                 mes_val = float(measurement['value'])
                 digits = int(measurement['digits'])
                 dic['measurement'] = "$" + \
-                            str(latex_result(unit, digits, mes_val,
-                                stat_error, syst_error))+"$"
+                    str(latex_result(unit, digits, mes_val,
+                                     stat_error, syst_error))+"$"
             measurements_red_list.append(dic)
         else:
             dic = {}
@@ -289,18 +292,23 @@ def view_detail(request, id):
     return render(request, "detail.html", {'title': id, 'id': id, 'image_url': image_url, 'latex': par.data['latex'],
                                            'unit': unit, 'avg': avg, 'chi2_avg': chi2_avg, 'ndf_avg': ndf_avg, 'p': p, 'pdg_value': pdg_val, 'pdg_link': pdg_link,
                                            'measurement_list': measurements_list, 'measurement_red_list': measurements_red_list, 'correlation_list_fit': correlations_list_fit,
-                                           'correlation_list_external':correlations_list_external,'correlation_list_n':correlations_list_nuisance, })
-    
+                                           'correlation_list_external': correlations_list_external, 'correlation_list_n': correlations_list_nuisance, })
+
+
 def overview_plot(request):
     if request.is_ajax and request.method == "POST":
         selected = str(request.POST.get('selected')).rstrip(',').split(',')
-        selected_dic={}
+        selected_dic = {}
         for bf in selected:
-            data=Parameters.objects.filter(data__id=str(bf)).first().data
+            data = Parameters.objects.filter(data__id=str(bf)).first().data
             selected_dic[str(bf)] = data
-        _overview_plot(selected_dic,'download.png')
-        return JsonResponse(json.dumps({"a":"yahooo"}), safe=False, content_type="application/json", status=200)
-    
+        file_id = uuid.uuid1()
+        filename = str(pathlib.Path().resolve(
+        ))+"/b2charm/static/b2charm/user_gen_plots/"+str(file_id)+".png"
+        file_path = "/static/b2charm/user_gen_plots/"+str(file_id)+".png"
+        _overview_plot(selected_dic, filename)
+        return JsonResponse(json.dumps({"filepath": file_path}), safe=False, content_type="application/json", status=200)
+
 
 dpi = 120
 
@@ -314,22 +322,29 @@ def hflav_logo(fig, scale=1):
     fontsize = 12
     fontsub = 0.75
     offset = -0.05
-    xsize, ysize = fig.transFigure.inverted().transform((scale * xyratio * ypixel, scale * (1 + ysub) * ypixel))
+    xsize, ysize = fig.transFigure.inverted().transform(
+        (scale * xyratio * ypixel, scale * (1 + ysub) * ypixel))
     fraction = ysub / (1 + ysub)
-    font = {'family': 'sans-serif', 'style': 'italic', 'color': 'white', 'weight': 'bold', 'size': scale * fontsize}
+    font = {'family': 'sans-serif', 'style': 'italic',
+            'color': 'white', 'weight': 'bold', 'size': scale * fontsize}
 
     save_axes = plt.gca()
     ax = plt.axes((0, 1-ysize, xsize, ysize), label='logo', frame_on=False)
     ax.set_axis_off()
-    plt.fill([0, 1, 1, 0], [fraction, fraction, 1, 1], 'k', edgecolor='k', linewidth=0.5)
-    plt.text(0.5, 0.5 * (1 + fraction) + offset, 'HFLAV', fontdict=font, ha='center', va='center')
-    plt.fill([0, 1, 1, 0], [0, 0, fraction, fraction], 'w', edgecolor='k', linewidth=0.5)
+    plt.fill([0, 1, 1, 0], [fraction, fraction, 1, 1],
+             'k', edgecolor='k', linewidth=0.5)
+    plt.text(0.5, 0.5 * (1 + fraction) + offset, 'HFLAV',
+             fontdict=font, ha='center', va='center')
+    plt.fill([0, 1, 1, 0], [0, 0, fraction, fraction],
+             'w', edgecolor='k', linewidth=0.5)
     font['color'] = 'black'
     font['size'] *= fontsub
-    plt.text(0.5, 0.5 * fraction + offset, subtitle, fontdict=font, ha='center', va='center')
+    plt.text(0.5, 0.5 * fraction + offset, subtitle,
+             fontdict=font, ha='center', va='center')
     plt.sca(save_axes)
 
-def _overview_plot(parameters, filename,title = "Overview Plot for selected fractions"):
+
+def _overview_plot(parameters, filename, title="Overview Plot for selected fractions"):
     """Create an overview plot."""
 
     # create the plot axes
@@ -359,7 +374,7 @@ def _overview_plot(parameters, filename,title = "Overview Plot for selected frac
                 error.append(float(parameters[parameter]['error']))
             else:
                 error = None
-        plot, xmin_zero = plot_measurement(y, avg,error, None, xmin_zero)
+        plot, xmin_zero = plot_measurement(y, avg, error, None, xmin_zero)
         yticks.append(r'$' + parameters[parameter]['latex'] + '$')
         y += 1
 
@@ -372,13 +387,15 @@ def _overview_plot(parameters, filename,title = "Overview Plot for selected frac
     plt.savefig(filename, format='png', dpi=dpi)
     plt.close()
 
-def plot_measurement(y, value, stat_error, syst_error, xmin_zero, color = 'black', linestyle = 'solid'):
+
+def plot_measurement(y, value, stat_error, syst_error, xmin_zero, color='black', linestyle='solid'):
     """Add a measurement entry to a plot."""
 
     if value is None:
         return
     if stat_error is None:
-        plot = plt.errorbar([value], [y], xerr=[[value], [0]], xuplims=True, capsize=6, mew=2, color=color, linestyle=linestyle)
+        plot = plt.errorbar([value], [y], xerr=[[value], [
+                            0]], xuplims=True, capsize=6, mew=2, color=color, linestyle=linestyle)
         plot[1][0].set_marker(matplotlib.markers.CARETLEFT)
         plot[1][0].set_markeredgewidth(0)
         if xmin_zero is False:
@@ -387,10 +404,11 @@ def plot_measurement(y, value, stat_error, syst_error, xmin_zero, color = 'black
         error = deepcopy(stat_error)
         if syst_error is not None:
             error.append(syst_error)
-        plot = plt.errorbar([value], [y], xerr=[[abs(error[1])], [error[0]]], fmt='o', capsize=0, color=color, linestyle=linestyle)
-        plt.errorbar([value], [y], xerr=[[abs(stat_error[1])], [stat_error[0]]], capsize=6, mew=2, color=color)
+        plot = plt.errorbar([value], [y], xerr=[[abs(error[1])], [
+                            error[0]]], fmt='o', capsize=0, color=color, linestyle=linestyle)
+        plt.errorbar([value], [y], xerr=[[abs(stat_error[1])], [
+                     stat_error[0]]], capsize=6, mew=2, color=color)
         if value + error[1] < 0:
             xmin_zero = None
 
     return (plot, xmin_zero)
-
