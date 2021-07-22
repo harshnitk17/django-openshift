@@ -26,7 +26,7 @@
             <th>Reference</th>
             <th>Comments</th>
         </tr>
-        
+
         <tr>
             <td><b>Average</b></td>
             <td><b>{{ avg }}</b></td>
@@ -34,7 +34,7 @@
             <td>{{ p }} (ndf={{ ndf_avg }})</td>
             <td></td>
         </tr>
-        
+
         <tr>
             <td><i>PDG</i></td>
             <td><i>{{ pdg_value }}</i></td>
@@ -42,7 +42,7 @@
             <td><a href="{{ pdg_link }}">pdgLive</a></td>
             <td></td>
         </tr>
-        
+
         {% for measurement in measurement_list %}
         <tr>
             <td>{{ measurement.experiment }}</td>
@@ -77,8 +77,44 @@
             {% endif %}
         </tr>
         {% endfor %}
+    </table><br>
+    <h3>Further parameters used in the fit and their correlation with the average</h3>
+    <table border="1">
+        <tr>
+            <th>Source</th>
+            <th>Parameter</th>
+            <th>Correlation [%]</th>
+            <th>Value</th>
+            <th>$\Delta\chi^2$</th>
+        </tr>
+        {% for correlation in correlation_list_fit %}
+        <tr>
+        <td>{{ correlation.type }}</td>
+        <td><a href="/index/detail/{{ correlation.link }}">${{ correlation.latex }}$</a></td>
+        <td></td>
+        <td>{{ correlation.value }}</td>
+        <td></td>
+        </tr>
+        {% endfor %}
+        {% for correlation in correlation_list_external %}
+        <tr>
+        <td>{{ correlation.type }}</td>
+        <td>${{ correlation.latex }}$</td>
+        <td></td>
+        <td>{{ correlation.value }}</td>
+        <td>{{ correlation.chi2 }}</td>
+        </tr>
+        {% endfor %}
+        {% for correlation in correlation_list_n %}
+        <tr>
+        <td>{{ correlation.type }}</td>
+        <td>{{ correlation.latex }}</td>
+        <td></td>
+        <td>{{ correlation.value }}</td>
+        <td>{{ correlation.chi2 }}</td>
+        </tr>
+        {% endfor %}
     </table>
-    
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

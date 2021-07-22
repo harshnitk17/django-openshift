@@ -27,7 +27,6 @@ $(document).ready(function () {
                     },
                     columns: [
                         { data: 'latex' },
-                        { data: 'unit' },
                         { data: 'value' },
                         {
                             "data": "id", "name": "id",

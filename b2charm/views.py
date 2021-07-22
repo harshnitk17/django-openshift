@@ -65,9 +65,8 @@ def post_form(request):
                                 error = None
                         dic_final[item]['latex'] = "$" + \
                             str(dic[item]['latex'])+"$"
-                        dic_final[item]['unit'] = "$"+f'10^{str(unit)}'+"$"
                         dic_final[item]['value'] = "$" + \
-                            str(latex_result_index(unit, digits, value, error))+"$"
+                            str(latex_result_index(unit, digits, value, error))+" \\times "+"10^{"+str(unit)+"}$"
                         result_json.append(dic_final[item])
                         dic_final[item]['id'] = str(dic[item]['id'])
                         del dic_final, unit, digits, value, error
@@ -107,8 +106,8 @@ def latex_result(unit, digits, value, stat_error, syst_error=None):
 
     digits = max(0, digits)
     if stat_error is None:
-        return f'< {value/unit:.{digits}f}'
-    result = f'{(value/unit):.{digits}f}'
+        return f'< {value/10**(unit):.{digits}f}'
+    result = f'{(value/10**(unit)):.{digits}f}'
     result += latex_error(unit, digits, stat_error)
     if syst_error is not None:
         result += latex_error(unit, digits, syst_error)
@@ -142,9 +141,8 @@ def view_detail(request, id):
                 pdg_error = None
         pdg_val = float(par.data['pdg_value'])
         pdg_val = "$" + str(latex_result_index(unit,
-                            digits, pdg_val, pdg_error))+"$"    
+                            digits, pdg_val, pdg_error))+"$"
         pdg_link = par.data['pdg_link']
-        print (pdg_val)
     else:
         pdg_val = None
         pdg_link = None
@@ -168,11 +166,11 @@ def view_detail(request, id):
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
             dic['text'] = measurement['text']
-            dic['chi2'] = round(measurement['chi2'],2)
+            dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
                 dic['comments'] = measurement['comments']
             else:
-                dic['comments']= None
+                dic['comments'] = None
             if 'latex' in measurement.keys():
                 dic['measurement'] = "$"+measurement['latex']+"$"
             measurements_red_list.append(dic)
@@ -181,7 +179,7 @@ def view_detail(request, id):
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
             dic['text'] = measurement['text']
-            dic['chi2'] = round(measurement['chi2'],2)
+            dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
                 dic['comments'] = measurement['comments']
             else:
@@ -217,7 +215,44 @@ def view_detail(request, id):
                         str(latex_result(unit, digits, mes_val,
                             stat_error, syst_error))+"$"
             measurements_list.append(dic)
-
+    del measurements
+    correlations = par.data['correlations']
+    correlations_list_fit = []
+    correlations_list_external = []
+    correlations_list_nuisance = []
+    for correlation in correlations:
+        dic = {}
+        dic["type"] = str(correlation['type'])
+        if "chi2" in correlation.keys():
+            dic["chi2"] = round(correlation["chi2"], 2)
+        else:
+            dic["chi2"] = None
+        error = []
+        if 'error_pos' in correlation.keys():
+            error.append(float(correlation['error_pos']))
+            error.append(float(correlation['error_neg']))
+        else:
+            if 'error' in correlation.keys():
+                error.append(float(correlation['error']))
+            else:
+                error = None
+        unit = int(correlation['unit_exp'])
+        digits = int(correlation['digits'])
+        value = float(correlation['value'])
+        dic["value"] = "$" + str(latex_result_index(unit, digits,
+                                 value, error)) + " \\times "+"10^{"+str(unit)+"}$"
+        if dic["type"] == "fit":
+            dic["latex"] = correlation['latex']
+            dic["link"] = correlation["name"]
+            correlations_list_fit.append(dic)
+        elif dic['type'] == "external":
+            dic["latex"] = correlation['latex']
+            correlations_list_external.append(dic)
+        elif dic['type'] == "nuisance":
+            dic['latex'] = correlation["name"]
+            correlations_list_nuisance.append(dic)
+    del correlations
     return render(request, "detail.html", {'title': id, 'id': id, 'image_url': image_url, 'latex': par.data['latex'],
                                            'unit': unit, 'avg': avg, 'chi2_avg': chi2_avg, 'ndf_avg': ndf_avg, 'p': p, 'pdg_value': pdg_val, 'pdg_link': pdg_link,
-                                           'measurement_list': measurements_list, 'measurement_red_list': measurements_red_list, })
+                                           'measurement_list': measurements_list, 'measurement_red_list': measurements_red_list, 'correlation_list_fit': correlations_list_fit,
+                                           'correlation_list_external':correlations_list_external,'correlation_list_n':correlations_list_nuisance, })
