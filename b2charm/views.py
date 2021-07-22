@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Parameters, user_plots
+from .models import Parameters
 from .forms import FilterForm
 import json
 from decimal import Decimal
