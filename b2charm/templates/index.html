@@ -12,6 +12,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'b2charm/css/index_style.css' %}">
     <title>B2CHARM</title>
 </head>
@@ -215,7 +216,7 @@
     <table cellpadding="0" cellspacing="0" border="0" class="table" id="table1" align="center">
         <thead>
             <tr>
-
+                <th>Select</th>
                 <th>Latex</th>
                 <th>Value and Error</th>
                 <th>Detail</th>
@@ -224,7 +225,7 @@
         </thead>
         <tfoot>
             <tr>
-
+                <th>Select</th>
                 <th>Latex</th>
                 <th>Value and Error</th>
                 <th>Detail</th>
@@ -235,6 +236,7 @@
 
         </tbody>
     </table>
+    <center><button id="checkbox-btn">Generate Overview Plot</button></center><br>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -243,10 +245,37 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+
     <script src="{% static 'b2charm/js/index.js' %}"></script>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
+    <script>
+    $('#checkbox-btn').click(function () {
+        var rows_selected = table.column(0).checkboxes.selected();
+        var selected = '';
+        $.each(rows_selected, function(index, rowId){
+            selected = selected.concat(rowId);
+            selected = selected.concat(',');
+         });
+         $.ajax({
+            url: "/index/post/ajax/plot",
+            type: "POST",
+            data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}' ,
+                "selected": selected,
+           },
+            success: function (json_response) {
+                console.log("yahoooo");
+                console.log(json_response);
+            },
+            error: function (xhr, errmsg, err) {
+                console.log(xhr.status + ": " + xhr.responseText);
+            }
+        });
+    });
+    </script>
 
 </body>
 

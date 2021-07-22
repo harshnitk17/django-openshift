@@ -4,6 +4,12 @@ from .models import Parameters
 from .forms import FilterForm
 import json
 from decimal import Decimal
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+from datetime import date
+from copy import deepcopy
+import os
 
 
 var_particle_map = {
@@ -67,8 +73,8 @@ def post_form(request):
                             str(dic[item]['latex'])+"$"
                         dic_final[item]['value'] = "$" + \
                             str(latex_result_index(unit, digits, value, error))+" \\times "+"10^{"+str(unit)+"}$"
-                        result_json.append(dic_final[item])
                         dic_final[item]['id'] = str(dic[item]['id'])
+                        result_json.append(dic_final[item])
                         del dic_final, unit, digits, value, error
 
             del results
@@ -166,20 +172,47 @@ def view_detail(request, id):
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
             dic['text'] = measurement['text']
-            dic['chi2'] = round(measurement['chi2'], 2)
+            if 'chi2' in measurement.keys():
+                dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
                 dic['comments'] = measurement['comments']
             else:
                 dic['comments'] = None
-            if 'latex' in measurement.keys():
-                dic['measurement'] = "$"+measurement['latex']+"$"
+            if 'value' not in measurement.keys():
+                if 'latex' in measurement.keys():
+                    dic['measurement'] = "$"+measurement['latex']+"$"
+            else:
+                stat_error = []
+                if 'stat_error_pos' in measurement.keys():
+                    stat_error.append(float(measurement['stat_error_pos']))
+                    stat_error.append(float(measurement['stat_error_neg']))
+                else:
+                    if 'stat_error' in measurement.keys():
+                        stat_error.append(float(measurement['stat_error']))
+                    else:
+                        stat_error = None
+                syst_error = []
+                if 'syst_error_pos' in measurement.keys():
+                    syst_error.append(float(measurement['syst_error_pos']))
+                    syst_error.append(float(measurement['syst_error_neg']))
+                else:
+                    if 'syst_error' in measurement.keys():
+                        syst_error.append(float(measurement['syst_error']))
+                    else:
+                        syst_error = None
+                mes_val = float(measurement['value'])
+                digits = int(measurement['digits'])
+                dic['measurement'] = "$" + \
+                            str(latex_result(unit, digits, mes_val,
+                                stat_error, syst_error))+"$"
             measurements_red_list.append(dic)
         else:
             dic = {}
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
             dic['text'] = measurement['text']
-            dic['chi2'] = round(measurement['chi2'], 2)
+            if 'chi2' in measurement.keys():
+                dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
                 dic['comments'] = measurement['comments']
             else:
@@ -252,7 +285,112 @@ def view_detail(request, id):
             dic['latex'] = correlation["name"]
             correlations_list_nuisance.append(dic)
     del correlations
+    unit = int(par.data['unit_exp'])
     return render(request, "detail.html", {'title': id, 'id': id, 'image_url': image_url, 'latex': par.data['latex'],
                                            'unit': unit, 'avg': avg, 'chi2_avg': chi2_avg, 'ndf_avg': ndf_avg, 'p': p, 'pdg_value': pdg_val, 'pdg_link': pdg_link,
                                            'measurement_list': measurements_list, 'measurement_red_list': measurements_red_list, 'correlation_list_fit': correlations_list_fit,
                                            'correlation_list_external':correlations_list_external,'correlation_list_n':correlations_list_nuisance, })
+    
+def overview_plot(request):
+    if request.is_ajax and request.method == "POST":
+        selected = str(request.POST.get('selected')).rstrip(',').split(',')
+        selected_dic={}
+        for bf in selected:
+            data=Parameters.objects.filter(data__id=str(bf)).first().data
+            selected_dic[str(bf)] = data
+        _overview_plot(selected_dic,'download.png')
+        return JsonResponse(json.dumps({"a":"yahooo"}), safe=False, content_type="application/json", status=200)
+    
+
+dpi = 120
+
+
+def hflav_logo(fig, scale=1):
+    """Add the HFLAV logo to the figure"""
+    subtitle = str(date.today())
+    ypixel = 25
+    xyratio = 4.8
+    ysub = 0.9
+    fontsize = 12
+    fontsub = 0.75
+    offset = -0.05
+    xsize, ysize = fig.transFigure.inverted().transform((scale * xyratio * ypixel, scale * (1 + ysub) * ypixel))
+    fraction = ysub / (1 + ysub)
+    font = {'family': 'sans-serif', 'style': 'italic', 'color': 'white', 'weight': 'bold', 'size': scale * fontsize}
+
+    save_axes = plt.gca()
+    ax = plt.axes((0, 1-ysize, xsize, ysize), label='logo', frame_on=False)
+    ax.set_axis_off()
+    plt.fill([0, 1, 1, 0], [fraction, fraction, 1, 1], 'k', edgecolor='k', linewidth=0.5)
+    plt.text(0.5, 0.5 * (1 + fraction) + offset, 'HFLAV', fontdict=font, ha='center', va='center')
+    plt.fill([0, 1, 1, 0], [0, 0, fraction, fraction], 'w', edgecolor='k', linewidth=0.5)
+    font['color'] = 'black'
+    font['size'] *= fontsub
+    plt.text(0.5, 0.5 * fraction + offset, subtitle, fontdict=font, ha='center', va='center')
+    plt.sca(save_axes)
+
+def _overview_plot(parameters, filename,title = "Overview Plot for selected fractions"):
+    """Create an overview plot."""
+
+    # create the plot axes
+    n = len(parameters)
+    width = 10
+    height = (n+3) * 0.4
+    fig = plt.figure(figsize=(width, height), dpi=dpi, constrained_layout=True)
+    ax = plt.axes()
+    if title is not None:
+        plt.title(title)
+    plt.axis(ymin=0, ymax=n)
+    plt.grid(True)
+
+    # plot each parameter
+    y = 0.5
+    yticks = []
+    xmin_zero = False
+    for parameter in parameters:
+        avg = parameters[parameter]['value']
+        error = []
+        if 'error_pos' in parameters[parameter].keys():
+            error.append(float(parameters[parameter]['error_pos']))
+            error.append(float(parameters[parameter]['error_neg']))
+        else:
+            if 'error' in parameters[parameter].keys():
+                error.append(float(parameters[parameter]['error']))
+                error.append(float(parameters[parameter]['error']))
+            else:
+                error = None
+        plot, xmin_zero = plot_measurement(y, avg,error, None, xmin_zero)
+        yticks.append(r'$' + parameters[parameter]['latex'] + '$')
+        y += 1
+
+    plt.yticks(0.5+np.arange(n), yticks)
+    if xmin_zero:
+        plt.xlim(left=0)
+
+    # add logo and save figure
+    hflav_logo(fig)
+    plt.savefig(filename, format='png', dpi=dpi)
+    plt.close()
+
+def plot_measurement(y, value, stat_error, syst_error, xmin_zero, color = 'black', linestyle = 'solid'):
+    """Add a measurement entry to a plot."""
+
+    if value is None:
+        return
+    if stat_error is None:
+        plot = plt.errorbar([value], [y], xerr=[[value], [0]], xuplims=True, capsize=6, mew=2, color=color, linestyle=linestyle)
+        plot[1][0].set_marker(matplotlib.markers.CARETLEFT)
+        plot[1][0].set_markeredgewidth(0)
+        if xmin_zero is False:
+            xmin_zero = True
+    else:
+        error = deepcopy(stat_error)
+        if syst_error is not None:
+            error.append(syst_error)
+        plot = plt.errorbar([value], [y], xerr=[[abs(error[1])], [error[0]]], fmt='o', capsize=0, color=color, linestyle=linestyle)
+        plt.errorbar([value], [y], xerr=[[abs(stat_error[1])], [stat_error[0]]], capsize=6, mew=2, color=color)
+        if value + error[1] < 0:
+            xmin_zero = None
+
+    return (plot, xmin_zero)
+

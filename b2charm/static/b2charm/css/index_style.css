@@ -168,3 +168,24 @@
             border-radius: 20px;
             border: 2px solid lightsalmon;
         }
+        #checkbox-btn {
+            padding: 10px 15px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px #999;
+            ;
+          }
+          
+          #checkbox-btn:hover {background-color: #3e8e41}
+          
+          #checkbox-btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+          }

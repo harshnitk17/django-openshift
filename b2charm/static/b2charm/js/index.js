@@ -3,19 +3,14 @@ $(document).ready(function () {
         $("#filter_form").submit(function (e) {
             return false;
         });
-        console.log("form submitted!")
-        console.log("getting data")
         var serializedData = $('#filter_form').serialize();
         $.ajax({
             url: "/index/post/ajax/filter",
             type: "POST",
             data: serializedData,
             success: function (json_response) {
-                console.log(json_response);
-                console.log("success");
-                $('#table1').DataTable({
+                globalThis.table = $('#table1').DataTable({
                     data: JSON.parse(json_response),
-                    stateSave: true,
                     responsive: true,
                     bDestroy: true,
                     "sDom": '<"top"flp>rt<"bottom"i><"clear">',
@@ -26,6 +21,7 @@ $(document).ready(function () {
                             });
                     },
                     columns: [
+                        { data: 'id'},
                         { data: 'latex' },
                         { data: 'value' },
                         {
@@ -38,6 +34,18 @@ $(document).ready(function () {
                         }
 
                     ],
+                    'columnDefs': [
+                        {
+                           'targets': 0,
+                           'checkboxes': {
+                              'selectRow': true
+                           }
+                        }
+                     ],
+                     'select': {
+                        'style': 'multi'
+                     },
+                     'order': [[2, 'asc']]
 
                 });
                 MathJax.typeset();
@@ -202,4 +210,5 @@ $(document).ready(function () {
         }
         return false;
     });
+    
 });
