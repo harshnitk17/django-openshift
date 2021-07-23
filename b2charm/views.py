@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Parameters
+from .models import Parameters,plot_info
 from .forms import FilterForm
 import json
 from decimal import Decimal
@@ -305,6 +305,9 @@ def overview_plot(request):
         file_id = uuid.uuid1()
         filename = str(pathlib.Path().resolve(
         ))+"/b2charm/static/b2charm/user_gen_plots/"+str(file_id)+".png"
+        img_obj = plot_info(img_id=file_id,img_path=filename)
+        img_obj.save()
+        img_obj.chk_expiry()
         file_path = "/static/b2charm/user_gen_plots/"+str(file_id)+".png"
         _overview_plot(selected_dic, filename)
         return JsonResponse(json.dumps({"filepath": file_path}), safe=False, content_type="application/json", status=200)
