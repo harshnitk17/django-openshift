@@ -83,14 +83,14 @@
 
 
                     <div class="box_particle">
-                        <button>$J/\psi$</button>
-                        <button>$\psi(2S)$</button>
-                        <button>$\eta_c$</button>
-                        <button>$\chi_c$</button>
-                        <button>other charmonium</button>
-                        <button>$X(3872)$</button>
-                        <button>$P_c$</button>
-                        <button>$XYZ$ states</button>
+                        <button id="Jpsi_bt">$J/\psi$</button>
+                        <button id="psi2S_bt">$\psi(2S)$</button>
+                        <button id="etac_bt">$\eta_c$</button>
+                        <button id="chic_bt">$\chi_c$</button>
+                        <button id="ccbar_bt">other charmonium</button>
+                        <button id="X3872_bt">$X(3872)$</button>
+                        <button id="Pc_bt">$P_c$</button>
+                        <button id="XYX_bt">$XYZ$ states</button>
                     </div>
                 </div>
             </article>
@@ -100,17 +100,17 @@
                     <h6>Baryons</h6>
 
                     <div class="box_particle">
-                        <button>$p$</button>
-                        <button>$n$</button>
-                        <button>$\Lambda$</button>
-                        <button>$\Sigma$</button>
-                        <button>$\Xi$</button>
-                        <button>$\Omega$</button>
-                        <button>other light baryons</button>
-                        <button>$\Lambda_c$</button>
-                        <button>$\Sigma_c$</button>
-                        <button>$\Xi_c$</button>
-                        <button>other charm baryons</button>
+                        <button id="p_bt">$p$</button>
+                        <button id="n_bt">$n$</button>
+                        <button id="Lambda_bt">$\Lambda$</button>
+                        <button id="Sigma_bt">$\Sigma$</button>
+                        <button id="Xi_bt">$\Xi$</button>
+                        <button id="Omega_bt">$\Omega$</button>
+                        <button id="baryon_bt">other light baryons</button>
+                        <button id="Lambdac_bt">$\Lambda_c$</button>
+                        <button id="Sigmac_bt">$\Sigma_c$</button>
+                        <button id="Xic_bt">$\Xi_c$</button>
+                        <button id="cbaryon_bt">other charm baryons</button>
                     </div>
                 </div>
             </article>
@@ -121,12 +121,12 @@
 
 
                     <div class="box_particle">
-                        <button>$K^{\pm}$</button>
-                        <button>$K^0_{(S/L)}$</button>
-                        <button>$K^{*\pm}$</button>
-                        <button>$K^{*0}$</button>
-                        <button>$\phi$</button>
-                        <button>other kaons</button>
+                        <button id="K_bt">$K^{\pm}$</button>
+                        <button id="K0_bt">$K^0_{(S/L)}$</button>
+                        <button id="Ksplus_bt">$K^{*\pm}$</button>
+                        <button id="Ks0_bt">$K^{*0}$</button>
+                        <button id="phi_bt">$\phi$</button>
+                        <button id="kaon_bt">other kaons</button>
                     </div>
                 </div>
             </article>
@@ -137,15 +137,15 @@
 
 
                     <div class="box_particle">
-                        <button>$\pi^{\pm}$</button>
-                        <button>$\pi^0$</button>
-                        <button>$\rho^{\pm}$</button>
-                        <button>$\rho^0$</button>
-                        <button>$\eta^{(\prima)}$</button>
-                        <button>$\omega$</button>
-                        <button>other light mesons</button>
-                        <button>leptons</button>
-                        <button>$\gamma$</button>
+                        <button id="pi_bt">$\pi^{\pm}$</button>
+                        <button id="pi0_bt">$\pi^0$</button>
+                        <button id="rhoplus_bt">$\rho^{\pm}$</button>
+                        <button id="rho0_bt">$\rho^0$</button>
+                        <button id="eta_bt">$\eta^{(\prima)}$</button>
+                        <button id="omega_bt">$\omega$</button>
+                        <button id="light_bt">other light mesons</button>
+                        <button id="lepton_bt">leptons</button>
+                        <button id="photon_bt">$\gamma$</button>
                     </div>
                 </div>
             </article>
@@ -157,52 +157,257 @@
                         <div id="D0" style="display: none;">
 
                             <span class="minus">-</span>
-                            <input type="text" name="D0" class="charminput" value="0" id="id_D0">
+                            <input type="text" name="D0" class="daughterinput" value="0" id="id_D0">
                             <span class="plus">+</span>
                             <label for="id_D0">$D^0$</label>
                         </div>
                         <div id="Dplus" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Dplus" class="charminput" value="0" id="id_Dplus">
+                            <input type="text" name="Dplus" class="daughterinput" value="0" id="id_Dplus">
                             <span class="plus">+</span>
                             <label for="id_Dplus">$D^{\\pm}$</label>
                         </div>
                         <div id="Ds" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Ds" class="charminput" value="0" id="id_Ds">
+                            <input type="text" name="Ds" class="daughterinput" value="0" id="id_Ds">
                             <span class="plus">+</span>
                             <label for="id_Ds">$D_s^{\\pm}$</label>
                         </div>
                         <div id="Ds0" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Ds0" class="charminput" value="0" id="id_Ds0">
+                            <input type="text" name="Ds0" class="daughterinput" value="0" id="id_Ds0">
                             <span class="plus">+</span>
                             <label for="id_Ds0">$D^{*0}$</label>
                         </div>
                         <div id="Dsplus" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Dsplus" class="charminput" value="0" id="id_Dsplus">
+                            <input type="text" name="Dsplus" class="daughterinput" value="0" id="id_Dsplus">
                             <span class="plus">+</span>
                             <label for="id_Dsplus">$D^{*\\pm}$</label>
                         </div>
                         <div id="Dss" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Dss" class="charminput" value="0" id="id_Dss">
+                            <input type="text" name="Dss" class="daughterinput" value="0" id="id_Dss">
                             <span class="plus">+</span>
                             <label for="id_Dss">$D_s^{*\\pm}$</label>
                         </div>
                         <div id="Dsss" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Dsss" class="charminput" value="0" id="id_Dsss">
+                            <input type="text" name="Dsss" class="daughterinput" value="0" id="id_Dsss">
                             <span class="plus">+</span>
                             <label for="id_Dsss">exited $D$</label>
                         </div>
                         <div id="Dssss" style="display: none;">
                             <span class="minus">-</span>
-                            <input type="text" name="Dssss" class="charminput" value="0" id="id_Dssss">
+                            <input type="text" name="Dssss" class="daughterinput" value="0" id="id_Dssss">
                             <span class="plus">+</span>
                             <label for="id_Dssss">exited $D_s$</label>
                         </div>
+                        <div id="Jpsi" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Jpsi" class="daughterinput" value="0" id="id_Jpsi">
+                            <span class="plus">+</span>
+                            <label for="id_Jpsi">$J/\psi$</label>
+                        </div>
+                        <div id="psi2S" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="psi2S" class="daughterinput" value="0" id="id_psi2S">
+                            <span class="plus">+</span>
+                            <label for="id_psi2S">$\psi(2S)$</label>
+                        </div>
+                        <div id="etac" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="etac" class="daughterinput" value="0" id="id_etac">
+                            <span class="plus">+</span>
+                            <label for="id_etac">$\eta_c$</label>
+                        </div>
+                        <div id="chic" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="chic" class="daughterinput" value="0" id="id_chic">
+                            <span class="plus">+</span>
+                            <label for="id_chic">$\chi_c$</label>
+                        </div>
+                        <div id="ccbar" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="ccbar" class="daughterinput" value="0" id="id_ccbar">
+                            <span class="plus">+</span>
+                            <label for="id_ccbar">other charmonium</label>
+                        </div>
+                        <div id="X3872" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="X3872" class="daughterinput" value="0" id="id_X3872">
+                            <span class="plus">+</span>
+                            <label for="id_X3872">$X(3872)$</label>
+                        </div>
+                        <div id="Pc" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Pc" class="daughterinput" value="0" id="id_Pc">
+                            <span class="plus">+</span>
+                            <label for="id_Pc">$P_c$</label>
+                        </div>
+                        <div id="XYZ" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="XYZ" class="daughterinput" value="0" id="id_XYZ">
+                            <span class="plus">+</span>
+                            <label for="id_XYZ">$XYZ$ states</label>
+                        </div>
+                        <div id="p" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="p" class="daughterinput" value="0" id="id_p">
+                            <span class="plus">+</span>
+                            <label for="id_p">$p$</label>
+                        </div>
+                        <div id="n" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="n" class="daughterinput" value="0" id="id_n">
+                            <span class="plus">+</span>
+                            <label for="id_n">$n$</label>
+                        </div>
+                        <div id="Lambda" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Lambda" class="daughterinput" value="0" id="id_Lambda">
+                            <span class="plus">+</span>
+                            <label for="id_Lambda">$\Lambda$</label>
+                        </div>
+                        <div id="Sigma" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Sigma" class="daughterinput" value="0" id="id_Sigma">
+                            <span class="plus">+</span>
+                            <label for="id_Sigma">$\Sigma$</label>
+                        </div>
+                        <div id="Xi" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Xi" class="daughterinput" value="0" id="id_Xi">
+                            <span class="plus">+</span>
+                            <label for="id_Xi">$\Xi$</label>
+                        </div>
+                        <div id="Omega" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name=Oomega" class="daughterinput" value="0" id="id_Omega">
+                            <span class="plus">+</span>
+                            <label for="id_Omega">$\Omega$</label>
+                        </div>
+                        <div id="baryon" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="baryon" class="daughterinput" value="0" id="id_baryon">
+                            <span class="plus">+</span>
+                            <label for="id_baryon">other light baryons</label>
+                        </div>
+                        <div id="Lambdac" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Lambdac" class="daughterinput" value="0" id="id_Lambdac">
+                            <span class="plus">+</span>
+                            <label for="id_Lambdac">$\\Lambda_c$</label>
+                        </div>
+                        <div id="Sigmac" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Sigmac" class="daughterinput" value="0" id="id_Sigmac">
+                            <span class="plus">+</span>
+                            <label for="id_Sigmac">$\\Sigma_c$</label>
+                        </div>
+                        <div id="Xic" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Xic" class="daughterinput" value="0" id="id_Xic">
+                            <span class="plus">+</span>
+                            <label for="id_Xic">$\\Xi_c$</label>
+                        </div>
+                        <div id="cbaryon" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="cbaryon" class="daughterinput" value="0" id="id_cbaryon">
+                            <span class="plus">+</span>
+                            <label for="id_cbaryon">other charm baryons</label>
+                        </div>
+                        <div id="K" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="K" class="daughterinput" value="0" id="id_K">
+                            <span class="plus">+</span>
+                            <label for="id_K">$K^{\pm}$</label>
+                        </div>
+                        <div id="K0" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="K0" class="daughterinput" value="0" id="id_K0">
+                            <span class="plus">+</span>
+                            <label for="id_K0">$K^0_{(S/L)}$</label>
+                        </div>
+                        <div id="Ksplus" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Ksplus" class="daughterinput" value="0" id="id_Ksplus">
+                            <span class="plus">+</span>
+                            <label for="id_Ksplus">$K^{*\pm}$</label>
+                        </div>
+                        <div id="Ks0" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="Ks0" class="daughterinput" value="0" id="id_Ks0">
+                            <span class="plus">+</span>
+                            <label for="id_Ks0">$K^{*0}$</label>
+                        </div>
+                        <div id="phi" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="phi" class="daughterinput" value="0" id="id_phi">
+                            <span class="plus">+</span>
+                            <label for="id_phi">$\phi$</label>
+                        </div>
+                        <div id="kaon" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="kaon" class="daughterinput" value="0" id="id_kaon">
+                            <span class="plus">+</span>
+                            <label for="id_kaon">other kaons</label>
+                        </div>
+                        <div id="pi" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="pi" class="daughterinput" value="0" id="id_pi">
+                            <span class="plus">+</span>
+                            <label for="id_pi">$\pi{^\pm}$</label>
+                        </div>
+                        <div id="pi0" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="pi0" class="daughterinput" value="0" id="id_pi0">
+                            <span class="plus">+</span>
+                            <label for="id_pi0">$\pi^0$</label>
+                        </div>
+                        <div id="rhoplus" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="rhoplus" class="daughterinput" value="0" id="id_rhoplus">
+                            <span class="plus">+</span>
+                            <label for="id_rhoplus">$\rho^{\pm}$</label>
+                        </div>
+                        <div id="rho0" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="rho0" class="daughterinput" value="0" id="id_rho0">
+                            <span class="plus">+</span>
+                            <label for="id_rho0">$\rho^{0}$</label>
+                        </div>
+                        <div id="eta" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="eta" class="daughterinput" value="0" id="id_eta">
+                            <span class="plus">+</span>
+                            <label for="id_eta">$\eta^{(\prima)}$</label>
+                        </div>
+                        <div id="omega" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="omega" class="daughterinput" value="0" id="id_omega">
+                            <span class="plus">+</span>
+                            <label for="id_omega">$\omega$</label>
+                        </div>
+                        <div id="light" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="light" class="daughterinput" value="0" id="id_light">
+                            <span class="plus">+</span>
+                            <label for="id_light">other light mesons</label>
+                        </div>
+                        <div id="lepton" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="lepton" class="daughterinput" value="0" id="id_lepton">
+                            <span class="plus">+</span>
+                            <label for="id_lepton">leptons</label>
+                        </div>
+                        <div id="photon" style="display: none;">
+                            <span class="minus">-</span>
+                            <input type="text" name="photon" class="daughterinput" value="0" id="id_photon">
+                            <span class="plus">+</span>
+                            <label for="id_photon">$\gamma$</label>
+                        </div>
+
 
                     </div>
                 </div>
@@ -274,9 +479,6 @@
                 console.log(json_response);
                 var path = JSON.parse(json_response)["filepath"];
                 $('#plot').prepend('<img  src='+path+'/>')
-
-                
-
             },
             error: function (xhr, errmsg, err) {
                 console.log(xhr.status + ": " + xhr.responseText);

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Parameters,plot_info
+from .models import Parameters, plot_info
 from .forms import FilterForm
 import json
 from decimal import Decimal
@@ -15,14 +15,14 @@ import pathlib
 
 
 var_particle_map = {
-    "D0": 'D0',
-    "Dplus": 'D+',
-    "Ds": 'Ds',
-    "Ds0": 'D*0',
-    "Dsplus": 'D*+',
-    "Dss": 'Ds*',
-    "Dsss": 'D**',
-    "Dssss": 'Ds**',
+    "D0": 'D0', "Dplus": 'D+', "Ds": 'Ds', "Ds0": 'D*0', "Dsplus": 'D*+', "Dss": 'Ds*',
+    "Dsss": 'D**', "Dssss": 'Ds**', "Jpsi": 'Jpsi', "psi2S": 'psi2S', "etac": 'etac',
+    "chic": 'chic', "ccbar": 'ccbar', "X3872": 'X3872', "Pc": 'Pc', "XYZ": 'XYZ',
+    "p": 'p', "n": 'n', "Lambda": 'Lambda', "Sigma": 'Sigma', "Xi": 'Xi', "Omega": 'Omega',
+    "baryon": 'baryon', "Lambdac": 'Lambdac', "Sigmac": 'Sigmac', "Xic": 'Xic',
+    "cbaryon": 'cbaryon', "K": 'K', "K0": 'K0', "Ksplus": 'K*+', "Ks0": 'K*0',
+    "phi": 'phi', "kaon": 'kaon', "pi": 'pi', "pi0": 'pi0', "rhoplus": 'rho+', "rho0": 'rho0',
+    "eta": 'eta', "omega": 'omega', "light": 'light', "lepton": 'lepton', "photon": 'photon'
 }
 
 
@@ -305,7 +305,7 @@ def overview_plot(request):
         file_id = uuid.uuid1()
         filename = str(pathlib.Path().resolve(
         ))+"/b2charm/static/b2charm/user_gen_plots/"+str(file_id)+".png"
-        img_obj = plot_info(img_id=file_id,img_path=filename)
+        img_obj = plot_info(img_id=file_id, img_path=filename)
         img_obj.save()
         img_obj.chk_expiry()
         file_path = "/static/b2charm/user_gen_plots/"+str(file_id)+".png"
