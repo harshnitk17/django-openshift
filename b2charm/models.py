@@ -13,7 +13,7 @@ class plot_info(models.Model):
     created_on = models.DateTimeField(auto_now_add=True,null=True)
 
     def chk_expiry(self):
-        deletion_time = 0.5 #in minutes
+        deletion_time = 5 #in minutes
         now = datetime.now(timezone.utc)
         img_objs = plot_info.objects.all()
         for img_obj in img_objs:
