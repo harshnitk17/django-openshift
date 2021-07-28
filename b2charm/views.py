@@ -263,6 +263,10 @@ def view_detail(request, id):
             dic["chi2"] = round(correlation["chi2"], 2)
         else:
             dic["chi2"] = None
+        if "correlation" in correlation.keys():
+            dic["correlation"]=round(correlation["correlation"], 2)
+        else:
+            dic["correlation"]=None
         error = []
         if 'error_pos' in correlation.keys():
             error.append(float(correlation['error_pos']))
