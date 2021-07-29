@@ -12,18 +12,7 @@ from copy import deepcopy
 import os
 import uuid
 import pathlib
-
-
-var_particle_map = {
-    "D0": 'D0', "Dplus": 'D+', "Ds": 'Ds', "Ds0": 'D*0', "Dsplus": 'D*+', "Dss": 'Ds*',
-    "Dsss": 'D**', "Dssss": 'Ds**', "Jpsi": 'Jpsi', "psi2S": 'psi2S', "etac": 'etac',
-    "chic": 'chic', "ccbar": 'ccbar', "X3872": 'X3872', "Pc": 'Pc', "XYZ": 'XYZ',
-    "p": 'p', "n": 'n', "Lambda": 'Lambda', "Sigma": 'Sigma', "Xi": 'Xi', "Omega": 'Omega',
-    "baryon": 'baryon', "Lambdac": 'Lambdac', "Sigmac": 'Sigmac', "Xic": 'Xic',
-    "cbaryon": 'cbaryon', "K": 'K', "K0": 'K0', "Ksplus": 'K*+', "Ks0": 'K*0',
-    "phi": 'phi', "kaon": 'kaon', "pi": 'pi', "pi0": 'pi0', "rhoplus": 'rho+', "rho0": 'rho0',
-    "eta": 'eta', "omega": 'omega', "light": 'light', "lepton": 'lepton', "photon": 'photon'
-}
+from averaging.particles import var_particle_map,particle_filter_names,particle_categories
 
 
 def build_config(data):
