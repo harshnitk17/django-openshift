@@ -12,7 +12,7 @@ from copy import deepcopy
 import os
 import uuid
 import pathlib
-from averaging.particles import var_particle_map,particle_filter_names,particle_categories
+from averaging.particles import var_particle_map,particle_filter_names,particle_categories,var_particle_map_inv
 
 
 def build_config(data):
@@ -29,7 +29,33 @@ def build_config(data):
 
 def index(request):
     form = FilterForm()
-    return render(request, "index.html", {'form': form})
+    initial_prt_list = particle_categories['Initial particle']
+    initial_context = []
+    for prt in initial_prt_list:
+        initial_context.append([prt,particle_filter_names[prt]])
+    del initial_prt_list
+    obs_prt_list = particle_categories['Type of observable']
+    obs_context = []
+    for prt in obs_prt_list:
+        obs_context.append([prt,particle_filter_names[prt]])
+    del obs_prt_list
+    daughter_prt_list = list()
+    for key in particle_categories:
+        if key == 'Type of observable' or key == 'Initial particle':
+            pass
+        else:
+            a = deepcopy(particle_categories[key])
+            daughter_prt_list.append([key,a])
+    for prt in daughter_prt_list:
+        for i in range(0,len(prt[1])):
+            prt[1][i] = [var_particle_map_inv[prt[1][i]],particle_filter_names[prt[1][i]]]
+
+    daughter_num_list = []
+    for key in var_particle_map:
+        daughter_num_list.append([key,particle_filter_names[var_particle_map[key]]])
+    context = {'form': form,'initial': initial_context, 'obs': obs_context,
+                'daughter': daughter_prt_list,'num':daughter_num_list }
+    return render(request, "index.html",context)
 
 
 def post_form(request):
