@@ -12,13 +12,14 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'b2charm/css/detail_style.css' %}">
     <title>{{title}}</title>
 </head>
 
 <body>
-    <h3>${{ latex }}$</h3>
-    <img src="{% static 'b2charm/images/'|add:image_url %}">
-    <table border="1">
+    <center><h3>${{ latex }}$</h3></center>
+    <center><img src="{% static 'b2charm/images/'|add:image_url %}"></center><br>
+    <table border="1" id="measurement">
         <tr>
             <th>Experiment</th>
             <th>Measurement [10<sup>{{ unit }}</sup>]</th>
@@ -48,7 +49,7 @@
             <td>{{ measurement.experiment }}</td>
             <td>{{ measurement.measurement }}</td>
             <td>{{ measurement.chi2 }}</td>
-            <td><a href="{{ measurement.link }}">{{ measurement.text }}</a></td>
+            <td><a href="{{ measurement.link }}">{{ measurement.text.0 }}<b>{{ measurement.text.1 }}</b>{{ measurement.text.2 }}</a></td>
             {% if measurement.comments %}
             <td>
                 {% for comment in measurement.comments %}
@@ -65,7 +66,7 @@
             <td style="color:red">{{ measurement.experiment }}</td>
             <td style="color:red">{{ measurement.measurement }}</td>
             <td>{{ measurement.chi2 }}</td>
-            <td><a href="{{ measurement.link }}">{{ measurement.text }}</a></td>
+            <td><a href="{{ measurement.link }}">{{ measurement.text.0 }}<b>{{ measurement.text.1 }}</b>{{ measurement.text.2 }}</a></td>
             {% if measurement.comments %}
             <td>
                 {% for comment in measurement.comments %}
@@ -79,7 +80,7 @@
         {% endfor %}
     </table><br>
     <h3>Further parameters used in the fit and their correlation with the average</h3>
-    <table border="1">
+    <table border="1" id="correlation">
         <tr>
             <th>Source</th>
             <th>Parameter</th>

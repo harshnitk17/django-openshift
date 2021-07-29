@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Parameters, plot_info
-from .forms import FilterForm
 import json
 from decimal import Decimal
 import numpy as np
@@ -9,7 +8,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 from datetime import date
 from copy import deepcopy
-import os
 import uuid
 import pathlib
 from averaging.particles import var_particle_map,particle_filter_names,particle_categories,var_particle_map_inv
@@ -17,9 +15,9 @@ from averaging.particles import var_particle_map,particle_filter_names,particle_
 
 def build_config(data):
     config = {}
-    if data['initial']:
+    if 'initial' in data.keys():
         config[str(data['initial'])] = 1
-    if data['observable']:
+    if 'observable' in data.keys():
         config[str(data['observable'])] = 1
     for particle in var_particle_map:
         if data[str(particle)] != None and data[str(particle)] != 0:
@@ -28,7 +26,6 @@ def build_config(data):
 
 
 def index(request):
-    form = FilterForm()
     initial_prt_list = particle_categories['Initial particle']
     initial_context = []
     for prt in initial_prt_list:
@@ -53,16 +50,23 @@ def index(request):
     daughter_num_list = []
     for key in var_particle_map:
         daughter_num_list.append([key,particle_filter_names[var_particle_map[key]]])
-    context = {'form': form,'initial': initial_context, 'obs': obs_context,
+    context = {'initial': initial_context, 'obs': obs_context,
                 'daughter': daughter_prt_list,'num':daughter_num_list }
     return render(request, "index.html",context)
 
 
 def post_form(request):
     if request.is_ajax and request.method == "POST":
-        form = FilterForm(request.POST)
-        if form.is_valid():
-            config = build_config(form.cleaned_data)
+        if request.POST:
+            req = dict(request.POST)
+            del req['csrfmiddlewaretoken']
+            for item in req:
+                if item == "initial" or item == "observable":
+                    req[item] = req[item][0]
+                else:
+                    req[item] = int(req[item][0])
+            print (req)
+            config = build_config(req)
             results = Parameters.objects.all()
             dic = {}
             result_json = []
@@ -189,7 +193,10 @@ def view_detail(request, id):
             dic = {}
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
-            dic['text'] = measurement['text']
+            p1 = measurement['text'].split('<b>')
+            p2 = p1[1].split('</b>')
+            dic['text'] = [p1[0]]+p2
+            del p1,p2
             if 'chi2' in measurement.keys():
                 dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
@@ -228,7 +235,10 @@ def view_detail(request, id):
             dic = {}
             dic["experiment"] = measurement['experiment']
             dic['link'] = measurement['link']
-            dic['text'] = measurement['text']
+            p1 = measurement['text'].split('<b>')
+            p2 = p1[1].split('</b>')
+            dic['text'] = [p1[0]]+p2
+            del p1,p2
             if 'chi2' in measurement.keys():
                 dic['chi2'] = round(measurement['chi2'], 2)
             if 'comments' in measurement.keys():
