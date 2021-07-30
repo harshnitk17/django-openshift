@@ -12,7 +12,8 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
+    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css"
+        rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'b2charm/css/index_style.css' %}">
     <title>B2CHARM</title>
 </head>
@@ -28,7 +29,8 @@
                     <i class="fa fa-close" id="btnini" style="font-size:20px"></i>
                     <div class="radio_initial">
                         {% for value , latex in initial %}
-                        <input type="radio" name="initial" value="{{ value }}" class="formbtn" id="id_initial_{{ forloop.counter0 }}">
+                        <input type="radio" name="initial" value="{{ value }}" class="formbtn"
+                            id="id_initial_{{ forloop.counter0 }}">
                         <label for="id_initial_{{ forloop.counter0 }}">{{ latex }}</label>
                         {% endfor %}
 
@@ -41,7 +43,8 @@
                     <i class="fa fa-close" id="btnobs" style="font-size:20px"></i>
                     <div class="radio_obs">
                         {% for value , latex in obs %}
-                        <input type="radio" name="observable" value="{{ value }}" class="formbtn" id="id_observable_{{ forloop.counter0 }}">
+                        <input type="radio" name="observable" value="{{ value }}" class="formbtn"
+                            id="id_observable_{{ forloop.counter0 }}">
                         <label for="id_observable_{{ forloop.counter0 }}">{{ latex }}</label>
                         {% endfor %}
                     </div>
@@ -64,15 +67,15 @@
                     <h6>Daughter Particle Numbers</h6>
 
                     <div class="particle_list">
-                    {% for prt, latex in num %}
-                    <div id="{{ prt }}" style="display: none;">
+                        {% for prt, latex in num %}
+                        <div id="{{ prt }}" style="display: none;">
 
-                        <span class="minus">-</span>
-                        <input type="text" name="{{ prt }}" class="daughterinput" value="0" id="id_{{ prt }}">
-                        <span class="plus">+</span>
-                        <label for="id_{{ prt }}">{{ latex }}</label>
+                            <span class="minus">-</span>
+                            <input type="text" name="{{ prt }}" class="daughterinput" value="0" id="id_{{ prt }}">
+                            <span class="plus">+</span>
+                            <label for="id_{{ prt }}">{{ latex }}</label>
                         </div>
-                    {% endfor %}
+                        {% endfor %}
                     </div>
                 </div>
             </article>
@@ -105,8 +108,8 @@
 
         </tbody>
     </table>
-    <center><button id="checkbox-btn">Generate Overview Plot</button></center><br>
-    <hr>
+    <center><button id="checkbox-btn" href="#plot">Generate Overview Plot</button></center><br>
+    <hr><div id='toTop'>To The Top!</div>
     <div id="plot">
 
     </div>
@@ -118,37 +121,41 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+    <script type="text/javascript"
+        src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
 
     <script src="{% static 'b2charm/js/index.js' %}"></script>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
     <script>
-    $('#checkbox-btn').click(function () {
-        var rows_selected = table.column(0).checkboxes.selected();
-        var selected = '';
-        $.each(rows_selected, function(index, rowId){
-            selected = selected.concat(rowId);
-            selected = selected.concat(',');
-         });
-         $.ajax({
-            url: "/index/post/ajax/plot",
-            type: "POST",
-            data: {
-                csrfmiddlewaretoken: '{{ csrf_token }}' ,
-                "selected": selected,
-           },
-            success: function (json_response) {
-                console.log(json_response);
-                var path = JSON.parse(json_response)["filepath"];
-                $('#plot').prepend('<img  src='+path+'/>')
-            },
-            error: function (xhr, errmsg, err) {
-                console.log(xhr.status + ": " + xhr.responseText);
-            }
+        $('#checkbox-btn').click(function (e) {
+            e.preventDefault();
+            var rows_selected = table.column(0).checkboxes.selected();
+            var selected = '';
+            $.each(rows_selected, function (index, rowId) {
+                selected = selected.concat(rowId);
+                selected = selected.concat(',');
+            });
+            $.ajax({
+                url: "/index/post/ajax/plot",
+                type: "POST",
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    "selected": selected,
+                },
+                success: function (json_response) {
+                    var path = JSON.parse(json_response)["filepath"];
+                    var id = JSON.parse(json_response)["id"];
+                    $('#plot').prepend('<img style="border: 5px solid #555;" class="center" id=' + id + ' src=' + path + '/><button class="btn"><a href="' +path+'" download ><i class="fa fa-download"></i> </a>Download</button><hr>');
+                    $('html,body').animate({ scrollTop: $("#" + id).offset().top }, 'slow');
+                },
+                error: function (xhr, errmsg, err) {
+                    console.log(xhr.status + ": " + xhr.responseText);
+                }
+            });
+
         });
-    });
     </script>
 
 </body>

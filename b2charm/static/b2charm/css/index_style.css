@@ -195,3 +195,18 @@
             box-shadow: 0 5px #666;
             transform: translateY(4px);
           }
+          .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+          }
+          #toTop {
+            padding: 5px 3px;
+            background: #000;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            right: 5px;
+            display: none;
+        }

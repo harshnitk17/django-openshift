@@ -339,7 +339,7 @@ def overview_plot(request):
         img_obj.chk_expiry()
         file_path = "/static/b2charm/user_gen_plots/"+str(file_id)+".png"
         _overview_plot(selected_dic, filename)
-        return JsonResponse(json.dumps({"filepath": file_path}), safe=False, content_type="application/json", status=200)
+        return JsonResponse(json.dumps({"filepath": file_path,"id": str(file_id)}), safe=False, content_type="application/json", status=200)
 
 
 dpi = 120
