@@ -50,8 +50,9 @@
         <form id="filter_form" method="POST">
             {% csrf_token %}
             <article class="card">
-                <div class="text">
-                    <h6>Initial particles </h6>
+                
+                    <p class="heading">Initial particles </p>
+                    <div class="text">
                     <div class="radio_initial">
                         {% for value , latex in initial %}
                         <input type="radio" name="initial" value="{{ value }}" class="formbtn"
@@ -63,8 +64,9 @@
                 </div>
             </article>
             <article class="card">
-                <div class="text">
-                    <h6>Type of observable</h6>
+                
+                    <p class="heading">Type of observable</p>
+                    <div class="text">
                     <div class="radio_obs">
                         {% for value , latex in obs %}
                         <input type="radio" name="observable" value="{{ value }}" class="formbtn"
@@ -76,8 +78,8 @@
             </article>
             {% for name , prt_list in daughter %}
             <article class="card3">
+            <p class="heading">{{ name }}</p>
                 <div class="text">
-                    <h6>{{ name }}</h6>
                     <div class="box_particle">
                         {% for id, latex in prt_list %}
                         <button id="{{ id }}_bt">{{ latex }}</button>
@@ -87,9 +89,9 @@
             </article>
             {% endfor %}
             <article class="card2">
-                <div class="text">
-                    <h6>Daughter Particle Numbers</h6>
-
+                
+                    <p class="heading2">Daughter Particle Numbers</p>
+                    <div class="text">
                     <div class="particle_list">
                         {% for prt, latex in num %}
                         <div id="{{ prt }}" style="display: none;">
