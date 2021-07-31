@@ -13,15 +13,21 @@ $(document).ready(function () {
                     data: JSON.parse(json_response),
                     responsive: true,
                     bDestroy: true,
+                    searching: false,
+                    "ordering": false,
+                    "pageLength": 25,
                     "sDom": '<"top"flp>rt<"bottom"i><"clear">',
                     drawCallback: function () {
                         $('.paginate_button', this.api().table().container())
                             .on('click', function () {
                                 MathJax.typeset();
                             });
+                        $('select[name=table1_length]', this.api().table().container()).on('change', function (e) {
+                            MathJax.typeset();
+                        });
                     },
                     columns: [
-                        { data: 'id'},
+                        { data: 'id' },
                         { data: 'latex' },
                         { data: 'value' },
                         {
@@ -36,16 +42,16 @@ $(document).ready(function () {
                     ],
                     'columnDefs': [
                         {
-                           'targets': 0,
-                           'checkboxes': {
-                              'selectRow': true
-                           }
+                            'targets': 0,
+                            'checkboxes': {
+                                'selectRow': true
+                            }
                         }
-                     ],
-                     'select': {
+                    ],
+                    'select': {
                         'style': 'multi'
-                     },
-                     'order': [[2, 'asc']]
+                    },
+                    'order': [[2, 'asc']]
 
                 });
                 MathJax.typeset();
@@ -62,14 +68,28 @@ $(document).ready(function () {
 
     });
 
-    $('#btnini').on('click', function (event) {
+    $('#clear').on('click',function(e){
         $('input[name=initial]').prop('checked', false);
-        formsubmit();
-    });
-
-    $('#btnobs').on('click', function (event) {
         $('input[name=observable]').prop('checked', false);
+        $('.box_particle button').each(function (index,element) {
+            var btn_id = $(element).attr('id');
+            var input_id = "#id_" + btn_id.slice(0, -3);
+            var btn_selector = "#" + btn_id.slice(0, -3);
+            var counter = $(input_id).val();
+            if (counter != "0") {
+                $(btn_selector).css({ "display": "none" });
+                $(element).css({ "background-color": "#ddd", "border": "2px solid #444" });
+                $(element).hover(function(){
+                    $(element).css({ "background-color": "#dfd"});
+                }, function(){
+                    $(element).css({ "background-color": "#ddd"});
+                });
+                $(input_id).val("0");
+            }
+            
+        });
         formsubmit();
+        
     });
     $('.minus').click(function () {
         var $input = $(this).parent().find('input');
@@ -87,35 +107,49 @@ $(document).ready(function () {
         formsubmit();
 
     });
-    $('.box_particle button').click(function () {
+    $('.box_particle button').click(function (e) {
+        e.preventDefault();
         var btn_id = $(this).attr('id');
-        var input_id = "#id_"+btn_id.slice(0,-3);
-        var btn_selector = "#"+btn_id.slice(0,-3);
+        var input_id = "#id_" + btn_id.slice(0, -3);
+        var btn_selector = "#" + btn_id.slice(0, -3);
         var counter = $(input_id).val();
         if (counter == "0") {
             $(btn_selector).css({ "display": "block" });
-            $(this).css({ "background-color": "#bfb" });
+            $(this).css({ "background-color": "#bfb", "border-color": "#4c4" });
+            $(this).hover(function(){
+                $(this).css({ "background-color": "#bfb"});
+            }, function(){
+                $(this).css({ "background-color": "#bfb"});
+            });
             $(input_id).val("1");
             formsubmit();
         }
         else {
             $(btn_selector).css({ "display": "none" });
-            $(this).css({ "background-color": "#ddd" });
+            $(this).css({ "background-color": "#ddd", "border": "2px solid #444" });
+            $(this).hover(function(){
+                $(this).css({ "background-color": "#dfd"});
+            }, function(){
+                $(this).css({ "background-color": "#ddd"});
+            });
             $(input_id).val("0");
             formsubmit();
         }
         return false;
     });
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('#toTop').fadeIn();
         } else {
             $('#toTop').fadeOut();
         }
     });
-    $("#toTop").click(function() {
-        $("html, body").animate({scrollTop: 0}, 1000);
-     });
-    
+    $("#toTop").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+
+
+
+
 });

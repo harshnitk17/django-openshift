@@ -15,10 +15,36 @@
     <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css"
         rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'b2charm/css/index_style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'b2charm/HFLAV.png' %}" />
     <title>B2CHARM</title>
 </head>
 
 <body>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <a class="navbar-brand" href="/index">
+    <img src="{% static 'b2charm/HFLAV.png' %}" alt="logo" style="width:80px;">
+  </a>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/index">HFLAV-B2CHARM AVERAGES</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button class="navbtn" id="clear">Clear Filters</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="/manual"><button class="navbtn">User Manual</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="cards">
         <form id="filter_form" method="POST">
@@ -26,7 +52,6 @@
             <article class="card">
                 <div class="text">
                     <h6>Initial particles </h6>
-                    <i class="fa fa-close" id="btnini" style="font-size:20px"></i>
                     <div class="radio_initial">
                         {% for value , latex in initial %}
                         <input type="radio" name="initial" value="{{ value }}" class="formbtn"
@@ -40,7 +65,6 @@
             <article class="card">
                 <div class="text">
                     <h6>Type of observable</h6>
-                    <i class="fa fa-close" id="btnobs" style="font-size:20px"></i>
                     <div class="radio_obs">
                         {% for value , latex in obs %}
                         <input type="radio" name="observable" value="{{ value }}" class="formbtn"
@@ -71,7 +95,7 @@
                         <div id="{{ prt }}" style="display: none;">
 
                             <span class="minus">-</span>
-                            <input type="text" name="{{ prt }}" class="daughterinput" value="0" id="id_{{ prt }}">
+                            <input type="text" name="{{ prt }}" class="daughterinput" value="0" id="id_{{ prt }}" >
                             <span class="plus">+</span>
                             <label for="id_{{ prt }}">{{ latex }}</label>
                         </div>
@@ -83,13 +107,13 @@
     </main>
 
     <br>
-    <hr>
+
 
     <table cellpadding="0" cellspacing="0" border="0" class="table" id="table1" align="center">
         <thead>
             <tr>
                 <th>Select for Overview Plot</th>
-                <th>Latex</th>
+                <th>Observable</th>
                 <th>Value and Error</th>
                 <th>Detail</th>
 
@@ -98,7 +122,7 @@
         <tfoot>
             <tr>
                 <th>Select for Overview Plot</th>
-                <th>Latex</th>
+                <th>Observable</th>
                 <th>Value and Error</th>
                 <th>Detail</th>
 
@@ -108,8 +132,10 @@
 
         </tbody>
     </table>
+    <hr>
     <center><button id="checkbox-btn" href="#plot">Generate Overview Plot</button></center><br>
-    <hr><div id='toTop'>To The Top!</div>
+
+    <div id='toTop'>To The Top!</div>
     <div id="plot">
 
     </div>
@@ -147,8 +173,8 @@
                 success: function (json_response) {
                     var path = JSON.parse(json_response)["filepath"];
                     var id = JSON.parse(json_response)["id"];
-                    $('#plot').prepend('<img style="border: 5px solid #555;" class="center" id=' + id + ' src=' + path + '/><button class="btn"><a href="' +path+'" download ><i class="fa fa-download"></i> </a>Download</button><hr>');
-                    $('html,body').animate({ scrollTop: $("#" + id).offset().top }, 'slow');
+                    $('#plot').prepend('<img style="border: 5px solid #555;" class="center" id="' + id + '" src="' + path + '" /><a href="' + path + '" download ><button class="btn"><i class="fa fa-download"></i> Download</button></a><hr>');
+                    $('html,body').animate({ scrollTop: $("#" + id).offset().top }, 'medium');
                 },
                 error: function (xhr, errmsg, err) {
                     console.log(xhr.status + ": " + xhr.responseText);

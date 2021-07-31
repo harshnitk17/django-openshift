@@ -65,7 +65,6 @@ def post_form(request):
                     req[item] = req[item][0]
                 else:
                     req[item] = int(req[item][0])
-            print (req)
             config = build_config(req)
             results = Parameters.objects.all()
             dic = {}

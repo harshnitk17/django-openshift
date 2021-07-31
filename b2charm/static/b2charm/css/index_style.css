@@ -8,6 +8,7 @@
             display: inline-block;
             vertical-align: middle;
             text-align: center;
+            cursor: pointer;
         }
 
         .daughterinput {
@@ -19,6 +20,7 @@
             border-radius: 4px;
             display: inline-block;
             vertical-align: middle;
+            cursor: pointer;
         }
 
 
@@ -35,15 +37,13 @@
             font-size: 15px;
             border: 2px solid #444;
             border-radius: 4px;
+            cursor: pointer;
         }
 
         .radio_initial label:hover {
             background-color: #dfd;
         }
 
-        .radio_initial input[type="radio"]:focus+label {
-            border: 2px dashed #444;
-        }
 
         .radio_initial input[type="radio"]:checked+label {
             background-color: #bfb;
@@ -63,14 +63,11 @@
             font-size: 15px;
             border: 2px solid #444;
             border-radius: 4px;
+            cursor: pointer;
         }
 
         .radio_obs label:hover {
             background-color: #dfd;
-        }
-
-        .radio_obs input[type="radio"]:focus+label {
-            border: 2px dashed #444;
         }
 
         .radio_obs input[type="radio"]:checked+label {
@@ -86,6 +83,7 @@
             border: 2px solid #444;
             border-radius: 4px;
             margin-bottom: 5px;
+            cursor: pointer;
         }
 
         .box_particle button:hover {
@@ -103,7 +101,7 @@
             margin: 10px;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-            height: 315px;
+            height: 290px;
             overflow-y: hidden;
             width: 150px;
             display: inline-block;
@@ -116,7 +114,7 @@
             margin: 10px;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-            height: 310px;
+            height: 290px;
             overflow-y: scroll;
             width: 220px;
             display: inline-block;
@@ -128,7 +126,7 @@
             margin: 10px;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-            height: 310px;
+            height: 290px;
             overflow-y: hidden;
             width: 150px;
             display: inline-block;
@@ -209,4 +207,21 @@
             bottom: 0;
             right: 5px;
             display: none;
+            cursor: pointer;
         }
+        
+        .navbtn {
+            background-color: lightpink; /* Green */
+            border-radius: 4px;
+            color: black;
+            padding: 10px 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin-left: 10px;
+            height: 40px;
+            cursor: pointer;
+        }
+        
