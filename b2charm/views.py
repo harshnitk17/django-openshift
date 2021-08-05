@@ -10,9 +10,28 @@ from datetime import date
 from copy import deepcopy
 import uuid
 import pathlib
-from averaging.particles import var_particle_map,particle_filter_names,particle_categories,var_particle_map_inv
+from averaging.particles import particle_filter_names,particle_categories
 
-
+var_particle_map={}
+var_particle_map_inv={}
+combined_particle_list=[]
+for cat in particle_categories:
+    combined_particle_list+=particle_categories[cat]
+for prt in combined_particle_list:
+    if '*' in prt or '+' in prt:
+        prt_new=prt
+        if '*' in prt:
+            cnt = prt.count('*')
+            prt_new = prt.replace('*','S',cnt)
+        if '+' in prt_new:
+            cnt = prt_new.count('+')
+            prt_new = prt_new.replace('+','plus',cnt)
+        var_particle_map[prt_new]=prt
+        var_particle_map_inv[prt]=prt_new
+    else:
+        var_particle_map[prt]=prt
+        var_particle_map_inv[prt]=prt
+        
 def build_config(data):
     config = {}
     if 'initial' in data.keys():
