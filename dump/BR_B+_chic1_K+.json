@@ -1,0 +1,109 @@
+{
+    "id": "BR_B+_chic1_K+",
+    "latex": "{\\cal B}(B^+ \\to \\chi_{c1} K^+)",
+    "chi2": 11.236550689127943,
+    "ndf": 7,
+    "p": 0.12862845837280598,
+    "value": 0.00048532412531262034,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "chic": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 2.2135309287787063e-05,
+    "pdg_value": 0.000474464371453681,
+    "pdg_error_pos": 2.22070279192093e-05,
+    "pdg_error_neg": -2.22048760837543e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=171&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/794094",
+            "text": "Phys.Rev.Lett. <b>102</b>,132001 (2009)",
+            "value": 0.00045000000000000004,
+            "stat_error": 1e-05,
+            "syst_error": 3e-05,
+            "digits": 1,
+            "chi2": 1.247793829101702
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/897836",
+            "text": "Phys.Rev.Lett. <b>107</b>,091803 (2011)",
+            "value": 0.0004940000000000001,
+            "stat_error": 1.1000000000000001e-05,
+            "syst_error": 3.3e-05,
+            "digits": 2,
+            "chi2": 0.0622072740422451
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1624416",
+            "text": "Phys.Rev.D <b>97</b>,012005 (2018)",
+            "value": 0.00058,
+            "stat_error": 9e-05,
+            "syst_error": 5e-05,
+            "digits": 1,
+            "chi2": 0.8456152120585299
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/696138",
+            "text": "Phys.Rev.Lett. <b>96</b>,052002 (2006)",
+            "value": 0.0008,
+            "stat_error": 0.00014,
+            "syst_error": 7e-05,
+            "digits": 1,
+            "chi2": 4.041669637153777
+        },
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/588090",
+            "text": "Phys.Rev.D <b>66</b>,052005 (2002)",
+            "value": 0.0015500000000000002,
+            "stat_error": 0.0005400000000000001,
+            "syst_error": 0.0002,
+            "digits": 1,
+            "chi2": 3.418379729014887
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/667864",
+            "text": "Phys.Rev.Lett. <b>94</b>,141801 (2005)",
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} K^*(892)^+) / {\\cal B}(B^+ \\to \\chi_{c1} K^+)",
+            "chi2": 0.13376748701805358
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/721033",
+            "text": "Phys.Rev.D <b>74</b>,051103 (2006)",
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} \\pi^+) / {\\cal B}(B^+ \\to \\chi_{c1} K^+)",
+            "chi2": 0.012810448284520529
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_chic1_pi+",
+            "value": 2.1338264317984137e-05,
+            "correlation": 0.18169070191326872,
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} \\pi^+)",
+            "error": 3.245826766738333e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_chic1_K*+",
+            "value": 0.0002889539364900979,
+            "correlation": 0.058116771191760876,
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} K^*(892)^+)",
+            "error": 4.9635442133990316e-05,
+            "unit_exp": -4,
+            "digits": 2
+        }
+    ]
+}

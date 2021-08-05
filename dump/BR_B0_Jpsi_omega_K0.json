@@ -1,0 +1,58 @@
+{
+    "id": "BR_B0_Jpsi_omega_K0",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi \\omega(782) K^0)",
+    "chi2": 0.007479663540666065,
+    "ndf": 1,
+    "p": 0.9310808414423004,
+    "value": 0.000227947227887861,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "omega": 1,
+        "K0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 3.383999896039366e-05,
+    "pdg_value": 0.00023,
+    "pdg_error": 4.24264068711929e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=440&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/856587",
+            "text": "Phys.Rev.D <b>82</b>,011101 (2010)",
+            "value": 0.00022999999999999998,
+            "stat_error": 3e-05,
+            "syst_error": 3e-05,
+            "digits": 1,
+            "chi2": 0.0023410407468752985
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/856587",
+            "text": "Phys.Rev.D <b>82</b>,011101 (2010)",
+            "value": 0.00022537311905457331,
+            "stat_error": 3.219615986493905e-05,
+            "syst_error_pos": 4.788965085234727e-05,
+            "syst_error_neg": -3.893892636927002e-05,
+            "digits": 1,
+            "using": "${\\cal B}(B^+ \\to J/\\psi \\omega(782) K^+)$",
+            "chi2": 0.003196065446619976
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_Jpsi_omega_K+",
+            "value": 0.0003219615986493905,
+            "correlation": 0.3982968099789207,
+            "latex": "{\\cal B}(B^+ \\to J/\\psi \\omega(782) K^+)",
+            "error_pos": 5.064534446261337e-05,
+            "error_neg": -3.128693007235593e-05,
+            "unit_exp": -4,
+            "digits": 2
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "id": "Deltapara_B_KS_chi1c",
+    "latex": "\\delta_{\\parallel} ( B \\to \\chi_{c1} K^{*} )",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.0,
+    "filter": {
+        "polarization": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.3162277659666504,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.0,
+            "stat_error": 0.3,
+            "syst_error": 0.1,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

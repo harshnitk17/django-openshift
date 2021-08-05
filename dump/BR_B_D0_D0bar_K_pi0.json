@@ -1,0 +1,33 @@
+{
+    "id": "BR_B_D0_D0bar_K_pi0",
+    "latex": "{\\cal{B}} ( B \\to D^{0} \\bar{D}^{0} \\pi^{0} K )",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.000127,
+    "filter": {
+        "BR": 1,
+        "D0": 2,
+        "K": 1,
+        "pi0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error_pos": 3.801315561749637e-05,
+    "error_neg": -4.981533419098918e-05,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/720033",
+            "text": "Phys.Rev.Lett. <b>97</b>,162002 (2006)",
+            "color": "red",
+            "value": 0.000127,
+            "stat_error": 3.1e-05,
+            "syst_error_pos": 2.2000000000000003e-05,
+            "syst_error_neg": -3.9000000000000006e-05,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

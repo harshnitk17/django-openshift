@@ -1,0 +1,28 @@
+{
+    "id": "BR_B+_X(3872)+_K0.BR_X(3872)+_Jpsi_pi+_pi0",
+    "latex": "{\\cal B}(B^+ \\to X(3872)^+ K^0) \\times {\\cal B}(X(3872)^+ \\to J/\\psi \\pi^+ \\pi^0)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 2.2000000000000003e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "XYZ": 1,
+        "K0": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 6.1e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=402&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/667544",
+            "text": "Phys.Rev.D <b>71</b>,031501 (2005)",
+            "value": 2.2000000000000003e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

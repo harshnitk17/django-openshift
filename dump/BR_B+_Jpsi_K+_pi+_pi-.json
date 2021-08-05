@@ -1,0 +1,54 @@
+{
+    "id": "BR_B+_Jpsi_K+_pi+_pi-",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi K^+ \\pi^+ \\pi^-)",
+    "chi2": 12.115906274859576,
+    "ndf": 2,
+    "p": 0.0023391839788250036,
+    "value": 0.0008071607646505797,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "K": 1,
+        "pi": 2
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 5.2088924271196484e-05,
+    "pdg_value": 0.000811418155805151,
+    "pdg_error": 0.000127769419602655,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=19&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/871475",
+            "text": "Phys.Rev.D <b>83</b>,032005 (2011)",
+            "value": 0.0007160000000000001,
+            "stat_error": 1e-05,
+            "syst_error": 6e-05,
+            "digits": 2,
+            "chi2": 2.246022976129291
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/651834",
+            "text": "Phys.Rev.D <b>71</b>,071103 (2005)",
+            "value": 0.00116,
+            "stat_error": 7e-05,
+            "syst_error": 9e-05,
+            "digits": 1,
+            "chi2": 9.576578923227967
+        },
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/588090",
+            "text": "Phys.Rev.D <b>66</b>,052005 (2002)",
+            "value": 0.0006900000000000001,
+            "stat_error": 0.00018,
+            "syst_error": 0.00012,
+            "digits": 1,
+            "chi2": 0.2933043755023187
+        }
+    ],
+    "correlations": []
+}

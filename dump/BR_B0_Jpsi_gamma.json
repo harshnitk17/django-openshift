@@ -1,0 +1,35 @@
+{
+    "id": "BR_B0_Jpsi_gamma",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi \\gamma)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 1.5e-06,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "photon": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 1.5e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=279&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1398352",
+            "text": "Phys.Rev.D <b>92</b>,112002 (2015)",
+            "value": 1.5e-06,
+            "digits": 1
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656094",
+            "text": "Phys.Rev.D <b>70</b>,091104 (2004)",
+            "value": 1.6000000000000001e-06,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

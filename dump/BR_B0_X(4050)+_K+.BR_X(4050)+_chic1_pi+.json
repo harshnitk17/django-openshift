@@ -1,0 +1,42 @@
+{
+    "id": "BR_B0_X(4050)+_K+.BR_X(4050)+_chic1_pi+",
+    "latex": "{\\cal B}(B^0 \\to X(4050)^+ K^+) \\times {\\cal B}(X(4050)^+ \\to \\chi_{c1} \\pi^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 3.0000000000000004e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "XYZ": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "error_pos": 3.990729815305815e-05,
+    "error_neg": -1.7888543819998333e-05,
+    "pdg_value": 0.0,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=1&parCode=M191",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/789101",
+            "text": "Phys.Rev.D <b>78</b>,072004 (2008)",
+            "value": 3.0000000000000004e-05,
+            "stat_error_pos": 1.5000000000000002e-05,
+            "stat_error_neg": -8.000000000000001e-06,
+            "syst_error_pos": 3.7000000000000005e-05,
+            "syst_error_neg": -1.6000000000000003e-05,
+            "digits": 1,
+            "chi2": 0.0
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/955166",
+            "text": "Phys.Rev.D <b>85</b>,052003 (2012)",
+            "value": 1.8e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

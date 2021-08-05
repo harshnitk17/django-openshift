@@ -1,0 +1,66 @@
+{
+    "id": "BR_B0_chic1_K*0",
+    "latex": "{\\cal B}(B^0 \\to \\chi_{c1} K^*(892)^0)",
+    "chi2": 1.252353169309448,
+    "ndf": 3,
+    "p": 0.7404771518933267,
+    "value": 0.0002609740602608871,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "chic": 1,
+        "K*0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 2.4615110915744055e-05,
+    "pdg_value": 0.0002381612287923569,
+    "pdg_error_pos": 1.962301632254193e-05,
+    "pdg_error_neg": -1.854056857395862e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=127&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/794094",
+            "text": "Phys.Rev.Lett. <b>102</b>,132001 (2009)",
+            "value": 0.00025,
+            "stat_error": 2e-05,
+            "syst_error": 2e-05,
+            "digits": 1,
+            "chi2": 0.15053749826197738
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/689881",
+            "text": "Phys.Lett.B <b>634</b>,155 (2006)",
+            "value": 0.00031,
+            "stat_error": 3e-05,
+            "syst_error": 7e-05,
+            "digits": 1,
+            "chi2": 0.41440392539709087
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/667864",
+            "text": "Phys.Rev.Lett. <b>94</b>,141801 (2005)",
+            "value": 0.0002831177149996169,
+            "stat_error": 4.325409534716369e-05,
+            "syst_error": 5.107887473926613e-05,
+            "digits": 2,
+            "using": "${\\cal B}(B^0 \\to \\chi_{c1} K^0)$",
+            "chi2": 0.11966954302295475
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B0_chic1_K0",
+            "value": 0.00039321904861057904,
+            "correlation": 0.09810773475873658,
+            "latex": "{\\cal B}(B^0 \\to \\chi_{c1} K^0)",
+            "error": 2.7163551922194712e-05,
+            "unit_exp": -4,
+            "digits": 2
+        }
+    ]
+}

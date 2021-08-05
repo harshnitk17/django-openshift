@@ -1,0 +1,31 @@
+{
+    "id": "BR_B+_psi2(3823)_K+.BR_psi2(3823)_chic1_gamma",
+    "latex": "{\\cal B}(B^+ \\to \\psi_2(3823) K^+) \\times {\\cal B}(\\psi_2(3823) \\to \\chi_{c1} \\gamma)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 9.699999999999999e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error": 3.0083217916758396e-06,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1228343",
+            "text": "Phys.Rev.Lett. <b>111</b>,032001 (2013)",
+            "color": "red",
+            "value": 9.699999999999999e-06,
+            "stat_error": 2.8e-06,
+            "syst_error": 1.1e-06,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

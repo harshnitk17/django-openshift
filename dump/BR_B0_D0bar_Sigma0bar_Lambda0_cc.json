@@ -1,0 +1,35 @@
+{
+    "id": "BR_B0_D0bar_Sigma0bar_Lambda0_cc",
+    "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 \\bar{\\Sigma}^0 \\Lambda^0 \\mathrm{+c.c.})",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 1.4999999999999999e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D0": 1,
+        "Sigma": 1,
+        "Lambda": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error_pos": 9.487371931285001e-06,
+    "error_neg": -8.544003745317714e-06,
+    "pdg_value": 3.1e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=534&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/1278588",
+            "text": "Phys.Rev.D <b>89</b>,112002 (2014)",
+            "value": 1.4999999999999999e-05,
+            "stat_error_pos": 9e-06,
+            "stat_error_neg": -8e-06,
+            "syst_error": 3e-06,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

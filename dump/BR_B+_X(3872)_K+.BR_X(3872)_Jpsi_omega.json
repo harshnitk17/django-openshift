@@ -1,0 +1,30 @@
+{
+    "id": "BR_B+_X(3872)_K+.BR_X(3872)_Jpsi_omega",
+    "latex": "{\\cal B}(B^+ \\to X(3872) K^+) \\times {\\cal B}(X(3872) \\to J/\\psi \\omega(782))",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 6e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error": 2.236067977144912e-06,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/856587",
+            "text": "Phys.Rev.D <b>82</b>,011101 (2010)",
+            "value": 6e-06,
+            "stat_error": 2.0000000000000003e-06,
+            "syst_error": 1.0000000000000002e-06,
+            "digits": 0,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,30 @@
+{
+    "id": "ACP_B+_Jpsi_K+",
+    "latex": "A_\\mathrm{CP}(B^+ \\to J/\\psi K^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.0059,
+    "filter": {
+        "ACP": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "K": 1
+    },
+    "unit_exp": -3,
+    "digits": 1,
+    "error": 0.0036674241646387504,
+    "measurements": [
+        {
+            "experiment": "D0",
+            "link": "https://inspirehep.net/literature/1227374",
+            "text": "Phys.Rev.Lett. <b>110</b>,241801 (2013)",
+            "value": 0.0059,
+            "stat_error": 0.0036,
+            "syst_error": 0.0007000000000000001,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

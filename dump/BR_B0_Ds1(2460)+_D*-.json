@@ -1,0 +1,117 @@
+{
+    "id": "BR_B0_Ds1(2460)+_D*-",
+    "latex": "{\\cal B}(B^0 \\to D_{s1}(2460)^+ D^*(2010)^-)",
+    "chi2": 4.891738964971583,
+    "ndf": 12,
+    "p": 0.9614974355698116,
+    "value": 0.010049060748884899,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Ds**": 1,
+        "D*+": 1
+    },
+    "unit_exp": -2,
+    "digits": 2,
+    "error": 0.0018065514502656006,
+    "pdg_value": 0.00928257177959933,
+    "pdg_error_pos": 0.00225089814254783,
+    "pdg_error_neg": -0.0021848030379366,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=98&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656424",
+            "text": "Phys.Rev.Lett. <b>93</b>,181801 (2004)",
+            "value": 0.012534547634532274,
+            "stat_error": 0.0016349409958085572,
+            "syst_error_pos": 0.0050401874399606085,
+            "syst_error_neg": -0.0037175732009259665,
+            "digits": 2,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)$",
+            "chi2": 0.4334417452143619,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/716811",
+            "text": "Phys.Rev.D <b>74</b>,031103 (2006)",
+            "value": 0.0088,
+            "stat_error": 0.002,
+            "syst_error": 0.0014000000000000002,
+            "digits": 2,
+            "chi2": 0.2617705963766615
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656424",
+            "text": "Phys.Rev.Lett. <b>93</b>,181801 (2004)",
+            "value": 0.010290203029804885,
+            "stat_error": 0.0022451352065028843,
+            "syst_error_pos": 0.00431828072784888,
+            "syst_error_neg": -0.00332439406685504,
+            "digits": 2,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^{*+} \\pi^0)$",
+            "chi2": 0.0034739841556223144,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_Ds1(2460)+_D0bar",
+            "value": 0.0032788213802905724,
+            "correlation": 0.1419920359113099,
+            "latex": "{\\cal B}(B^+ \\to D_{s1}(2460)^+ \\bar{D}^0)",
+            "error": 0.0007797208423260827,
+            "unit_exp": -3,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Ds1(2460)+_D-",
+            "value": 0.00406940652895211,
+            "correlation": 0.11916697833347106,
+            "latex": "{\\cal B}(B^0 \\to D_{s1}(2460)^+ D^-)",
+            "error": 0.000859093161811527,
+            "unit_exp": -3,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_Ds1(2460)+_D*0bar",
+            "value": 0.01049405203500367,
+            "correlation": 0.08660882407214002,
+            "latex": "{\\cal B}(B^+ \\to D_{s1}(2460)^+ \\bar{D}^*(2007)^0)",
+            "error": 0.0024309281385648676,
+            "unit_exp": -2,
+            "digits": 2
+        },
+        {
+            "type": "external",
+            "name": "BR_Ds1(2460)+_Ds+_gamma",
+            "value": 0.18349286045741087,
+            "correlation": -0.2600603693283694,
+            "latex": "{\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)",
+            "error": 0.028243081075110102,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.00762504635934031
+        },
+        {
+            "type": "external",
+            "name": "BR_Ds1(2460)+_Ds*+_pi0",
+            "value": 0.5344889682030196,
+            "correlation": -0.20597991618742723,
+            "latex": "{\\cal B}(D_{s1}(2460)^+ \\to D_s^{*+} \\pi^0)",
+            "error": 0.08229947511689806,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.2453758393247673
+        }
+    ]
+}

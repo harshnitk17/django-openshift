@@ -1,0 +1,32 @@
+{
+    "id": "BR_B+_psi(4260)_K+.BR_psi(4260)_Jpsi_pi+_pi-",
+    "latex": "{\\cal B}(B^+ \\to \\psi(4260) K^+) \\times {\\cal B}(\\psi(4260) \\to J/\\psi \\pi^+ \\pi^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 7.280109888125116e-06,
+    "pdg_value": 1.56e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=421&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/687944",
+            "text": "Phys.Rev.D <b>73</b>,011101 (2006)",
+            "value": 2e-05,
+            "stat_error": 7e-06,
+            "syst_error": 2.0000000000000003e-06,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

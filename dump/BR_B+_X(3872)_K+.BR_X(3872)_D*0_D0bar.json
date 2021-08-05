@@ -1,0 +1,33 @@
+{
+    "id": "BR_B+_X(3872)_K+.BR_X(3872)_D*0_D0bar",
+    "latex": "{\\cal B}(B^+ \\to X(3872) K^+) \\times {\\cal B}(X(3872) \\to D^*(2007)^0 \\bar{D}^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.000167,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 5.920304046989333e-05,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/758167",
+            "text": "Phys.Rev.D <b>77</b>,011102 (2008)",
+            "value": 0.000167,
+            "stat_error": 3.6e-05,
+            "syst_error": 4.7e-05,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "mass 3 sigma away from X(3872)"
+            ]
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,34 @@
+{
+    "id": "BR_B0_D0bar_p_pbar_pi+_pi-",
+    "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 p \\bar{p} \\pi^+ \\pi^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00029900000000000006,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D0": 1,
+        "p": 2,
+        "pi": 2
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 4.965883606385936e-05,
+    "pdg_value": 0.000299,
+    "pdg_error": 4.96588360717405e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=509&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/946659",
+            "text": "Phys.Rev.D <b>85</b>,092017 (2012)",
+            "value": 0.00029900000000000006,
+            "stat_error": 2.1e-05,
+            "syst_error": 4.5e-05,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

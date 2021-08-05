@@ -1,0 +1,26 @@
+{
+    "id": "BR_B+_X(3872)_K+.BR_X(3872)_D0_D0bar_pi0",
+    "latex": "{\\cal B}(B^+ \\to X(3872) K^+) \\times {\\cal B}(X(3872) \\to D^0 \\bar{D}^0 \\pi^0)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 6.000000000000001e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/623994",
+            "text": "Phys.Rev.Lett. <b>93</b>,051803 (2004)",
+            "value": 6.000000000000001e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

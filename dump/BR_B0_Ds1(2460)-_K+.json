@@ -1,0 +1,28 @@
+{
+    "id": "BR_B0_Ds1(2460)-_K+",
+    "latex": "{\\cal B}(B^0 \\to D_{s1}(2460)^- K^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 5.1228151202001465e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Ds**": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/658669",
+            "text": "Phys.Rev.Lett. <b>94</b>,061802 (2005)",
+            "color": "red",
+            "value": 5.1228151202001465e-05,
+            "digits": 2,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)$"
+        }
+    ],
+    "correlations": []
+}

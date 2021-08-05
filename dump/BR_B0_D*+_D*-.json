@@ -1,0 +1,44 @@
+{
+    "id": "BR_B0_D*+_D*-",
+    "latex": "{\\cal B}(B^0 \\to D^*(2010)^+ D^*(2010)^-)",
+    "chi2": 0.04217321140398039,
+    "ndf": 1,
+    "p": 0.8372899531525071,
+    "value": 0.0007895972027972027,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D*+": 2
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 6.062522729193262e-05,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1123656",
+            "text": "Phys.Rev.D <b>86</b>,071103 (2012)",
+            "color": "red",
+            "value": 0.000782,
+            "stat_error": 3.8e-05,
+            "syst_error": 6e-05,
+            "digits": 2,
+            "chi2": 0.011442801415904853
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/714507",
+            "text": "Phys.Rev.D <b>73</b>,112004 (2006)",
+            "color": "red",
+            "value": 0.00081,
+            "stat_error": 6e-05,
+            "syst_error": 9.97296345125159e-05,
+            "digits": 1,
+            "chi2": 0.030730409988075538,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

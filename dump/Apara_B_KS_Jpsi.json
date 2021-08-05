@@ -1,0 +1,51 @@
+{
+    "id": "Apara_B_KS_Jpsi",
+    "latex": "\\vert{\\cal{A}}_{\\parallel}\\vert^{2} ( B \\to J/\\psi K^{*} )",
+    "chi2": 1.4615466214066006,
+    "ndf": 2,
+    "p": 0.4815364687660769,
+    "value": 0.22194261164739576,
+    "filter": {
+        "polarization": 1,
+        "Jpsi": 1
+    },
+    "unit_exp": 0,
+    "digits": 4,
+    "error": 0.007168522591678605,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1242126",
+            "text": "Phys.Rev.D <b>88</b>,052002 (2013)",
+            "color": "red",
+            "value": 0.227,
+            "stat_error": 0.004,
+            "syst_error": 0.011,
+            "digits": 3,
+            "chi2": 0.18669472225589123
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.211,
+            "stat_error": 0.01,
+            "syst_error": 0.006,
+            "digits": 3,
+            "chi2": 0.8804466887185404
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/680703",
+            "text": "Phys.Rev.Lett. <b>95</b>,091601 (2005)",
+            "color": "red",
+            "value": 0.231,
+            "stat_error": 0.012,
+            "syst_error": 0.008,
+            "digits": 3,
+            "chi2": 0.39440521043216886
+        }
+    ],
+    "correlations": []
+}

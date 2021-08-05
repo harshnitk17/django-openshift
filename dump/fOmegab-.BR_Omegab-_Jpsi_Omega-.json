@@ -1,0 +1,45 @@
+{
+    "id": "fOmegab-.BR_Omegab-_Jpsi_Omega-",
+    "latex": "f_{\\Omega_b^-} \\times {\\cal B}(\\Omega_b^- \\to J/\\psi \\Omega^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.7045e-06,
+    "filter": {
+        "fOmegab-": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error_pos": 1.1633102846587913e-06,
+    "error_neg": -8.235331965875145e-07,
+    "pdg_value": 2.90228747905673e-06,
+    "pdg_error_pos": 1.05197977063185e-06,
+    "pdg_error_neg": -8.13993664575821e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=1&parCode=S063",
+    "measurements": [
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/820851",
+            "text": "Phys.Rev.D <b>80</b>,072003 (2009)",
+            "value": 2.7045e-06,
+            "stat_error_pos": 1.0217e-06,
+            "stat_error_neg": -7.212000000000001e-07,
+            "syst_error": 4.632055172247127e-07,
+            "digits": 2,
+            "using": "$f_{\\Lambda_b^0} \\times {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)$",
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "fLambdab0.BR_Lambdab0_Jpsi_Lambda0",
+            "value": 6.0100000000000004e-05,
+            "correlation": 0.4045120838092357,
+            "latex": "f_{\\Lambda_b^0} \\times {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "error": 8.798630398117279e-06,
+            "unit_exp": -5,
+            "digits": 2
+        }
+    ]
+}

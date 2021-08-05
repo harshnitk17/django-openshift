@@ -1,0 +1,32 @@
+{
+    "id": "BR_B+_Jpsi_pi+_pi0",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi \\pi^+ \\pi^0)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 7.2999999999999996e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "pi": 1,
+        "pi0": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 7.3e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=478&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748487",
+            "text": "Phys.Rev.D <b>76</b>,031101 (2007)",
+            "value": 7.2999999999999996e-06,
+            "digits": 1,
+            "comments": [
+                "non resonant only"
+            ]
+        }
+    ],
+    "correlations": []
+}

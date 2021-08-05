@@ -1,0 +1,49 @@
+{
+    "id": "BR_Bs0_psi2S_K-_pi+",
+    "latex": "{\\cal B}(B_s^0 \\to \\psi(2S) K^- \\pi^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 3.1204e-05,
+    "filter": {
+        "BR": 1,
+        "Bs": 1,
+        "psi2S": 1,
+        "K": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.690146589659112e-06,
+    "pdg_value": 3.1204e-05,
+    "pdg_error": 3.69095749636866e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=118&parCode=S086",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1355376",
+            "text": "Phys.Lett.B <b>747</b>,484 (2015)",
+            "value": 3.1204e-05,
+            "stat_error": 2.0879999999999997e-06,
+            "syst_error": 3.0432689737408046e-06,
+            "digits": 3,
+            "using": "$None$",
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "BR_B0bar_K-pi+_psi2S",
+            "value": 0.00058,
+            "correlation": 0.5682086467346009,
+            "error": 3.8991418531259224e-05,
+            "unit_exp": -4,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ]
+}

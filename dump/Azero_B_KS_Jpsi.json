@@ -1,0 +1,40 @@
+{
+    "id": "Azero_B_KS_Jpsi",
+    "latex": "\\vert{\\cal{A}}_{0}\\vert^{2} ( B \\to J/\\psi K^{*} )",
+    "chi2": 0.798029556650238,
+    "ndf": 1,
+    "p": 0.3716831534088234,
+    "value": 0.5640246305418719,
+    "filter": {
+        "polarization": 1,
+        "Jpsi": 1
+    },
+    "unit_exp": 0,
+    "digits": 3,
+    "error": 0.010015382259233967,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.556,
+            "stat_error": 0.009,
+            "syst_error": 0.01,
+            "digits": 3,
+            "chi2": 0.3557717974228874
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/680703",
+            "text": "Phys.Rev.Lett. <b>95</b>,091601 (2005)",
+            "color": "red",
+            "value": 0.574,
+            "stat_error": 0.012,
+            "syst_error": 0.009,
+            "digits": 3,
+            "chi2": 0.44225775922735056
+        }
+    ],
+    "correlations": []
+}

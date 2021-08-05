@@ -1,0 +1,169 @@
+{
+    "id": "BR_B0_D0bar_K+_K-",
+    "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 K^+ K^-)",
+    "chi2": 3.0091575874277288,
+    "ndf": 11,
+    "p": 0.99060430968581,
+    "value": 5.920694015599169e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D0": 1,
+        "K": 2
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.8819195407683396e-06,
+    "pdg_value": 5.927083051209317e-05,
+    "pdg_error": 5.15833602990483e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=507&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1681145",
+            "text": "Phys.Rev.D <b>98</b>,072006 (2018)",
+            "value": 5.8258152802014365e-05,
+            "stat_error": 3.3772842204066294e-06,
+            "syst_error": 3.71138594396559e-06,
+            "digits": 2,
+            "using": "${\\cal B}(B^0 \\to \\bar{D}^0 \\pi^+ \\pi^-)$",
+            "chi2": 0.05051059998454373
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1681145",
+            "text": "Phys.Rev.D <b>98</b>,072006 (2018)",
+            "value": 6.1e-05,
+            "stat_error": 4.000000000000001e-06,
+            "syst_error": 4.242640687119286e-06,
+            "digits": 1,
+            "chi2": 0.09456069424103253,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_pi+_pi-",
+            "value": 0.0008443210551016574,
+            "correlation": 0.4733512655092079,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 \\pi^+ \\pi^-)",
+            "error": 3.9313803392873604e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D0bar_K-_pi+",
+            "value": 0.0009962595406022808,
+            "correlation": 0.18434913938849032,
+            "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^0 K^- \\pi^+)",
+            "error": 0.00011917082363214512,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_K+_pi-",
+            "value": 8.917840998345443e-05,
+            "correlation": 0.17966889972148667,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 K^+ \\pi^-)",
+            "error": 8.631436807314034e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D0bar_K+_K-",
+            "value": 0.0007851876040340239,
+            "correlation": 0.16997742105359775,
+            "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^0 K^+ K^-)",
+            "error": 0.00010187778882569078,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D0bar_phi",
+            "value": 2.7690674057510082e-05,
+            "correlation": 0.15647358536834505,
+            "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^0 \\phi(1020))",
+            "error": 3.100110407720312e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D*0bar_phi",
+            "value": 3.480452769561989e-05,
+            "correlation": 0.1517521953844357,
+            "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^*(2007)^0 \\phi(1020))",
+            "error": 4.560295672970422e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D0bar_K*0bar",
+            "value": 0.0003612614943495664,
+            "correlation": 0.05520497644388005,
+            "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^0 \\bar{K}^*(892)^0)",
+            "error": 4.392051994942594e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_phi",
+            "value": 1.0131452955278758e-06,
+            "correlation": 0.034875394660995686,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 \\phi(1020))",
+            "error": 6.447681671219164e-07,
+            "unit_exp": -6,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_K*0",
+            "value": 4.317979824714458e-05,
+            "correlation": 0.03300470548995761,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 K^*(892)^0)",
+            "error": 4.159549779678285e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_rho0",
+            "value": 0.00030624596762243315,
+            "correlation": 0.0066988762449300444,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 \\rho^0(770))",
+            "error": 4.573799506550995e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_D0bar_omega",
+            "value": 0.00025365173484739683,
+            "correlation": 9.463140126309242e-05,
+            "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 \\omega(782))",
+            "error": 1.5600572367231095e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "external",
+            "name": "BR_K*0_K+_pi-",
+            "value": 0.9990199656812333,
+            "correlation": -1.1480474238687595e-05,
+            "latex": "{\\cal B}(K^*(892)^0 \\to K^+ \\pi^-)",
+            "error": 8.999999236775288e-05,
+            "unit_exp": 0,
+            "digits": 6,
+            "chi2": 1.4540466037022048e-07
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "id": "P_Lambdab0_Jpsi_Lambda0",
+    "latex": "P(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+    "chi2": 0.2879999999999999,
+    "ndf": 1,
+    "p": 0.5915050369949164,
+    "value": 0.034559999999999994,
+    "filter": {
+        "P": 1,
+        "Lambdab": 1,
+        "Jpsi": 1,
+        "Lambda": 1
+    },
+    "unit_exp": -2,
+    "digits": 1,
+    "error": 0.05525214928639713,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1220792",
+            "text": "Phys.Lett.B <b>724</b>,27 (2013)",
+            "color": "red",
+            "value": 0.06,
+            "stat_error": 0.07,
+            "syst_error": 0.02,
+            "digits": 1,
+            "chi2": 0.12211200000000004
+        },
+        {
+            "experiment": "CMS",
+            "link": "https://inspirehep.net/literature/1654926",
+            "text": "Phys.Rev.D <b>97</b>,072010 (2018)",
+            "color": "red",
+            "value": 0.0,
+            "stat_error": 0.06,
+            "syst_error": 0.06,
+            "digits": -1,
+            "chi2": 0.1658879999999999
+        }
+    ],
+    "correlations": []
+}

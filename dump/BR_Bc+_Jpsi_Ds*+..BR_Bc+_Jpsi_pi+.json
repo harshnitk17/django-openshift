@@ -1,0 +1,34 @@
+{
+    "id": "BR_Bc+_Jpsi_Ds*+..BR_Bc+_Jpsi_pi+",
+    "latex": "\\frac{{\\cal B}(B_c^+ \\to J/\\psi D_s^{*+})}{{\\cal B}(B_c^+ \\to J/\\psi \\pi^+)}",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 10.4,
+    "filter": {
+        "BR": 1,
+        "Bc": 1,
+        "Jpsi": 1,
+        "Ds*": 1
+    },
+    "unit_exp": 0,
+    "digits": 1,
+    "error": 3.4957116580349146,
+    "measurements": [
+        {
+            "experiment": "ATLAS",
+            "link": "https://inspirehep.net/literature/1385102",
+            "text": "Eur.Phys.J.C <b>76</b>,4 (2016)",
+            "color": "red",
+            "value": 10.4,
+            "stat_error": 3.1,
+            "syst_error": 1.6155494421403511,
+            "digits": 1,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

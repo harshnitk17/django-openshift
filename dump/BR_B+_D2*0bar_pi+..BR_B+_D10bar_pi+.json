@@ -1,0 +1,31 @@
+{
+    "id": "BR_B+_D2*0bar_pi+..BR_B+_D10bar_pi+",
+    "latex": "\\frac{{\\cal B}(B^+ \\to \\bar{D}_2^*(2460)^0 \\pi^+)}{{\\cal B}(B^+ \\to \\bar{D}_1(2420)^0 \\pi^+)}",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.8,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D**": 1,
+        "pi": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.17464249193801284,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/625628",
+            "text": "arXiv:hep-ex/0308026",
+            "color": "blue",
+            "value": 0.8,
+            "stat_error": 0.07,
+            "syst_error": 0.16,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

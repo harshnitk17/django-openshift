@@ -1,0 +1,28 @@
+{
+    "id": "BR_B+_Sigmac*0bar_p",
+    "latex": "{\\cal B}(B^+ \\to \\bar{\\Sigma}_c(2520)^0 p)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 4.600000000000001e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Sigmac": 1,
+        "p": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 3e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=312&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/593544",
+            "text": "Phys.Rev.D <b>66</b>,091102 (2002)",
+            "value": 4.600000000000001e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

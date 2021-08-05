@@ -1,0 +1,31 @@
+{
+    "id": "fzero_Bs0_Jpsi_K*0bar",
+    "latex": "f_0(B_s^0 \\to J/\\psi \\bar{K}^*(892)^0)",
+    "chi2": 2.465190328815661e-30,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.49700000000000005,
+    "filter": {
+        "fzero": 1,
+        "Bs": 1,
+        "Jpsi": 1,
+        "K*0": 1
+    },
+    "unit_exp": 0,
+    "digits": 3,
+    "error": 0.035355339063764826,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1391324",
+            "text": "JHEP <b>11</b>,082 (2015)",
+            "color": "red",
+            "value": 0.497,
+            "stat_error": 0.025,
+            "syst_error": 0.025,
+            "digits": 3,
+            "chi2": 2.465190328815661e-30
+        }
+    ],
+    "correlations": []
+}

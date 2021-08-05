@@ -1,0 +1,59 @@
+{
+    "id": "fXib-Lambdab0.BR_Xib-_Jpsi_Xi-",
+    "latex": "\\frac{f_{\\Xi_b^-}}{f_{\\Lambda_b^0}} \\times {\\cal B}(\\Xi_b^- \\to J/\\psi \\Xi^-)",
+    "chi2": 0.06116964168919671,
+    "ndf": 1,
+    "p": 0.8046567342596792,
+    "value": 7.882519596307918e-05,
+    "filter": {
+        "fXib-Lambdab0": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "error_pos": 5.3447715470721614e-05,
+    "error_neg": -4.801790741191824e-05,
+    "pdg_value": 1.01994516861841e-05,
+    "pdg_error_pos": 2.62404048269259e-06,
+    "pdg_error_neg": -2.13400860104478e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=2&parCode=S069",
+    "measurements": [
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/820851",
+            "text": "Phys.Rev.D <b>80</b>,072003 (2009)",
+            "color": "red",
+            "value": 7.882098250786705e-05,
+            "stat_error_pos": 1.7463331453838807e-05,
+            "stat_error_neg": -1.1799548279620816e-05,
+            "syst_error_pos": 4.730504370487055e-05,
+            "syst_error_neg": -4.796003226555068e-05,
+            "digits": 2,
+            "using": "${\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)$",
+            "chi2": 7.387597917369683e-08
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_Lambda0",
+            "value": 0.00047198193118483264,
+            "correlation": 0.942266018749795,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "error_pos": 0.00028122611022080734,
+            "error_neg": -0.0002851762226565625,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_psi2S_Lambda0",
+            "value": 0.000239951121187349,
+            "correlation": 0.9389781193316267,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) \\Lambda^0)",
+            "error_pos": 0.0001440512493910268,
+            "error_neg": -0.00014504776405177677,
+            "unit_exp": -4,
+            "digits": 1
+        }
+    ]
+}

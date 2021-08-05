@@ -1,0 +1,38 @@
+{
+    "id": "BR_B0_Lambdac+_Lambdac-bar",
+    "latex": "{\\cal B}(B^0 \\to \\Lambda_c^+ \\bar{\\Lambda}_c^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 1.5621931618891303e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Lambdac": 2
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1285949",
+            "text": "Phys.Rev.Lett. <b>112</b>,202001 (2014)",
+            "color": "red",
+            "value": 1.5621931618891303e-05,
+            "digits": 1,
+            "using": "${\\cal B}(B^0 \\to D_s^+ D^-)$",
+            "comments": [
+                " limit quoted at 95% CL"
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/757813",
+            "text": "Phys.Rev.D <b>77</b>,051101 (2008)",
+            "color": "red",
+            "value": 5.7e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

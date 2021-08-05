@@ -1,0 +1,45 @@
+{
+    "id": "fc.BR_Bc+_Bs0_pi+",
+    "latex": "f_c \\times {\\cal B}(B_c^+ \\to B_s^0 \\pi^+)",
+    "chi2": 2.377691289366958e-30,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00023226000000000006,
+    "filter": {
+        "fc": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error_pos": 4.34634175596695e-05,
+    "error_neg": -3.939034870779932e-05,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1250004",
+            "text": "Phys.Rev.Lett. <b>111</b>,181801 (2013)",
+            "value": 0.00023226000000000006,
+            "stat_error": 3.0380000000000004e-05,
+            "syst_error_pos": 2.9131182953848055e-05,
+            "syst_error_neg": -2.7080949397880555e-05,
+            "digits": 3,
+            "using": "$f_s$",
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "fs",
+            "value": 0.09800000000000002,
+            "correlation": 0.515234210915065,
+            "latex": "f_s",
+            "error": 0.008998940835191413,
+            "unit_exp": -2,
+            "digits": 2,
+            "chi2": 2.377691289366958e-30
+        }
+    ]
+}

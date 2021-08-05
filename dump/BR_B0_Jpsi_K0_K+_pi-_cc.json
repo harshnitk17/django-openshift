@@ -1,0 +1,30 @@
+{
+    "id": "BR_B0_Jpsi_K0_K+_pi-_cc",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi K^0 K^+ \\pi^- \\mathrm{+c.c.})",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 2.1e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "K0": 1,
+        "K": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 2.1e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=535&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1295905",
+            "text": "JHEP <b>07</b>,140 (2014)",
+            "value": 2.1e-05,
+            "digits": 2
+        }
+    ],
+    "correlations": []
+}

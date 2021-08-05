@@ -1,0 +1,32 @@
+{
+    "id": "BR_B+_D0_K+",
+    "latex": "{\\cal B}(B^+ \\to D^0 K^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 6.748490348339633e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D0": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 3.574726557956142e-06,
+    "pdg_error_pos": 3.518145061984492e-07,
+    "pdg_error_neg": -3.518089033941376e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=724&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/783316",
+            "text": "Phys.Rev.D <b>78</b>,071901 (2008)",
+            "color": "red",
+            "value": 6.748490348339633e-05,
+            "digits": 1,
+            "using": "${\\cal B}(B^+ \\to \\bar{D}^0 K^+)$"
+        }
+    ],
+    "correlations": []
+}

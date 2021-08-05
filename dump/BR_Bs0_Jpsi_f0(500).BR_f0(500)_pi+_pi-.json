@@ -1,0 +1,28 @@
+{
+    "id": "BR_Bs0_Jpsi_f0(500).BR_f0(500)_pi+_pi-",
+    "latex": "{\\cal B}(B_s^0 \\to J/\\psi f_0(500)) \\times {\\cal B}(f_0(500) \\to \\pi^+ \\pi^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 3.681429036850178e-06,
+    "filter": {
+        "BR": 1,
+        "Bs": 1,
+        "Jpsi": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 4e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=101&parCode=S086",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1282445",
+            "text": "Phys.Rev.D <b>89</b>,092006 (2014)",
+            "value": 3.681429036850178e-06,
+            "digits": 1,
+            "using": "${\\cal B}(B_s^0 \\to J/\\psi f_0(980)) \\times {\\cal B}(f_0(980) \\to \\pi^+ \\pi^-)$"
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,35 @@
+{
+    "id": "BR_B0_chic1_K+_pi-_pi0",
+    "latex": "{\\cal B}(B^0 \\to \\chi_{c1} K^+ \\pi^- \\pi^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00035200000000000005,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "chic": 1,
+        "K": 1,
+        "pi": 1,
+        "pi0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 5.727128426029353e-05,
+    "pdg_value": 0.000352,
+    "pdg_error": 5.72712842531054e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=566&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1408873",
+            "text": "Phys.Rev.D <b>93</b>,052016 (2016)",
+            "value": 0.00035200000000000005,
+            "stat_error": 5.2000000000000004e-05,
+            "syst_error": 2.4e-05,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

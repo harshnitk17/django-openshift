@@ -1,0 +1,53 @@
+{
+    "id": "alpha_Lambdab0_Jpsi_Lambda0",
+    "latex": "\\alpha(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+    "chi2": 3.3129716385670593,
+    "ndf": 2,
+    "p": 0.19080833827278032,
+    "value": 0.07195051476982635,
+    "filter": {
+        "alpha": 1,
+        "Lambdab": 1,
+        "Jpsi": 1,
+        "Lambda": 1
+    },
+    "unit_exp": -2,
+    "digits": 0,
+    "error": 0.10121366353452105,
+    "measurements": [
+        {
+            "experiment": "CMS",
+            "link": "https://inspirehep.net/literature/1654926",
+            "text": "Phys.Rev.D <b>97</b>,072010 (2018)",
+            "color": "red",
+            "value": -0.14,
+            "stat_error": 0.14,
+            "syst_error": 0.1,
+            "digits": 0,
+            "chi2": 1.5176696186214311
+        },
+        {
+            "experiment": "ATLAS",
+            "link": "https://inspirehep.net/literature/1288490",
+            "text": "Phys.Rev.D <b>89</b>,092009 (2014)",
+            "color": "red",
+            "value": 0.3,
+            "stat_error": 0.16,
+            "syst_error": 0.06,
+            "digits": -1,
+            "chi2": 1.7810468395118897
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1220792",
+            "text": "Phys.Lett.B <b>724</b>,27 (2013)",
+            "color": "red",
+            "value": 0.05,
+            "stat_error": 0.17,
+            "syst_error": 0.07,
+            "digits": 1,
+            "chi2": 0.014255180433738595
+        }
+    ],
+    "correlations": []
+}

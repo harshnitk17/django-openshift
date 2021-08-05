@@ -1,0 +1,33 @@
+{
+    "id": "BR_B+_psi2S_pi+",
+    "latex": "{\\cal B}(B^+ \\to \\psi(2S) \\pi^+)",
+    "chi2": 1.2740773606824533e-30,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.5200000000000006e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "psi2S": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.001666203484344e-06,
+    "pdg_value": 2.44e-05,
+    "pdg_error": 2.9732137494637e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=524&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1094045",
+            "text": "Phys.Rev.D <b>85</b>,091105 (2012)",
+            "value": 2.5200000000000003e-05,
+            "stat_error": 2.6e-06,
+            "syst_error": 1.5e-06,
+            "digits": 2,
+            "chi2": 1.2740773606824533e-30
+        }
+    ],
+    "correlations": []
+}

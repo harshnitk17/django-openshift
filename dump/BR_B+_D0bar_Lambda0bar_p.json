@@ -1,0 +1,36 @@
+{
+    "id": "BR_B+_D0bar_Lambda0bar_p",
+    "latex": "{\\cal B}(B^+ \\to \\bar{D}^0 \\bar{\\Lambda}^0 p)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 1.43e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D0": 1,
+        "Lambda": 1,
+        "p": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.2022214509016646e-06,
+    "pdg_value": 1.43e-05,
+    "pdg_error_pos": 3.32866339541865e-06,
+    "pdg_error_neg": -3.08058436014987e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=577&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/924618",
+            "text": "Phys.Rev.D <b>84</b>,071501 (2011)",
+            "value": 1.43e-05,
+            "stat_error_pos": 2.8000000000000003e-06,
+            "stat_error_neg": -2.5e-06,
+            "syst_error": 1.8000000000000001e-06,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

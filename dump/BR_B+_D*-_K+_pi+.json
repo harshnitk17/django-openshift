@@ -1,0 +1,46 @@
+{
+    "id": "BR_B+_D*-_K+_pi+",
+    "latex": "{\\cal B}(B^+ \\to D^*(2010)^- K^+ \\pi^+)",
+    "chi2": 0.010033444816053564,
+    "ndf": 1,
+    "p": 0.9202116773235594,
+    "value": 7.870385618729097e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D*+": 1,
+        "K": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "error": 1.1524687373633275e-05,
+    "pdg_value": 8.2e-05,
+    "pdg_error": 1.43178210632764e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=705&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1594907",
+            "text": "Phys.Rev.D <b>96</b>,011101 (2017)",
+            "value": 7.870385618729097e-05,
+            "stat_error": 3.325515050167224e-06,
+            "syst_error": 1.1038407093708405e-05,
+            "digits": 2,
+            "using": "${\\cal B}(B^+ \\to D^*(2010)^- \\pi^+ \\pi^+)$",
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_D*-_pi+_pi+",
+            "value": 0.0012316722408026756,
+            "correlation": 0.808442230968927,
+            "latex": "{\\cal B}(B^+ \\to D^*(2010)^- \\pi^+ \\pi^+)",
+            "error": 0.00014587973418031687,
+            "unit_exp": -3,
+            "digits": 2
+        }
+    ]
+}

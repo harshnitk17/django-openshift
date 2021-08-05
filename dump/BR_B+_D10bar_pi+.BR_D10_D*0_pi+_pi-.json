@@ -1,0 +1,28 @@
+{
+    "id": "BR_B+_D10bar_pi+.BR_D10_D*0_pi+_pi-",
+    "latex": "{\\cal B}(B^+ \\to \\bar{D}_1(2420)^0 \\pi^+) \\times {\\cal B}(D_1(2420)^0 \\to D^*(2007)^0 \\pi^+ \\pi^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 6e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D**": 1,
+        "pi": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 6e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=444&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/663194",
+            "text": "Phys.Rev.Lett. <b>94</b>,221805 (2005)",
+            "value": 6e-06,
+            "digits": 0
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,151 @@
+{
+    "id": "BR_Lambdab0_Pc(4457)+_K-",
+    "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ K^-)",
+    "chi2": 0.0009229353187575561,
+    "ndf": 1,
+    "p": 0.9757641143787578,
+    "value": 0.00015373484754999285,
+    "filter": {
+        "BR": 1,
+        "Lambdab": 1,
+        "Pc": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "error_pos": 0.000259672854354401,
+    "error_neg": -8.724164400475366e-05,
+    "pdg_value": 1.3e-05,
+    "pdg_error_pos": 4.49444101084885e-06,
+    "pdg_error_neg": -4.2154477816716e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=43&parCode=S040",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1471725",
+            "text": "Phys.Rev.Lett. <b>117</b>,082003 (2016)",
+            "color": "red",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ \\pi^-) / {\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ K^-)",
+            "chi2": 2.0834826614869846e-05,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4457)+_pi-",
+            "value": 5.08755752549653e-06,
+            "correlation": 0.6611546992154957,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ \\pi^-)",
+            "error_pos": 3.161958800894186e-06,
+            "error_neg": -2.4929001184384896e-06,
+            "unit_exp": -6,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_p_K-",
+            "value": 0.0003170543757947713,
+            "correlation": 0.0329197840607769,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "error": 8.751064126511286e-06,
+            "unit_exp": -4,
+            "digits": 3
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_psi2S_p_K-",
+            "value": 6.562408395723085e-05,
+            "correlation": 0.01680447654640463,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) p K^-)",
+            "error": 3.5482662618453256e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_p_pi-",
+            "value": 2.612282375872802e-05,
+            "correlation": 0.013888727645842727,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p \\pi^-)",
+            "error": 1.70924743697879e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_chic1_p_K-",
+            "value": 7.68366474557864e-05,
+            "correlation": 0.011672756399529235,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c1} p K^-)",
+            "error": 5.981476870195201e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_p_K-_pi+_pi-",
+            "value": 6.613132325344393e-05,
+            "correlation": 0.010858152305288861,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^- \\pi^+ \\pi^-)",
+            "error": 5.536114598759496e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_chic2_p_K-",
+            "value": 7.8521717903467e-05,
+            "correlation": 0.009275627881643047,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c2} p K^-)",
+            "error": 7.692155463415138e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4380)+_pi-",
+            "value": 1.6171368375928714e-05,
+            "correlation": 0.001794136226681532,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4380)^+ \\pi^-)",
+            "error_pos": 9.5345266263293e-06,
+            "error_neg": -6.962901814645114e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Zc(4200)-_p",
+            "value": 2.4410646612481097e-05,
+            "correlation": 0.001520095220863172,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to Z_c(4200)^- p)",
+            "error_pos": 1.4003942813189425e-05,
+            "error_neg": -1.5483434960713694e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4380)+_K-",
+            "value": 0.00032185048800350484,
+            "correlation": 0.0010104573207149854,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4380)^+ K^-)",
+            "error_pos": 0.0007371726410610814,
+            "error_neg": -0.0001794552085937229,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "nuisance",
+            "name": "BF",
+            "value": -0.006283281742031126,
+            "correlation": -3.942123133704362e-06,
+            "error": 0.9555256497151935,
+            "unit_exp": -3,
+            "digits": -1,
+            "chi2": 3.94796294497417e-05
+        }
+    ]
+}

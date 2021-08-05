@@ -1,0 +1,65 @@
+{
+    "id": "BR_B0_D+_D-",
+    "latex": "{\\cal B}(B^0 \\to D^+ D^-)",
+    "chi2": 0.9827842720510078,
+    "ndf": 1,
+    "p": 0.32151237962049134,
+    "value": 0.0002203825717321998,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D+": 2
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 2.2551516520009498e-05,
+    "pdg_value": 0.000211327344005227,
+    "pdg_error": 1.76280492831428e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=184&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1095407",
+            "text": "Phys.Rev.D <b>85</b>,091106 (2012)",
+            "value": 0.00021200000000000003,
+            "stat_error": 1.6000000000000003e-05,
+            "syst_error": 1.8e-05,
+            "digits": 2,
+            "chi2": 0.12115087731978416
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/714507",
+            "text": "Phys.Rev.D <b>73</b>,112004 (2006)",
+            "value": 0.00028,
+            "stat_error": 4e-05,
+            "syst_error": 5.0249378105604456e-05,
+            "digits": 1,
+            "chi2": 0.8616333947312237,
+            "comments": [
+                "Also charge conjugate final state is considered",
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1221043",
+            "text": "Phys.Rev.D <b>87</b>,092007 (2013)",
+            "color": "red",
+            "latex": "{\\cal B}(B_s^0 \\to D^+ D^-) / {\\cal B}(B^0 \\to D^+ D^-)",
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Bs0_D+_D-",
+            "value": 0.0002380131774707758,
+            "correlation": 0.44317695920056593,
+            "latex": "{\\cal B}(B_s^0 \\to D^+ D^-)",
+            "error": 5.497229353636952e-05,
+            "unit_exp": -4,
+            "digits": 2
+        }
+    ]
+}

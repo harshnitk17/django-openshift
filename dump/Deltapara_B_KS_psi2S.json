@@ -1,0 +1,29 @@
+{
+    "id": "Deltapara_B_KS_psi2S",
+    "latex": "\\delta_{\\parallel} ( B \\to \\psi(2S) K^{*} )",
+    "chi2": 1.1600895665014877e-30,
+    "ndf": 0,
+    "p": 1,
+    "value": -2.7999999999999994,
+    "filter": {
+        "polarization": 1,
+        "psi2S": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.4123105626135155,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": -2.8,
+            "stat_error": 0.4,
+            "syst_error": 0.1,
+            "digits": 1,
+            "chi2": 1.1600895665014877e-30
+        }
+    ],
+    "correlations": []
+}

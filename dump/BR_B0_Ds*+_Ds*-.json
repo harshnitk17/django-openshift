@@ -1,0 +1,27 @@
+{
+    "id": "BR_B0_Ds*+_Ds*-",
+    "latex": "{\\cal B}(B^0 \\to D_s^{*+} D_s^{*-})",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.00024,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Ds*": 2
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "pdg_value": 0.00024,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=318&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/695538",
+            "text": "Phys.Rev.D <b>72</b>,111101 (2005)",
+            "value": 0.00024,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

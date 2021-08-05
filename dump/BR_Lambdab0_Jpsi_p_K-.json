@@ -1,0 +1,216 @@
+{
+    "id": "BR_Lambdab0_Jpsi_p_K-",
+    "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+    "chi2": 0.0009229353187575561,
+    "ndf": 1,
+    "p": 0.9757641143787578,
+    "value": 0.0003170543757947713,
+    "filter": {
+        "BR": 1,
+        "Lambdab": 1,
+        "Jpsi": 1,
+        "p": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 3,
+    "error": 8.751064126511286e-06,
+    "pdg_value": 0.000317,
+    "pdg_error_pos": 5.71401785086466e-05,
+    "pdg_error_neg": -4.51774279923061e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=33&parCode=S040",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1391317",
+            "text": "Chin.Phys.C <b>40</b>,011001 (2016)",
+            "value": 0.000317,
+            "stat_error": 4.000000000000001e-06,
+            "syst_error": 7.782030583337489e-06,
+            "digits": 2,
+            "chi2": 3.8619736899322836e-05,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1298985",
+            "text": "JHEP <b>07</b>,103 (2014)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p \\pi^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 2.5133810978994875e-06
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1432696",
+            "text": "JHEP <b>05</b>,132 (2016)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) p K^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 4.091691152425954e-06,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1432696",
+            "text": "JHEP <b>05</b>,132 (2016)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^- \\pi^+ \\pi^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 1.4162080249791203e-06
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1471725",
+            "text": "Phys.Rev.Lett. <b>117</b>,082003 (2016)",
+            "color": "red",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4380)^+ \\pi^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 3.845091428622381e-08
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1471725",
+            "text": "Phys.Rev.Lett. <b>117</b>,082003 (2016)",
+            "color": "red",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ \\pi^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 2.744102923448481e-05
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1471725",
+            "text": "Phys.Rev.Lett. <b>117</b>,082003 (2016)",
+            "color": "red",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to Z_c(4200)^- p) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 2.985031351246819e-08
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1596892",
+            "text": "Phys.Rev.Lett. <b>119</b>,062001 (2017)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c1} p K^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 0.000228477769434946
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1596892",
+            "text": "Phys.Rev.Lett. <b>119</b>,062001 (2017)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c2} p K^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^-)",
+            "chi2": 0.00026371394802950294
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_psi2S_p_K-",
+            "value": 6.562408395723085e-05,
+            "correlation": 0.5104673861847218,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) p K^-)",
+            "error": 3.5482662618453256e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_p_pi-",
+            "value": 2.612282375872802e-05,
+            "correlation": 0.4218960648699964,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p \\pi^-)",
+            "error": 1.70924743697879e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_chic1_p_K-",
+            "value": 7.68366474557864e-05,
+            "correlation": 0.354581831511554,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c1} p K^-)",
+            "error": 5.981476870195201e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Jpsi_p_K-_pi+_pi-",
+            "value": 6.613132325344393e-05,
+            "correlation": 0.3298366666289289,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi p K^- \\pi^+ \\pi^-)",
+            "error": 5.536114598759496e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_chic2_p_K-",
+            "value": 7.8521717903467e-05,
+            "correlation": 0.28176458285334793,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\chi_{c2} p K^-)",
+            "error": 7.692155463415138e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4380)+_pi-",
+            "value": 1.6171368375928714e-05,
+            "correlation": 0.05450025501892028,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4380)^+ \\pi^-)",
+            "error_pos": 9.5345266263293e-06,
+            "error_neg": -6.962901814645114e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4457)+_pi-",
+            "value": 5.08755752549653e-06,
+            "correlation": 0.0497913477398636,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ \\pi^-)",
+            "error_pos": 3.161958800894186e-06,
+            "error_neg": -2.4929001184384896e-06,
+            "unit_exp": -6,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Zc(4200)-_p",
+            "value": 2.4410646612481097e-05,
+            "correlation": 0.04617574471907681,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to Z_c(4200)^- p)",
+            "error_pos": 1.4003942813189425e-05,
+            "error_neg": -1.5483434960713694e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4457)+_K-",
+            "value": 0.00015373484754999285,
+            "correlation": 0.0329197840607769,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4457)^+ K^-)",
+            "error_pos": 0.000259672854354401,
+            "error_neg": -8.724164400475366e-05,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_Pc(4380)+_K-",
+            "value": 0.00032185048800350484,
+            "correlation": 0.030694567068645366,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to P_c(4380)^+ K^-)",
+            "error_pos": 0.0007371726410610814,
+            "error_neg": -0.0001794552085937229,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "nuisance",
+            "name": "BF",
+            "value": -0.006283281742031126,
+            "correlation": -0.00011976114466958959,
+            "error": 0.9555256497151935,
+            "unit_exp": -3,
+            "digits": -1,
+            "chi2": 3.94796294497417e-05
+        }
+    ]
+}

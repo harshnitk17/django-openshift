@@ -1,0 +1,51 @@
+{
+    "id": "BR_B0_Lambdac-bar_p_pi+_pi-",
+    "latex": "{\\cal B}(B^0 \\to \\bar{\\Lambda}_c^- p \\pi^+ \\pi^-)",
+    "chi2": 0.0691489361702129,
+    "ndf": 1,
+    "p": 0.7925799814600072,
+    "value": 0.001171595744680851,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Lambdac": 1,
+        "p": 1,
+        "pi": 2
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.0002459082500560347,
+    "pdg_value": 0.00101919996983687,
+    "pdg_error_pos": 0.00013614655753068,
+    "pdg_error_neg": -0.000136031856166526,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=161&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/1217425",
+            "text": "Phys.Rev.D <b>87</b>,092004 (2013)",
+            "value": 0.0012300000000000002,
+            "stat_error": 5e-05,
+            "syst_error": 0.000327566787083184,
+            "digits": 3,
+            "chi2": 0.03106609325486679,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/593544",
+            "text": "Phys.Rev.D <b>66</b>,091102 (2002)",
+            "value": 0.0011,
+            "stat_error": 0.00012,
+            "syst_error": 0.0003466987164671943,
+            "digits": 2,
+            "chi2": 0.03808284291534611,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

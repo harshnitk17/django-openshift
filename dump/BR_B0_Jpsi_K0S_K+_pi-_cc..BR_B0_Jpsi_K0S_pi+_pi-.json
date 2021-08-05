@@ -1,0 +1,29 @@
+{
+    "id": "BR_B0_Jpsi_K0S_K+_pi-_cc..BR_B0_Jpsi_K0S_pi+_pi-",
+    "latex": "\\frac{{\\cal B}(B^0 \\to J/\\psi K^0_S K^+ \\pi^- \\mathrm{+c.c.})}{{\\cal B}(B^0 \\to J/\\psi K^0_S \\pi^+ \\pi^-)}",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.048,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "K0": 1,
+        "K": 1,
+        "pi": 1
+    },
+    "unit_exp": -2,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1295905",
+            "text": "JHEP <b>07</b>,140 (2014)",
+            "color": "red",
+            "value": 0.048,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

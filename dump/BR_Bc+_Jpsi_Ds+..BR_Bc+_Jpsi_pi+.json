@@ -1,0 +1,43 @@
+{
+    "id": "BR_Bc+_Jpsi_Ds+..BR_Bc+_Jpsi_pi+",
+    "latex": "\\frac{{\\cal B}(B_c^+ \\to J/\\psi D_s^+)}{{\\cal B}(B_c^+ \\to J/\\psi \\pi^+)}",
+    "chi2": 0.4518828451882845,
+    "ndf": 1,
+    "p": 0.5014421747742752,
+    "value": 3.092050209205021,
+    "filter": {
+        "BR": 1,
+        "Bc": 1,
+        "Jpsi": 1,
+        "Ds": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.5485240750728233,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1228506",
+            "text": "Phys.Rev.D <b>87</b>,112012 (2013)",
+            "value": 2.9,
+            "stat_error": 0.57,
+            "syst_error": 0.24,
+            "digits": 1,
+            "chi2": 0.0964268832828557
+        },
+        {
+            "experiment": "ATLAS",
+            "link": "https://inspirehep.net/literature/1385102",
+            "text": "Eur.Phys.J.C <b>76</b>,4 (2016)",
+            "value": 3.8,
+            "stat_error": 1.1,
+            "syst_error": 0.447213595499958,
+            "digits": 1,
+            "chi2": 0.3554559619054288,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,32 @@
+{
+    "id": "fXib-Lambdab0.BR_Xib-_Lambdab0_pi-",
+    "latex": "\\frac{f_{\\Xi_b^-}}{f_{\\Lambda_b^0}} \\times {\\cal B}(\\Xi_b^- \\to \\Lambda_b^0 \\pi^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.0005700000000000001,
+    "filter": {
+        "fXib-Lambdab0": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "error": 0.0001991001912923977,
+    "pdg_value": 0.00057,
+    "pdg_error_pos": 0.000196977156035922,
+    "pdg_error_neg": -0.000201246117974981,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=7&parCode=S060",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1397639",
+            "text": "Phys.Rev.Lett. <b>115</b>,241801 (2015)",
+            "value": 0.0005700000000000001,
+            "stat_error": 0.00018,
+            "syst_error_pos": 8e-05,
+            "syst_error_neg": -9e-05,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

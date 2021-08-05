@@ -1,0 +1,38 @@
+{
+    "id": "BR_B+_D*0bar_K*+",
+    "latex": "{\\cal B}(B^+ \\to \\bar{D}^*(2007)^0 K^*(892)^+)",
+    "chi2": 5.3322492666014395e-31,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00083,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D*0": 1,
+        "K*+": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "error": 0.0001484755871953454,
+    "pdg_value": 0.000397435166945134,
+    "pdg_error_pos": 3.05151894655755e-05,
+    "pdg_error_neg": -2.76043487178467e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=270&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/626518",
+            "text": "Phys.Rev.Lett. <b>92</b>,141801 (2004)",
+            "color": "red",
+            "value": 0.0008300000000000001,
+            "stat_error": 0.00011000000000000002,
+            "syst_error": 9.972462083156797e-05,
+            "digits": 1,
+            "chi2": 5.3322492666014395e-31,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

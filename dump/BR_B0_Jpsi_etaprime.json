@@ -1,0 +1,107 @@
+{
+    "id": "BR_B0_Jpsi_etaprime",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi \\eta^\\prime)",
+    "chi2": 2.576963973694452,
+    "ndf": 3,
+    "p": 0.46154237952593413,
+    "value": 8.561411403521042e-06,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "eta": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error": 2.7599066436683332e-06,
+    "pdg_value": 7.61337935433846e-06,
+    "pdg_error_pos": 2.43224695538052e-06,
+    "pdg_error_neg": -2.46079902357147e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=250&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://arxiv.org/abs/1411.0943",
+            "text": "arXiv:1411.0943",
+            "color": "blue",
+            "value": 8.552028039201251e-06,
+            "stat_error": 2.4380781690705323e-06,
+            "syst_error_pos": 1.341151375100175e-06,
+            "syst_error_neg": -1.2410323446664153e-06,
+            "digits": 2,
+            "using": "${\\cal B}(B_s^0 \\to J/\\psi \\eta^\\prime)$",
+            "chi2": 1.392565241503906e-05,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1093880",
+            "text": "Phys.Rev.D <b>85</b>,091102 (2012)",
+            "value": 7.4e-06,
+            "digits": 1
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/616619",
+            "text": "Phys.Rev.Lett. <b>91</b>,071801 (2003)",
+            "value": 6.3e-05,
+            "digits": 0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Bs0_Jpsi_etaprime",
+            "value": 0.0003750889490877742,
+            "correlation": 0.4122300607412135,
+            "latex": "{\\cal B}(B_s^0 \\to J/\\psi \\eta^\\prime)",
+            "error_pos": 5.226896807102479e-05,
+            "error_neg": -4.7272900652697425e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Jpsi_rho0",
+            "value": 2.957962392347439e-05,
+            "correlation": 0.24364204798361688,
+            "latex": "{\\cal B}(B^0 \\to J/\\psi \\rho^0(770))",
+            "error": 2.817401869428025e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_Bs0_Jpsi_eta",
+            "value": 0.000458242472504631,
+            "correlation": 0.1379704522510145,
+            "latex": "{\\cal B}(B_s^0 \\to J/\\psi \\eta)",
+            "error_pos": 5.622710789992131e-05,
+            "error_neg": -5.064169765747572e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Jpsi_omega",
+            "value": 2.6295110941917177e-05,
+            "correlation": 0.08903264664986638,
+            "latex": "{\\cal B}(B^0 \\to J/\\psi \\omega(782))",
+            "error": 6.867272354812034e-06,
+            "unit_exp": -5,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Jpsi_eta",
+            "value": 1.1181790619377545e-05,
+            "correlation": 0.03903530205727959,
+            "latex": "{\\cal B}(B^0 \\to J/\\psi \\eta)",
+            "error": 1.5913360237039714e-06,
+            "unit_exp": -5,
+            "digits": 2
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "id": "BR_B+_Zc(4430)+_K0.BR_Zc(4430)+_psi2S_pi+",
+    "latex": "{\\cal B}(B^+ \\to Z_c(4430)^+ K^0) \\times {\\cal B}(Z_c(4430)^+ \\to \\psi(2S) \\pi^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 4.7000000000000004e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "XYZ": 1,
+        "K0": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 4.699999999999999e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=535&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/801589",
+            "text": "Phys.Rev.D <b>79</b>,112001 (2009)",
+            "value": 4.7000000000000004e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,41 @@
+{
+    "id": "BR_B0_D0_K*0",
+    "latex": "{\\cal B}(B^0 \\to D^0 K^*(892)^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.0,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D0": 1,
+        "K*0": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error": 5.830951893919889e-06,
+    "pdg_value": 2.186131917841265e-06,
+    "pdg_error_pos": 8.567428413050571e-07,
+    "pdg_error_neg": -9.7193441185806e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=246&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/605636",
+            "text": "Phys.Rev.Lett. <b>90</b>,141802 (2003)",
+            "value": 1.8e-05,
+            "digits": 0
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/714058",
+            "text": "Phys.Rev.D <b>74</b>,031101 (2006)",
+            "value": 0.0,
+            "stat_error": 5e-06,
+            "syst_error": 3e-06,
+            "digits": 0,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

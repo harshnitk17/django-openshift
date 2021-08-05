@@ -1,0 +1,37 @@
+{
+    "id": "BR_B0_D*0_D0bar_K0",
+    "latex": "{\\cal B}(B^0 \\to D^*(2007)^0 \\bar{D}^0 K^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00108,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D*0": 1,
+        "D0": 1,
+        "K0": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.0004816637832121456,
+    "pdg_value": 0.00108,
+    "pdg_error": 0.000481663783151692,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=268&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/877816",
+            "text": "Phys.Rev.D <b>83</b>,032004 (2011)",
+            "value": 0.00108,
+            "stat_error": 0.00032,
+            "syst_error": 0.00035999999999999997,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "It includes also D*0D0barK0bar"
+            ]
+        }
+    ],
+    "correlations": []
+}

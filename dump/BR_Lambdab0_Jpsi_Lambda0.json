@@ -1,0 +1,80 @@
+{
+    "id": "BR_Lambdab0_Jpsi_Lambda0",
+    "latex": "{\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+    "chi2": 0.06116964168919671,
+    "ndf": 1,
+    "p": 0.8046567342596792,
+    "value": 0.00047198193118483264,
+    "filter": {
+        "BR": 1,
+        "Lambdab": 1,
+        "Jpsi": 1,
+        "Lambda": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "error_pos": 0.00028122611022080734,
+    "error_neg": -0.0002851762226565625,
+    "measurements": [
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/423031",
+            "text": "Phys.Rev.D <b>55</b>,1142 (1997)",
+            "color": "red",
+            "value": 0.00047000000000000004,
+            "stat_error": 0.00021,
+            "syst_error": 0.00019,
+            "digits": 1,
+            "chi2": 4.897819478069791e-05
+        },
+        {
+            "experiment": "ATLAS",
+            "link": "https://inspirehep.net/literature/1385604",
+            "text": "Phys.Lett.B <b>751</b>,63 (2015)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) \\Lambda^0) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "chi2": 0.03766842393335697
+        },
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/820851",
+            "text": "Phys.Rev.D <b>80</b>,072003 (2009)",
+            "color": "red",
+            "latex": "\\frac{f_{\\Xi_b^-}}{f_{\\Lambda_b^0}} \\times {\\cal B}(\\Xi_b^- \\to J/\\psi \\Xi^-) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "chi2": 7.387597917369683e-08
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1718851",
+            "text": "JHEP <b>03</b>,126 (2019)",
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) \\Lambda^0) / {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "chi2": 0.02345216568507987,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Lambdab0_psi2S_Lambda0",
+            "value": 0.000239951121187349,
+            "correlation": 0.9965106462891645,
+            "latex": "{\\cal B}(\\Lambda_b^0 \\to \\psi(2S) \\Lambda^0)",
+            "error_pos": 0.0001440512493910268,
+            "error_neg": -0.00014504776405177677,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "fXib-Lambdab0.BR_Xib-_Jpsi_Xi-",
+            "value": 7.882519596307918e-05,
+            "correlation": 0.942266018749795,
+            "latex": "\\frac{f_{\\Xi_b^-}}{f_{\\Lambda_b^0}} \\times {\\cal B}(\\Xi_b^- \\to J/\\psi \\Xi^-)",
+            "error_pos": 5.3447715470721614e-05,
+            "error_neg": -4.801790741191824e-05,
+            "unit_exp": -5,
+            "digits": 1
+        }
+    ]
+}

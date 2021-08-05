@@ -1,0 +1,81 @@
+{
+    "id": "BR_B+_chic1(4140)_K+.BR_chic1(4140)_Jpsi_phi",
+    "latex": "{\\cal B}(B^+ \\to \\chi_{c1}(4140) K^+) \\times {\\cal B}(\\chi_{c1}(4140) \\to J/\\psi \\phi(1020))",
+    "chi2": 0.6082007009998336,
+    "ndf": 1,
+    "p": 0.43546608340909454,
+    "value": 6.618217957427565e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error_pos": 3.6516443452763747e-06,
+    "error_neg": -2.6700678157249174e-06,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1472310",
+            "text": "Phys.Rev.Lett. <b>118</b>,022003 (2017)",
+            "color": "red",
+            "value": 5.708651866155315e-06,
+            "stat_error": 1.4052066132074622e-06,
+            "syst_error_pos": 2.826906798233889e-06,
+            "syst_error_neg": -2.1220416258966033e-06,
+            "digits": 1,
+            "using": "${\\cal B}(B^+ \\to J/\\psi \\phi(1020) K^+)$",
+            "chi2": 0.16879319777820942,
+            "comments": [
+                "The quoted value is a fit fraction from a Dalitz fit."
+            ]
+        },
+        {
+            "experiment": "D0",
+            "link": "https://inspirehep.net/literature/1255433",
+            "text": "Phys.Rev.D <b>89</b>,012004 (2014)",
+            "color": "red",
+            "value": 9.22166839917397e-06,
+            "stat_error": 3.5130165330186557e-06,
+            "syst_error": 3.5809426362744895e-06,
+            "digits": 2,
+            "using": "${\\cal B}(B^+ \\to J/\\psi \\phi(1020) K^+)$",
+            "chi2": 0.4393678041832864
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_Jpsi_phi_K+",
+            "value": 4.3912706662733195e-05,
+            "correlation": 0.7162175763382147,
+            "latex": "{\\cal B}(B^+ \\to J/\\psi \\phi(1020) K^+)",
+            "error": 1.4859759288825447e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_chic1(4274)_K+.BR_chic1(4274)_Jpsi_phi",
+            "value": 3.1191334913636744e-06,
+            "correlation": 0.3783401908843166,
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1}(4274) K^+) \\times {\\cal B}(\\chi_{c1}(4274) \\to J/\\psi \\phi(1020))",
+            "error_pos": 2.4287382456106975e-06,
+            "error_neg": -1.638892007971693e-06,
+            "unit_exp": -6,
+            "digits": 1
+        },
+        {
+            "type": "nuisance",
+            "name": "jpsi_phi_br_correlated",
+            "value": 0.0025694910799704844,
+            "correlation": -0.04794121194042213,
+            "error": 0.9999879519692492,
+            "unit_exp": -3,
+            "digits": -1,
+            "chi2": 6.6022844100478864e-06
+        }
+    ]
+}

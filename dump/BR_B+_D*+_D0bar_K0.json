@@ -1,0 +1,32 @@
+{
+    "id": "BR_B+_D*+_D0bar_K0",
+    "latex": "{\\cal B}(B^+ \\to D^*(2010)^+ \\bar{D}^0 K^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00381,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D*+": 1,
+        "D0": 1,
+        "K0": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.0003860051812511141,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/877816",
+            "text": "Phys.Rev.D <b>83</b>,032004 (2011)",
+            "color": "red",
+            "value": 0.00381,
+            "stat_error": 0.00031,
+            "syst_error": 0.00023,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,28 @@
+{
+    "id": "Azero_B_KS_chi1c",
+    "latex": "\\vert{\\cal{A}}_{0}\\vert^{2} ( B \\to \\chi_{c1} K^{*} )",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.77,
+    "filter": {
+        "polarization": 1
+    },
+    "unit_exp": 0,
+    "digits": 3,
+    "error": 0.08062257749310447,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.77,
+            "stat_error": 0.07,
+            "syst_error": 0.04,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

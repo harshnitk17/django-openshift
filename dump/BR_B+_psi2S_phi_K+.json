@@ -1,0 +1,37 @@
+{
+    "id": "BR_B+_psi2S_phi_K+",
+    "latex": "{\\cal B}(B^+ \\to \\psi(2S) \\phi(1020) K^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 4e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "psi2S": 1,
+        "phi": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 2,
+    "error": 7.483314774487115e-07,
+    "pdg_value": 4e-06,
+    "pdg_error": 7.21110255092798e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=691&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "CMS",
+            "link": "https://inspirehep.net/literature/1475003",
+            "text": "Phys.Lett.B <b>764</b>,66 (2017)",
+            "value": 4e-06,
+            "stat_error": 4e-07,
+            "syst_error": 6.324555320336758e-07,
+            "digits": 1,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

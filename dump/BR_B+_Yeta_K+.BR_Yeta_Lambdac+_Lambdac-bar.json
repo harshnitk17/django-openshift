@@ -1,0 +1,27 @@
+{
+    "id": "BR_B+_Yeta_K+.BR_Yeta_Lambdac+_Lambdac-bar",
+    "latex": "{\\cal B}(B^+ \\to Y_\\eta K^+) \\times {\\cal B}(Y_\\eta \\to \\Lambda_c^+ \\bar{\\Lambda}_c^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.0002,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "XYZ": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1642436",
+            "text": "Eur.Phys.J.C <b>78</b>,252 (2018)",
+            "color": "red",
+            "value": 0.0002,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

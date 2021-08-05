@@ -1,0 +1,67 @@
+{
+    "id": "BR_B+_Xic0bar_Lambdac+",
+    "latex": "{\\cal B}(B^+ \\to \\bar{\\Xi}_c^0 \\Lambda_c^+)",
+    "chi2": 1.7374491902193414,
+    "ndf": 1,
+    "p": 0.18746235601634423,
+    "value": 0.0018108789743794627,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Xic": 1,
+        "Lambdac": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error_pos": 0.0008151173695051491,
+    "error_neg": -0.000622583674491505,
+    "pdg_value": 0.000951,
+    "pdg_error": 0.000227692775467295,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=721&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/766290",
+            "text": "Phys.Rev.D <b>77</b>,031101 (2008)",
+            "color": "red",
+            "value": 0.0014541800902023705,
+            "stat_error": 0.0004544312781882408,
+            "syst_error": 0.0005384722742432768,
+            "digits": 3,
+            "using": "${\\cal B}(\\Xi_c^0 \\to \\Xi^- \\pi^+)$",
+            "chi2": 0.3261234737071154,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/696226",
+            "text": "Phys.Rev.D <b>74</b>,111105 (2006)",
+            "color": "red",
+            "value": 0.003355800208159317,
+            "stat_error_pos": 0.0006991250433665243,
+            "stat_error_neg": -0.0006292125390298719,
+            "syst_error": 0.001364350930002,
+            "digits": 2,
+            "using": "${\\cal B}(\\Xi_c^0 \\to \\Xi^- \\pi^+)$",
+            "chi2": 1.4113244558810245,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "BR_Xic0_Xi-_pi+",
+            "value": 0.014303592890688919,
+            "correlation": -0.5866041362384565,
+            "latex": "{\\cal B}(\\Xi_c^0 \\to \\Xi^- \\pi^+)",
+            "error": 0.0032072515647867347,
+            "unit_exp": -2,
+            "digits": 2,
+            "chi2": 1.2606312014177931e-06
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "BR_B0_Zc(4200)-_K+.BR_Zc(4200)+_Jpsi_pi+",
+    "latex": "{\\cal B}(B^0 \\to Z_c(4200)^- K^+) \\times {\\cal B}(Z_c(4200)^+ \\to J/\\psi \\pi^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.2000000000000003e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "XYZ": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "error_pos": 1.3029949714127473e-05,
+    "error_neg": -7.810249675906653e-06,
+    "pdg_value": 2.2e-05,
+    "pdg_error_pos": 1.30384048104053e-05,
+    "pdg_error_neg": -7.81024967590665e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=564&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1312626",
+            "text": "Phys.Rev.D <b>90</b>,112009 (2014)",
+            "value": 2.2000000000000003e-05,
+            "stat_error_pos": 7e-06,
+            "stat_error_neg": -5e-06,
+            "syst_error_pos": 1.1000000000000001e-05,
+            "syst_error_neg": -6e-06,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

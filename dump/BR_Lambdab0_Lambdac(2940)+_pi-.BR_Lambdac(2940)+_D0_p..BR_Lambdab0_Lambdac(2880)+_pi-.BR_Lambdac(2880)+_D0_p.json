@@ -1,0 +1,36 @@
+{
+    "id": "BR_Lambdab0_Lambdac(2940)+_pi-.BR_Lambdac(2940)+_D0_p..BR_Lambdab0_Lambdac(2880)+_pi-.BR_Lambdac(2880)+_D0_p",
+    "latex": "\\frac{{\\cal B}(\\Lambda_b^0 \\to \\Lambda_c(2940)^+ \\pi^-) \\times {\\cal B}(\\Lambda_c(2940)^+ \\to D^0 p)}{{\\cal B}(\\Lambda_b^0 \\to \\Lambda_c(2880)^+ \\pi^-) \\times {\\cal B}(\\Lambda_c(2880)^+ \\to D^0 p)}",
+    "chi2": 7.714712032637323e-32,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.8300000000000002,
+    "filter": {
+        "BR": 1,
+        "Lambdab": 1,
+        "cbaryon": 1,
+        "pi": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error_pos": 0.35860842154082245,
+    "error_neg": -0.4455151456780893,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1511124",
+            "text": "JHEP <b>05</b>,030 (2017)",
+            "value": 0.8300000000000001,
+            "stat_error_pos": 0.31000000000000005,
+            "stat_error_neg": -0.1,
+            "syst_error_pos": 0.18027756377319948,
+            "syst_error_neg": -0.43416586692184816,
+            "digits": 2,
+            "chi2": 7.714712032637323e-32,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

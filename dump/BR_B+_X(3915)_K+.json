@@ -1,0 +1,32 @@
+{
+    "id": "BR_B+_X(3915)_K+",
+    "latex": "{\\cal B}(B^+ \\to X(3915) K^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 4e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "XYZ": 1,
+        "K": 1
+    },
+    "unit_exp": -5,
+    "digits": 0,
+    "error": 0.0001600000000200817,
+    "pdg_value": 0.00028,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=709&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1624416",
+            "text": "Phys.Rev.D <b>97</b>,012005 (2018)",
+            "value": 4e-05,
+            "stat_error": 0.00016,
+            "syst_error": -0.0,
+            "digits": 0,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "BR_B+_Jpsi_Sigma0bar_p",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi \\bar{\\Sigma}^0 p)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 1.1000000000000001e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "Sigma": 1,
+        "p": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 1.1e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=422&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/689078",
+            "text": "Phys.Rev.D <b>72</b>,051105 (2005)",
+            "value": 1.1000000000000001e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

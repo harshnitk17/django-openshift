@@ -1,0 +1,27 @@
+{
+    "id": "BR_B0_etac2S_K*0",
+    "latex": "{\\cal B}(B^0 \\to \\eta_c(2S) K^*(892)^0)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.00039,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "ccbar": 1,
+        "K*0": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/783014",
+            "text": "Phys.Rev.D <b>78</b>,012006 (2008)",
+            "color": "red",
+            "value": 0.00039,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

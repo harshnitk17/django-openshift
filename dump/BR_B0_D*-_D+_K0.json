@@ -1,0 +1,37 @@
+{
+    "id": "BR_B0_D*-_D+_K0",
+    "latex": "{\\cal B}(B^0 \\to D^*(2010)^- D^+ K^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00641,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D*+": 1,
+        "D+": 1,
+        "K0": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.0005307541803234626,
+    "pdg_value": 0.00641,
+    "pdg_error": 0.000530754180388624,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=265&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/877816",
+            "text": "Phys.Rev.D <b>83</b>,032004 (2011)",
+            "value": 0.00641,
+            "stat_error": 0.00035999999999999997,
+            "syst_error": 0.00039000000000000005,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "It includes also D+D*-K0bar"
+            ]
+        }
+    ],
+    "correlations": []
+}

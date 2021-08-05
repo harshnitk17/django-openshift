@@ -1,0 +1,78 @@
+{
+    "id": "BR_B0_Jpsi_f1",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi f_1(1285))",
+    "chi2": 0.0017869364524136495,
+    "ndf": 2,
+    "p": 0.9991069307976815,
+    "value": 8.409544574716683e-06,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "light": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "error": 1.5034192212158818e-06,
+    "pdg_value": 8.4411303631202e-06,
+    "pdg_error_pos": 2.13334224883468e-06,
+    "pdg_error_neg": -2.08800298181842e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=531&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1257611",
+            "text": "Phys.Rev.Lett. <b>112</b>,091802 (2014)",
+            "value": 8.37e-06,
+            "stat_error": 1.95e-06,
+            "syst_error_pos": 7.915806970865321e-07,
+            "syst_error_neg": -7.470609078247905e-07,
+            "digits": 2,
+            "chi2": 0.0003684595327062157
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1257611",
+            "text": "Phys.Rev.Lett. <b>112</b>,091802 (2014)",
+            "value": 8.443817332653281e-06,
+            "stat_error": 1.9619727569900133e-06,
+            "syst_error": 7.414620295347317e-07,
+            "digits": 3,
+            "using": "${\\cal B}(f_1(1285) \\to \\pi^+ \\pi^+ \\pi^- \\pi^-)$",
+            "chi2": 0.00028589992646336576
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_Bs0_Jpsi_f1",
+            "value": 7.168109737133665e-05,
+            "correlation": 0.12418906206845547,
+            "latex": "{\\cal B}(B_s^0 \\to J/\\psi f_1(1285))",
+            "error": 1.0200465657975074e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "external",
+            "name": "BR_f1_pi+_pi+_pi-_pi-",
+            "value": 0.10907388965395778,
+            "correlation": -0.15137979364238913,
+            "latex": "{\\cal B}(f_1(1285) \\to \\pi^+ \\pi^+ \\pi^- \\pi^-)",
+            "error": 0.005792936101444759,
+            "unit_exp": 0,
+            "digits": 4,
+            "chi2": 0.00015165780450003102
+        },
+        {
+            "type": "nuisance",
+            "name": "f_1_1295_BR",
+            "value": 0.00038251382828421304,
+            "correlation": -0.2320444787006568,
+            "error": 1.000116662975207,
+            "unit_exp": -4,
+            "digits": -3,
+            "chi2": 1.4631682882864443e-07
+        }
+    ]
+}

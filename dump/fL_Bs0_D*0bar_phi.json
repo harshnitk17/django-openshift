@@ -1,0 +1,31 @@
+{
+    "id": "fL_Bs0_D*0bar_phi",
+    "latex": "f_L(B_s^0 \\to \\bar{D}^*(2007)^0 \\phi(1020))",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.73,
+    "filter": {
+        "polarization": 1,
+        "Bs": 1,
+        "D*0": 1,
+        "phi": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.1529705854269829,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1681146",
+            "text": "Phys.Rev.D <b>98</b>,071103 (2018)",
+            "color": "red",
+            "value": 0.73,
+            "stat_error": 0.15,
+            "syst_error": 0.03,
+            "digits": 3,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

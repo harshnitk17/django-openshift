@@ -1,0 +1,149 @@
+{
+    "id": "BR_B0_Ds1(2460)+_D-",
+    "latex": "{\\cal B}(B^0 \\to D_{s1}(2460)^+ D^-)",
+    "chi2": 4.891738964971583,
+    "ndf": 12,
+    "p": 0.9614974355698116,
+    "value": 0.00406940652895211,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Ds**": 1,
+        "D+": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.000859093161811527,
+    "pdg_value": 0.00354786342260164,
+    "pdg_error_pos": 0.00113797711048701,
+    "pdg_error_neg": -0.00107031891662983,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=254&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656424",
+            "text": "Phys.Rev.Lett. <b>93</b>,181801 (2004)",
+            "value": 0.0043598426554894865,
+            "stat_error": 0.0010899606638723716,
+            "syst_error_pos": 0.0018494220856668934,
+            "syst_error_neg": -0.00139116650332234,
+            "digits": 1,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)$",
+            "chi2": 0.026225413525574143,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/625444",
+            "text": "Phys.Rev.Lett. <b>91</b>,262002 (2003)",
+            "value": 0.0044688387218767235,
+            "stat_error_pos": 0.001198956730259609,
+            "stat_error_neg": -0.0010354626306787532,
+            "syst_error": 0.00152623604602296,
+            "digits": 2,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)$",
+            "chi2": 0.052064990752215594
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/625444",
+            "text": "Phys.Rev.Lett. <b>91</b>,262002 (2003)",
+            "value": 0.00424704743230129,
+            "stat_error_pos": 0.0013657905839559214,
+            "stat_error_neg": -0.0011599865233598236,
+            "syst_error": 0.0014304738102670902,
+            "digits": 2,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^{*+} \\pi^0)$",
+            "chi2": 0.009898920378605484
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656424",
+            "text": "Phys.Rev.Lett. <b>93</b>,181801 (2004)",
+            "value": 0.005238648815173397,
+            "stat_error": 0.0014967568043352563,
+            "syst_error_pos": 0.0022419211279469794,
+            "syst_error_neg": -0.0016691103656173152,
+            "digits": 1,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^{*+} \\pi^0)$",
+            "chi2": 0.2837138190924856,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/716811",
+            "text": "Phys.Rev.D <b>74</b>,031103 (2006)",
+            "value": 0.0026000000000000003,
+            "stat_error": 0.0015,
+            "syst_error": 0.0007000000000000001,
+            "digits": 1,
+            "chi2": 0.7880129734770388
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/625444",
+            "text": "Phys.Rev.Lett. <b>91</b>,262002 (2003)",
+            "value": 0.0022222222222222222,
+            "digits": 1,
+            "using": "${\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\pi^+ \\pi^-)$"
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_Ds1(2460)+_D0bar",
+            "value": 0.0032788213802905724,
+            "correlation": 0.18932734960493539,
+            "latex": "{\\cal B}(B^+ \\to D_{s1}(2460)^+ \\bar{D}^0)",
+            "error": 0.0007797208423260827,
+            "unit_exp": -3,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Ds1(2460)+_D*-",
+            "value": 0.010049060748884899,
+            "correlation": 0.11916697833347106,
+            "latex": "{\\cal B}(B^0 \\to D_{s1}(2460)^+ D^*(2010)^-)",
+            "error": 0.0018065514502656006,
+            "unit_exp": -2,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_Ds1(2460)+_D*0bar",
+            "value": 0.01049405203500367,
+            "correlation": 0.11384617619057814,
+            "latex": "{\\cal B}(B^+ \\to D_{s1}(2460)^+ \\bar{D}^*(2007)^0)",
+            "error": 0.0024309281385648676,
+            "unit_exp": -2,
+            "digits": 2
+        },
+        {
+            "type": "external",
+            "name": "BR_Ds1(2460)+_Ds+_gamma",
+            "value": 0.18349286045741087,
+            "correlation": -0.3327179892985566,
+            "latex": "{\\cal B}(D_{s1}(2460)^+ \\to D_s^+ \\gamma)",
+            "error": 0.028243081075110102,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.00762504635934031
+        },
+        {
+            "type": "external",
+            "name": "BR_Ds1(2460)+_Ds*+_pi0",
+            "value": 0.5344889682030196,
+            "correlation": -0.29364151402009125,
+            "latex": "{\\cal B}(D_{s1}(2460)^+ \\to D_s^{*+} \\pi^0)",
+            "error": 0.08229947511689806,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.2453758393247673
+        }
+    ]
+}

@@ -24,3 +24,6 @@ class plot_info(models.Model):
             elif td >= (deletion_time*60):
                 os.remove(img_obj.img_path)
                 img_obj.delete()
+class PageView(models.Model):
+    hostname = models.CharField(max_length=32)
+    timestamp = models.DateTimeField(auto_now_add=True)

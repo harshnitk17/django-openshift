@@ -1,0 +1,33 @@
+{
+    "id": "BR_B+_D*+_D*-_K+",
+    "latex": "{\\cal B}(B^+ \\to D^*(2010)^+ D^*(2010)^- K^+)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00132,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D*+": 2,
+        "K": 1
+    },
+    "unit_exp": -3,
+    "digits": 2,
+    "error": 0.00017691806015174643,
+    "pdg_value": 0.00132,
+    "pdg_error": 0.000176918060129541,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=339&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/877816",
+            "text": "Phys.Rev.D <b>83</b>,032004 (2011)",
+            "value": 0.00132,
+            "stat_error": 0.00013000000000000002,
+            "syst_error": 0.00012,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

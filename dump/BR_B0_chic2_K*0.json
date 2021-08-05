@@ -1,0 +1,33 @@
+{
+    "id": "BR_B0_chic2_K*0",
+    "latex": "{\\cal B}(B^0 \\to \\chi_{c2} K^*(892)^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 6.6e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "chic": 1,
+        "K*0": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "error": 1.8681541694614128e-05,
+    "pdg_value": 4.88219206224627e-05,
+    "pdg_error": 1.239679406339278e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=329&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/794094",
+            "text": "Phys.Rev.Lett. <b>102</b>,132001 (2009)",
+            "value": 6.6e-05,
+            "stat_error": 1.8e-05,
+            "syst_error": 5e-06,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,55 @@
+{
+    "id": "BR_B+_Jpsi_eta_K+",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi \\eta K^+)",
+    "chi2": 0.26622677061979955,
+    "ndf": 1,
+    "p": 0.6058741915883827,
+    "value": 0.0001235864884929473,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "eta": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 1.410004288740715e-05,
+    "pdg_value": 0.000123586488492947,
+    "pdg_error": 1.40898063475042e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=354&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1257984",
+            "text": "PTEP <b>2014</b>,043C01 (2014)",
+            "value": 0.000127,
+            "stat_error": 1.1000000000000001e-05,
+            "syst_error": 1.1000000000000001e-05,
+            "digits": 2,
+            "chi2": 0.04814901160653347
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/644452",
+            "text": "Phys.Rev.Lett. <b>93</b>,041801 (2004)",
+            "value": 0.00010800000000000001,
+            "stat_error": 2.3000000000000003e-05,
+            "syst_error": 2.418677324489565e-05,
+            "digits": 2,
+            "chi2": 0.2163159099736249
+        }
+    ],
+    "correlations": [
+        {
+            "type": "nuisance",
+            "name": "psi_eta_br_correlated",
+            "value": -0.04197438551832719,
+            "correlation": -0.03809803189636639,
+            "error": 0.9966758910200487,
+            "unit_exp": -2,
+            "digits": 0,
+            "chi2": 0.0017618490396411554
+        }
+    ]
+}

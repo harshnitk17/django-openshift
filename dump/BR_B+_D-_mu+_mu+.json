@@ -1,0 +1,28 @@
+{
+    "id": "BR_B+_D-_mu+_mu+",
+    "latex": "{\\cal B}(B^+ \\to D^- \\mu^+ \\mu^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 1e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "D+": 1,
+        "lepton": 2
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 6.9e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=574&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/916807",
+            "text": "Phys.Rev.D <b>84</b>,071106 (2011)",
+            "value": 1e-06,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

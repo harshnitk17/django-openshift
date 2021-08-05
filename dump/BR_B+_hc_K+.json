@@ -1,0 +1,39 @@
+{
+    "id": "BR_B+_hc_K+",
+    "latex": "{\\cal B}(B^+ \\to h_c K^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 3.7999999999999996e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 3.7e-05,
+    "pdg_error_pos": 1.28062484748657e-05,
+    "pdg_error_neg": -1.20415945787923e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=467&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/715830",
+            "text": "Phys.Rev.D <b>74</b>,012007 (2006)",
+            "value": 3.7999999999999996e-06,
+            "digits": 1,
+            "comments": [
+                "Assuming BF(h_c to gamma eta_c) = 0.5  and M(h_c) = 3.527 GeV/c^2 ;\npaper provides limits for a range of M(h_c)"
+            ]
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/783014",
+            "text": "Phys.Rev.D <b>78</b>,012006 (2008)",
+            "latex": "{\\cal B}(B^+ \\to h_c K^+) {\\cal B}(h_c \\to \\eta_c \\gamma) / {\\cal B}(B^+ \\to \\eta_c K^+)"
+        }
+    ],
+    "correlations": []
+}

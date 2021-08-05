@@ -1,0 +1,43 @@
+{
+    "id": "BR_B_X(3872)_K",
+    "latex": "{\\cal{B} ( B \\to X(3872) K ) }",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00021621621621621624,
+    "filter": {
+        "BR": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error_pos": 9.730457326427762e-05,
+    "error_neg": -7.01095749199976e-05,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/798279",
+            "text": "Phys.Rev.D <b>81</b>,031103 (2010)",
+            "value": 0.00021621621621621624,
+            "stat_error": 5.405405405405406e-05,
+            "syst_error": 5.927649567504376e-05,
+            "digits": 1,
+            "using": "${\\cal B}(X(3872) \\to \\bar{D}^*(2007)^0 D^0)$",
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "BR_X(3872)_D*0bar_D0",
+            "value": 0.37,
+            "correlation": -0.6591480361396668,
+            "latex": "{\\cal B}(X(3872) \\to \\bar{D}^*(2007)^0 D^0)",
+            "error": 0.09027947073204756,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.0
+        }
+    ]
+}

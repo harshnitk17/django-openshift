@@ -1,0 +1,29 @@
+{
+    "id": "Aperp_B_KS_psi2S",
+    "latex": "\\vert{\\cal{A}}_{\\perp}\\vert^{2} ( B \\to \\psi(2S) K^{*} )",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.3,
+    "filter": {
+        "polarization": 1,
+        "psi2S": 1
+    },
+    "unit_exp": 0,
+    "digits": 3,
+    "error": 0.0632455531933301,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.3,
+            "stat_error": 0.06,
+            "syst_error": 0.02,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

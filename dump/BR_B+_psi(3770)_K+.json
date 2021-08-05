@@ -1,0 +1,105 @@
+{
+    "id": "BR_B+_psi(3770)_K+",
+    "latex": "{\\cal B}(B^+ \\to \\psi(3770) K^+)",
+    "chi2": 7.2875988525536854,
+    "ndf": 4,
+    "p": 0.12144830824937551,
+    "value": 0.000251088801271455,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 4.926905335087492e-05,
+    "pdg_value": 0.000434362416107383,
+    "pdg_error": 0.000110231604866342,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=360&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/758167",
+            "text": "Phys.Rev.D <b>77</b>,011102 (2008)",
+            "color": "red",
+            "value": 0.0002693462455387602,
+            "stat_error": 5.730771181675747e-05,
+            "syst_error_pos": 4.646568289195134e-05,
+            "syst_error_neg": -4.8480937103268834e-05,
+            "digits": 2,
+            "using": "${\\cal B}(\\psi(3770) \\to D^0 \\bar{D}^0)$",
+            "chi2": 0.06600247935270703
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/758167",
+            "text": "Phys.Rev.D <b>77</b>,011102 (2008)",
+            "color": "red",
+            "value": 0.00020743350895078557,
+            "stat_error": 7.902228912410881e-05,
+            "syst_error": 5.560213222229658e-05,
+            "digits": 2,
+            "using": "${\\cal B}(\\psi(3770) \\to D^+ D^-)$",
+            "chi2": 0.21332262581922518
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/623994",
+            "text": "Phys.Rev.Lett. <b>93</b>,051803 (2004)",
+            "value": 0.00048,
+            "stat_error": 0.00011,
+            "syst_error": 7.000000000000001e-05,
+            "digits": 1,
+            "chi2": 3.082372759019966,
+            "comments": [
+                "Assumed BR(psi(3770)->D+D-)+BR(psi(3770)->D0D0bar)=1"
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1624416",
+            "text": "Phys.Rev.D <b>97</b>,012005 (2018)",
+            "value": -2e-05,
+            "stat_error": 0.00014,
+            "syst_error": -0.0,
+            "digits": 1,
+            "chi2": 3.749445825244614
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/696138",
+            "text": "Phys.Rev.Lett. <b>96</b>,052002 (2006)",
+            "value": 0.00035,
+            "stat_error": 0.00025,
+            "syst_error": 3e-05,
+            "digits": 1,
+            "chi2": 0.15431270085043722
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "BR_psi(3770)_D0_D0bar",
+            "value": 0.5234897546760475,
+            "correlation": -0.17888883226413244,
+            "latex": "{\\cal B}(\\psi(3770) \\to D^0 \\bar{D}^0)",
+            "error_pos": 0.038524807253616254,
+            "error_neg": -0.04697804819988052,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.0061973296501253855
+        },
+        {
+            "type": "external",
+            "name": "BR_psi(3770)_D+_D-",
+            "value": 0.40494903848890357,
+            "correlation": -0.15381239871639302,
+            "latex": "{\\cal B}(\\psi(3770) \\to D^+ D^-)",
+            "error": 0.039156116749343856,
+            "unit_exp": 0,
+            "digits": 3,
+            "chi2": 0.01594513261661082
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "id": "BR_B+_etac2S_K+",
+    "latex": "{\\cal B}(B^+ \\to \\eta_c(2S) K^+)",
+    "chi2": 0.47738587666168686,
+    "ndf": 2,
+    "p": 0.7876567044260296,
+    "value": 0.0004465046469100234,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 9.273095050342684e-05,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/898660",
+            "text": "Phys.Lett.B <b>706</b>,139 (2011)",
+            "color": "red",
+            "value": 0.0001625726323001015,
+            "stat_error_pos": 0.00010519405619418331,
+            "stat_error_neg": -7.172322013239771e-05,
+            "syst_error_pos": 7.499330458479776e-05,
+            "syst_error_neg": -6.396236308928048e-05,
+            "digits": 2,
+            "using": "${\\cal{B}} ( \\eta_c(2S) \\to K \\bar{K} \\pi$",
+            "chi2": 0.02501201859159673
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1624416",
+            "text": "Phys.Rev.D <b>97</b>,012005 (2018)",
+            "color": "red",
+            "value": 0.00048,
+            "stat_error": 0.00011000000000000002,
+            "syst_error": 3e-05,
+            "digits": 1,
+            "chi2": 0.0863029752786312
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/696138",
+            "text": "Phys.Rev.Lett. <b>96</b>,052002 (2006)",
+            "color": "red",
+            "value": 0.00034,
+            "stat_error": 0.00018,
+            "syst_error": 3e-05,
+            "digits": 1,
+            "chi2": 0.3406378322350976
+        }
+    ],
+    "correlations": [
+        {
+            "type": "external",
+            "name": "BR_etac2S_K_Kbar_pi",
+            "value": 0.020913729155370746,
+            "correlation": -0.24218674022650094,
+            "latex": "{\\cal{B}} ( \\eta_c(2S) \\to K \\bar{K} \\pi",
+            "error_pos": 0.009143944462355546,
+            "error_neg": -0.007851794124197902,
+            "unit_exp": -2,
+            "digits": 2,
+            "chi2": 0.02543305055636134
+        }
+    ]
+}

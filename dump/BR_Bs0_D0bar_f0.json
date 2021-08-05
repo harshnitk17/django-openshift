@@ -1,0 +1,28 @@
+{
+    "id": "BR_Bs0_D0bar_f0",
+    "latex": "{\\cal B}(B_s^0 \\to \\bar{D}^0 f_0(980))",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 3.1e-06,
+    "filter": {
+        "BR": 1,
+        "Bs": 1,
+        "D0": 1,
+        "light": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 3.1e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=114&parCode=S086",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1367305",
+            "text": "JHEP <b>08</b>,005 (2015)",
+            "value": 3.1e-06,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

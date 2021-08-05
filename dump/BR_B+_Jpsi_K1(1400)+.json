@@ -1,0 +1,29 @@
+{
+    "id": "BR_B+_Jpsi_K1(1400)+",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi K_1(1400)^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.0005431560956939406,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "kaon": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "pdg_value": 0.0005,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=272&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/556367",
+            "text": "Phys.Rev.Lett. <b>87</b>,161601 (2001)",
+            "value": 0.0005431560956939406,
+            "digits": 0,
+            "using": "${\\cal B}(B^+ \\to J/\\psi K_1(1270)^+)$"
+        }
+    ],
+    "correlations": []
+}

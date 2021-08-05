@@ -1,0 +1,38 @@
+{
+    "id": "BR_B0_Lambdac-bar_p_pi0",
+    "latex": "{\\cal B}(B^0 \\to \\bar{\\Lambda}_c^- p \\pi^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.000194,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Lambdac": 1,
+        "p": 1,
+        "pi0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 5.463515350991997e-05,
+    "pdg_value": 0.000154561959550024,
+    "pdg_error_pos": 1.85700339911446e-05,
+    "pdg_error_neg": -1.87397494288413e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=158&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/860780",
+            "text": "Phys.Rev.D <b>82</b>,031102 (2010)",
+            "value": 0.000194,
+            "stat_error": 1.7000000000000003e-05,
+            "syst_error": 5.192301994298868e-05,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

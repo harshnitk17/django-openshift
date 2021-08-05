@@ -1,0 +1,42 @@
+{
+    "id": "BR_B0_Jpsi_phi",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi \\phi(1020))",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 1.8999999999999998e-07,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "phi": 1
+    },
+    "unit_exp": -7,
+    "digits": 1,
+    "pdg_value": 1.9e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=249&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1251062",
+            "text": "Phys.Rev.D <b>88</b>,072005 (2013)",
+            "value": 1.8999999999999998e-07,
+            "digits": 1
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/786339",
+            "text": "Phys.Rev.D <b>78</b>,011106 (2008)",
+            "value": 9.4e-07,
+            "digits": 1
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/616619",
+            "text": "Phys.Rev.Lett. <b>91</b>,071801 (2003)",
+            "value": 9e-06,
+            "digits": -1
+        }
+    ],
+    "correlations": []
+}

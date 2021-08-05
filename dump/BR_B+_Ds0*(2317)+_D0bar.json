@@ -1,0 +1,112 @@
+{
+    "id": "BR_B+_Ds0*(2317)+_D0bar",
+    "latex": "{\\cal B}(B^+ \\to D_{s0}^*(2317)^+ \\bar{D}^0)",
+    "chi2": 1.5930288277088058,
+    "ndf": 2,
+    "p": 0.45089787162206685,
+    "value": 0.0008324367365041789,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Ds**": 1,
+        "D0": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "error_pos": 0.00024517508671224305,
+    "error_neg": -0.00015430872936788496,
+    "pdg_value": 0.000800188283724941,
+    "pdg_error_pos": 0.000155782937803054,
+    "pdg_error_neg": -0.000132601088763202,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=321&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1358936",
+            "text": "Phys.Rev.D <b>91</b>,092011 (2015)",
+            "value": 0.0008001247836080661,
+            "stat_error_pos": 0.00013002027733631074,
+            "stat_error_neg": -0.00012001871754120991,
+            "syst_error_pos": 0.00011734710031592692,
+            "syst_error_neg": -0.00019818063774113776,
+            "digits": 1,
+            "using": "${\\cal B}(D_{s0}^*(2317)^+ \\to D_s^+ \\pi^0)$",
+            "chi2": 0.03531010947759702,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/656424",
+            "text": "Phys.Rev.Lett. <b>93</b>,181801 (2004)",
+            "value": 0.0010001559795100826,
+            "stat_error": 0.0003000467938530247,
+            "syst_error_pos": 0.0004125000219112108,
+            "syst_error_neg": -0.00029995123163708035,
+            "digits": 0,
+            "using": "${\\cal B}(D_{s0}^*(2317)^+ \\to D_s^+ \\pi^0)$",
+            "chi2": 0.16736101566814643,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B0_Ds0*(2317)+_D-",
+            "value": 0.0010703519190194339,
+            "correlation": 0.066642504529343,
+            "latex": "{\\cal B}(B^0 \\to D_{s0}^*(2317)^+ D^-)",
+            "error_pos": 0.00029874188119738453,
+            "error_neg": -0.00016303598676020814,
+            "unit_exp": -3,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Ds0*(2317)-_K+",
+            "value": 5.2989961892031836e-05,
+            "correlation": 0.026734637179560157,
+            "latex": "{\\cal B}(B^0 \\to D_{s0}^*(2317)^- K^+)",
+            "error_pos": 2.3194712524389474e-05,
+            "error_neg": -2.0379049124627196e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_Ds0*(2317)+_D*-",
+            "value": 0.0015007232526264187,
+            "correlation": 0.026193417578968415,
+            "latex": "{\\cal B}(B^0 \\to D_{s0}^*(2317)^+ D^*(2010)^-)",
+            "error_pos": 0.0006957705319725297,
+            "error_neg": -0.0005406889361258506,
+            "unit_exp": -3,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_Ds0*(2317)+_D*0bar",
+            "value": 0.0008997173254267942,
+            "correlation": 0.014271617735021927,
+            "latex": "{\\cal B}(B^+ \\to D_{s0}^*(2317)^+ \\bar{D}^*(2007)^0)",
+            "error": 0.0006827553156691244,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "external",
+            "name": "BR_Ds0*(2317)+_Ds+_pi0",
+            "value": 0.9998440448157307,
+            "correlation": -0.2341811168923571,
+            "latex": "{\\cal B}(D_{s0}^*(2317)^+ \\to D_s^+ \\pi^0)",
+            "error_pos": 0.01015709233838494,
+            "error_neg": -0.19982548180097592,
+            "unit_exp": 0,
+            "digits": 2,
+            "chi2": 1.1983465806514432e-05
+        }
+    ]
+}

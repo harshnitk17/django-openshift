@@ -1,0 +1,60 @@
+{
+    "id": "BR_B0_etac_K+_pi-",
+    "latex": "{\\cal B}(B^0 \\to \\eta_c K^+ \\pi^-)",
+    "chi2": 4.5249047857612945,
+    "ndf": 1,
+    "p": 0.033404934352284796,
+    "value": 0.0004311291716002461,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "etac": 1,
+        "K": 1,
+        "pi": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 2.582734845319878e-05,
+    "pdg_value": 6.225351745091269e-05,
+    "pdg_error_pos": 1.265526459104138e-05,
+    "pdg_error_neg": -1.331504540345803e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=579&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1694990",
+            "text": "Eur.Phys.J.C <b>78</b>,1019 (2018)",
+            "value": 0.0004200066351691611,
+            "stat_error": 1.7647337612149628e-05,
+            "syst_error": 1.9982440197357087e-05,
+            "digits": 2,
+            "using": "${\\cal B}(B^0 \\to J/\\psi K^+ \\pi^-)$",
+            "chi2": 0.30926726995269155
+        },
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1694990",
+            "text": "Eur.Phys.J.C <b>78</b>,1019 (2018)",
+            "value": 0.000573,
+            "stat_error": 2.4e-05,
+            "syst_error": 6.726812023536856e-05,
+            "digits": 2,
+            "chi2": 3.9457619978107097,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B0_Jpsi_K+_pi-",
+            "value": 0.0011764891741433085,
+            "correlation": 0.6662833308788809,
+            "latex": "{\\cal B}(B^0 \\to J/\\psi K^+ \\pi^-)",
+            "error": 4.937556256525167e-05,
+            "unit_exp": -3,
+            "digits": 3
+        }
+    ]
+}

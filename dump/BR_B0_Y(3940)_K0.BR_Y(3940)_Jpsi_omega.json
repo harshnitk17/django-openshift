@@ -1,0 +1,31 @@
+{
+    "id": "BR_B0_Y(3940)_K0.BR_Y(3940)_Jpsi_omega",
+    "latex": "{\\cal B}(B^0 \\to Y(3940) K^0) \\times {\\cal B}(Y(3940) \\to J/\\psi \\omega(782))",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.1000000000000002e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "XYZ": 1,
+        "K0": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 9.486832981695836e-06,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/856587",
+            "text": "Phys.Rev.D <b>82</b>,011101 (2010)",
+            "color": "red",
+            "value": 2.1000000000000002e-05,
+            "stat_error": 9e-06,
+            "syst_error": 3e-06,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

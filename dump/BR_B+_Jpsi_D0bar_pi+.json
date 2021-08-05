@@ -1,0 +1,36 @@
+{
+    "id": "BR_B+_Jpsi_D0bar_pi+",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi \\bar{D}^0 \\pi^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 2.5e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "D0": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 1,
+    "pdg_value": 2.5e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=396&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/678875",
+            "text": "Phys.Rev.D <b>71</b>,091107 (2005)",
+            "value": 2.5e-05,
+            "digits": 1
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/651834",
+            "text": "Phys.Rev.D <b>71</b>,071103 (2005)",
+            "value": 5.2000000000000004e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,40 @@
+{
+    "id": "BR_B+_X(3872)_K+.BR_X(3872)_Jpsi_pi+_pi-",
+    "latex": "{\\cal B}(B^+ \\to X(3872) K^+) \\times {\\cal B}(X(3872) \\to J/\\psi \\pi^+ \\pi^-)",
+    "chi2": 0.012990455991516398,
+    "ndf": 1,
+    "p": 0.9092570710897023,
+    "value": 8.569494521032165e-06,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -6,
+    "digits": 2,
+    "error": 7.269800951510849e-07,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/916712",
+            "text": "Phys.Rev.D <b>84</b>,052004 (2011)",
+            "value": 8.609999999999999e-06,
+            "stat_error": 6.2e-07,
+            "syst_error": 5.2e-07,
+            "digits": 2,
+            "chi2": 0.0025056411521283315
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/781659",
+            "text": "Phys.Rev.D <b>77</b>,111101 (2008)",
+            "value": 8.4e-06,
+            "stat_error": 1.5e-06,
+            "syst_error": 7e-07,
+            "digits": 1,
+            "chi2": 0.010484814839388066
+        }
+    ],
+    "correlations": []
+}

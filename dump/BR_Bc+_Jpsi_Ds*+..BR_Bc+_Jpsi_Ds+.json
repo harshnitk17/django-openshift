@@ -1,0 +1,32 @@
+{
+    "id": "BR_Bc+_Jpsi_Ds*+..BR_Bc+_Jpsi_Ds+",
+    "latex": "\\frac{{\\cal B}(B_c^+ \\to J/\\psi D_s^{*+})}{{\\cal B}(B_c^+ \\to J/\\psi D_s^+)}",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.8,
+    "filter": {
+        "BR": 1,
+        "Bc": 1,
+        "Jpsi": 1,
+        "Ds*": 1
+    },
+    "unit_exp": 0,
+    "digits": 1,
+    "error_pos": 1.2366316354822242,
+    "error_neg": -0.8544003745317578,
+    "measurements": [
+        {
+            "experiment": "ATLAS",
+            "link": "https://inspirehep.net/literature/1385102",
+            "text": "Eur.Phys.J.C <b>76</b>,4 (2016)",
+            "value": 2.8,
+            "stat_error_pos": 1.2,
+            "stat_error_neg": -0.8,
+            "syst_error": 0.3,
+            "digits": 1,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

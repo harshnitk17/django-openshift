@@ -1,0 +1,65 @@
+{
+    "id": "BR_B+_chic1_pi+",
+    "latex": "{\\cal B}(B^+ \\to \\chi_{c1} \\pi^+)",
+    "chi2": 11.236550689127943,
+    "ndf": 7,
+    "p": 0.12862845837280598,
+    "value": 2.1338264317984137e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "chic": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.245826766738333e-06,
+    "pdg_value": 2.2e-05,
+    "pdg_error": 5e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=468&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/721033",
+            "text": "Phys.Rev.D <b>74</b>,051103 (2006)",
+            "value": 2.0868937388442673e-05,
+            "stat_error": 3.882593002500963e-06,
+            "syst_error": 1.7394866008449045e-06,
+            "digits": 2,
+            "using": "${\\cal B}(B^+ \\to \\chi_{c1} K^+)$",
+            "chi2": 0.012810448284520529
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/721033",
+            "text": "Phys.Rev.D <b>74</b>,051103 (2006)",
+            "value": 2.2000000000000003e-05,
+            "stat_error": 4.000000000000001e-06,
+            "syst_error": 3e-06,
+            "digits": 1,
+            "chi2": 0.017515764514120093
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B+_chic1_K+",
+            "value": 0.00048532412531262034,
+            "correlation": 0.18169070191326872,
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} K^+)",
+            "error": 2.2135309287787063e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_chic1_K*+",
+            "value": 0.0002889539364900979,
+            "correlation": 0.010559276950763866,
+            "latex": "{\\cal B}(B^+ \\to \\chi_{c1} K^*(892)^+)",
+            "error": 4.9635442133990316e-05,
+            "unit_exp": -4,
+            "digits": 2
+        }
+    ]
+}

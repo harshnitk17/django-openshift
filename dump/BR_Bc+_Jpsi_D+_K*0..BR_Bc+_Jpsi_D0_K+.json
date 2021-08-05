@@ -1,0 +1,31 @@
+{
+    "id": "BR_Bc+_Jpsi_D+_K*0..BR_Bc+_Jpsi_D0_K+",
+    "latex": "\\frac{{\\cal B}(B_c^+ \\to J/\\psi D^+ K^*(892)^0)}{{\\cal B}(B_c^+ \\to J/\\psi D^0 K^+)}",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.63,
+    "filter": {
+        "BR": 1,
+        "Bc": 1,
+        "Jpsi": 1,
+        "D+": 1,
+        "K*0": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "error": 0.398120584797856,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1505591",
+            "text": "Phys.Rev.D <b>95</b>,032005 (2017)",
+            "value": 0.63,
+            "stat_error": 0.39,
+            "syst_error": 0.08000000000000002,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

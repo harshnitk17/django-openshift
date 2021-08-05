@@ -1,0 +1,31 @@
+{
+    "id": "BR_Bs0_Lambdac+_Lambdac-bar",
+    "latex": "{\\cal B}(B_s^0 \\to \\Lambda_c^+ \\bar{\\Lambda}_c^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.00011717178181573328,
+    "filter": {
+        "BR": 1,
+        "Bs": 1,
+        "Lambdac": 2
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "pdg_value": 8e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=76&parCode=S086",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1285949",
+            "text": "Phys.Rev.Lett. <b>112</b>,202001 (2014)",
+            "value": 0.00011717178181573328,
+            "digits": 1,
+            "using": "${\\cal B}(B_s^0 \\to D_s^- D^+)$",
+            "comments": [
+                " limit quoted at 95% CL"
+            ]
+        }
+    ],
+    "correlations": []
+}

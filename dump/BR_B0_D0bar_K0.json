@@ -1,0 +1,45 @@
+{
+    "id": "BR_B0_D0bar_K0",
+    "latex": "{\\cal B}(B^0 \\to \\bar{D}^0 K^0)",
+    "chi2": 0.03568917766622865,
+    "ndf": 1,
+    "p": 0.8501588137274694,
+    "value": 5.2312870725312574e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "D0": 1,
+        "K0": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 6.69930699727549e-06,
+    "pdg_value": 5.23094437917661e-05,
+    "pdg_error_pos": 6.72377315763145e-06,
+    "pdg_error_neg": -6.62310699132117e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=242&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/714058",
+            "text": "Phys.Rev.D <b>74</b>,031101 (2006)",
+            "value": 5.3e-05,
+            "stat_error": 7e-06,
+            "syst_error": 3e-06,
+            "digits": 1,
+            "chi2": 0.008140459312628768
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/605636",
+            "text": "Phys.Rev.Lett. <b>90</b>,141802 (2003)",
+            "value": 5e-05,
+            "stat_error_pos": 1.3000000000000001e-05,
+            "stat_error_neg": -1.2e-05,
+            "syst_error": 6e-06,
+            "digits": 1,
+            "chi2": 0.027548718353599882
+        }
+    ],
+    "correlations": []
+}

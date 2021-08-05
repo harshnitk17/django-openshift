@@ -1,0 +1,41 @@
+{
+    "id": "ACP_B+_Jpsi_rho+",
+    "latex": "A_\\mathrm{CP}(B^+ \\to J/\\psi \\rho^+(770))",
+    "chi2": 0.1755680278681971,
+    "ndf": 1,
+    "p": 0.6752100033188217,
+    "value": -0.0538284949815777,
+    "filter": {
+        "ACP": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "rho+": 1
+    },
+    "unit_exp": -2,
+    "digits": 1,
+    "error": 0.053244169648106396,
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1709948",
+            "text": "Eur.Phys.J.C <b>79</b>,537 (2019)",
+            "value": -0.045,
+            "stat_error_pos": 0.056,
+            "stat_error_neg": -0.057,
+            "syst_error": 0.008,
+            "digits": 1,
+            "chi2": 0.02387389440499318
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748487",
+            "text": "Phys.Rev.D <b>76</b>,031101 (2007)",
+            "value": -0.11,
+            "stat_error": 0.12,
+            "syst_error": 0.08,
+            "digits": 0,
+            "chi2": 0.15169413346320393
+        }
+    ],
+    "correlations": []
+}

@@ -1,0 +1,44 @@
+{
+    "id": "BR_B+_Ds+_phi",
+    "latex": "{\\cal B}(B^+ \\to D_s^+ \\phi(1020))",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 1.2e-07,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Ds": 1,
+        "phi": 1
+    },
+    "unit_exp": -7,
+    "digits": 1,
+    "error_pos": 1.7917458305682025e-07,
+    "error_neg": -1.6155494421403676e-07,
+    "pdg_value": 4.2e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=198&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1636199",
+            "text": "JHEP <b>01</b>,131 (2018)",
+            "value": 1.2e-07,
+            "stat_error_pos": 1.6e-07,
+            "stat_error_neg": -1.3999999999999998e-07,
+            "syst_error": 8.06225774829855e-08,
+            "digits": 1,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/700308",
+            "text": "Phys.Rev.D <b>73</b>,011103 (2006)",
+            "value": 1.8999999999999998e-06,
+            "digits": 0
+        }
+    ],
+    "correlations": []
+}

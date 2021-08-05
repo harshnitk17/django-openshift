@@ -1,0 +1,45 @@
+{
+    "id": "BR_B+_Jpsi_rho+",
+    "latex": "{\\cal B}(B^+ \\to J/\\psi \\rho^+(770))",
+    "chi2": 1.8530949131692527,
+    "ndf": 1,
+    "p": 0.1734238662784381,
+    "value": 4.0977926583455875e-05,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "Jpsi": 1,
+        "rho+": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 3.7644466411902466e-06,
+    "pdg_value": 4.09678879068679e-05,
+    "pdg_error_pos": 5.09827537528388e-06,
+    "pdg_error_neg": -5.0464925100607e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=226&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1709948",
+            "text": "Eur.Phys.J.C <b>79</b>,537 (2019)",
+            "value": 3.8100000000000005e-05,
+            "stat_error_pos": 2.5e-06,
+            "stat_error_neg": -2.4000000000000003e-06,
+            "syst_error": 3.5e-06,
+            "digits": 2,
+            "chi2": 0.4496844177638696
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748487",
+            "text": "Phys.Rev.D <b>76</b>,031101 (2007)",
+            "value": 5e-05,
+            "stat_error": 7e-06,
+            "syst_error": 3e-06,
+            "digits": 1,
+            "chi2": 1.4034104954053832
+        }
+    ],
+    "correlations": []
+}

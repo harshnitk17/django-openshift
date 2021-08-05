@@ -1,0 +1,43 @@
+{
+    "id": "BR_B0_Sigmac*0bar_p_pi-",
+    "latex": "{\\cal B}(B^0 \\to \\bar{\\Sigma}_c(2520)^0 p \\pi^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.2000000000000003e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Sigmac": 1,
+        "p": 1,
+        "pi": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 9.273618496659642e-06,
+    "pdg_value": 3.1e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=238&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/1217425",
+            "text": "Phys.Rev.D <b>87</b>,092004 (2013)",
+            "value": 2.2000000000000003e-05,
+            "stat_error": 7e-06,
+            "syst_error": 6.082762530298221e-06,
+            "digits": 1,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/723504",
+            "text": "Phys.Rev.D <b>75</b>,011101 (2007)",
+            "value": 3.3e-05,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

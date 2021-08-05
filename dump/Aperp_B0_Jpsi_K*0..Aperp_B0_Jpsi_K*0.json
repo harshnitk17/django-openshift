@@ -1,0 +1,27 @@
+{
+    "id": "Aperp_B0_Jpsi_K*0..Aperp_B0_Jpsi_K*0",
+    "latex": "\\frac{A_\\perp(B^0 \\to J/\\psi K^*(892)^0)}{A_\\perp(B^0 \\to J/\\psi K^*(892)^0)}",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.26,
+    "filter": {
+        "polarization": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "K*0": 1
+    },
+    "unit_exp": 0,
+    "digits": 2,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/647602",
+            "text": "Phys.Rev.Lett. <b>93</b>,081801 (2004)",
+            "color": "red",
+            "value": 0.26,
+            "digits": 2
+        }
+    ],
+    "correlations": []
+}

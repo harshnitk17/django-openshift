@@ -1,0 +1,34 @@
+{
+    "id": "BR_B+_psi2S_K+_pi+_pi-",
+    "latex": "{\\cal B}(B^+ \\to \\psi(2S) K^+ \\pi^+ \\pi^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.00043099999999999996,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "psi2S": 1,
+        "K": 1,
+        "pi": 2
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 5.385164807810401e-05,
+    "pdg_value": 0.000434102993663049,
+    "pdg_error": 5.37947421289446e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=144&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/871475",
+            "text": "Phys.Rev.D <b>83</b>,032005 (2011)",
+            "value": 0.00043099999999999996,
+            "stat_error": 2e-05,
+            "syst_error": 5e-05,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

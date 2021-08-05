@@ -1,0 +1,30 @@
+{
+    "id": "BR_B0_Jpsi_f2",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi f_2(1270))",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 4.599999999999999e-06,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "light": 1
+    },
+    "unit_exp": -6,
+    "digits": 1,
+    "pdg_value": 3.2719657536886e-06,
+    "pdg_error_pos": 4.87309407582382e-07,
+    "pdg_error_neg": -5.52981898607492e-07,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=388&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748487",
+            "text": "Phys.Rev.D <b>76</b>,031101 (2007)",
+            "value": 4.599999999999999e-06,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

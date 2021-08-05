@@ -1,0 +1,28 @@
+{
+    "id": "BR_B0_X(3872)-_K+",
+    "latex": "{\\cal B}(B^0 \\to X(3872)^- K^+)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.0005,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "XYZ": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "pdg_value": 0.0005,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=330&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/696138",
+            "text": "Phys.Rev.Lett. <b>96</b>,052002 (2006)",
+            "value": 0.0005,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

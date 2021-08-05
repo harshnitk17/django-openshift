@@ -1,0 +1,27 @@
+{
+    "id": "BR_B+_psi(4660)_K+.BR_psi(4660)_Lambdac+_Lambdac-bar",
+    "latex": "{\\cal B}(B^+ \\to \\psi(4660) K^+) \\times {\\cal B}(\\psi(4660) \\to \\Lambda_c^+ \\bar{\\Lambda}_c^-)",
+    "chi2": 0,
+    "ndf": 0,
+    "p": -1,
+    "value": 0.00012,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "ccbar": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 1,
+    "measurements": [
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1642436",
+            "text": "Eur.Phys.J.C <b>78</b>,252 (2018)",
+            "color": "red",
+            "value": 0.00012,
+            "digits": 1
+        }
+    ],
+    "correlations": []
+}

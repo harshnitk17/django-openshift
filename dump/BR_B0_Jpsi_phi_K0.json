@@ -1,0 +1,45 @@
+{
+    "id": "BR_B0_Jpsi_phi_K0",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi \\phi(1020) K^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.000102,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "phi": 1,
+        "K0": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error": 3.934463113918527e-05,
+    "pdg_value": 0.0004,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=194&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/616619",
+            "text": "Phys.Rev.Lett. <b>91</b>,071801 (2003)",
+            "color": "red",
+            "value": 0.000102,
+            "stat_error": 3.8e-05,
+            "syst_error": 1.0198039027185571e-05,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "nuisance",
+            "name": "jpsi_phi_k_br_correlated",
+            "value": 0.0,
+            "correlation": -0.050832856586782306,
+            "error": 0.999999999694452,
+            "unit_exp": 0,
+            "digits": 2,
+            "chi2": 0.0
+        }
+    ]
+}

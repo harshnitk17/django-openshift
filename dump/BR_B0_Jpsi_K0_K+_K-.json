@@ -1,0 +1,37 @@
+{
+    "id": "BR_B0_Jpsi_K0_K+_K-",
+    "latex": "{\\cal B}(B^0 \\to J/\\psi K^0 K^+ K^-)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 2.02e-05,
+    "filter": {
+        "BR": 1,
+        "Bd": 1,
+        "Jpsi": 1,
+        "K0": 1,
+        "K": 2
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 4.692547281915287e-06,
+    "pdg_value": 2.48919410745234e-05,
+    "pdg_error": 6.85253419967165e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=532&parCode=S042",
+    "measurements": [
+        {
+            "experiment": "LHCb",
+            "link": "https://inspirehep.net/literature/1295905",
+            "text": "JHEP <b>07</b>,140 (2014)",
+            "value": 2.02e-05,
+            "stat_error": 4.2999999999999995e-06,
+            "syst_error": 1.8788294228055933e-06,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        }
+    ],
+    "correlations": []
+}

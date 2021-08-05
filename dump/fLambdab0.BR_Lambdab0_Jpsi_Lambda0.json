@@ -1,0 +1,53 @@
+{
+    "id": "fLambdab0.BR_Lambdab0_Jpsi_Lambda0",
+    "latex": "f_{\\Lambda_b^0} \\times {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 6.0100000000000004e-05,
+    "filter": {
+        "fLambdab0": 1
+    },
+    "unit_exp": -5,
+    "digits": 2,
+    "error": 8.798630398117279e-06,
+    "pdg_value": 5.84977047091047e-05,
+    "pdg_error": 8.30114896014647e-06,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=3&parCode=S040",
+    "measurements": [
+        {
+            "experiment": "D0",
+            "link": "https://inspirehep.net/literature/898041",
+            "text": "Phys.Rev.D <b>84</b>,031102 (2011)",
+            "value": 6.0100000000000004e-05,
+            "stat_error": 6e-06,
+            "syst_error": 6.440496875241848e-06,
+            "digits": 2,
+            "chi2": 0.0,
+            "comments": [
+                "Multiple systematic uncertainties are added in quadrature."
+            ]
+        },
+        {
+            "experiment": "CDF",
+            "link": "https://inspirehep.net/literature/820851",
+            "text": "Phys.Rev.D <b>80</b>,072003 (2009)",
+            "color": "red",
+            "latex": "f_{\\Omega_b^-} \\times {\\cal B}(\\Omega_b^- \\to J/\\psi \\Omega^-) / f_{\\Lambda_b^0} \\times {\\cal B}(\\Lambda_b^0 \\to J/\\psi \\Lambda^0)",
+            "chi2": 0.0
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "fOmegab-.BR_Omegab-_Jpsi_Omega-",
+            "value": 2.7045e-06,
+            "correlation": 0.4045120838092357,
+            "latex": "f_{\\Omega_b^-} \\times {\\cal B}(\\Omega_b^- \\to J/\\psi \\Omega^-)",
+            "error_pos": 1.1633102846587913e-06,
+            "error_neg": -8.235331965875145e-07,
+            "unit_exp": -6,
+            "digits": 1
+        }
+    ]
+}

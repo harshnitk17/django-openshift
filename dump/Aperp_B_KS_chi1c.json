@@ -1,0 +1,28 @@
+{
+    "id": "Aperp_B_KS_chi1c",
+    "latex": "\\vert{\\cal{A}}_{\\perp}\\vert^{2} ( B \\to \\chi_{c1} K^{*} )",
+    "chi2": 0.0,
+    "ndf": 0,
+    "p": 1,
+    "value": 0.03,
+    "filter": {
+        "polarization": 1
+    },
+    "unit_exp": -2,
+    "digits": 1,
+    "error": 0.044721359555608776,
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/748372",
+            "text": "Phys.Rev.D <b>76</b>,031102 (2007)",
+            "color": "red",
+            "value": 0.03,
+            "stat_error": 0.04,
+            "syst_error": 0.02,
+            "digits": 0,
+            "chi2": 0.0
+        }
+    ],
+    "correlations": []
+}

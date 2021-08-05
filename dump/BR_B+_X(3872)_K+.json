@@ -1,0 +1,157 @@
+{
+    "id": "BR_B+_X(3872)_K+",
+    "latex": "{\\cal B}(B^+ \\to X(3872) K^+)",
+    "chi2": 4.603111215535212,
+    "ndf": 9,
+    "p": 0.8674441561659993,
+    "value": 0.00019520410486040482,
+    "filter": {
+        "BR": 1,
+        "Bu": 1,
+        "X3872": 1,
+        "K": 1
+    },
+    "unit_exp": -4,
+    "digits": 2,
+    "error_pos": 6.172874648024628e-05,
+    "error_neg": -4.9116367861588415e-05,
+    "pdg_value": 0.00021,
+    "pdg_error": 6.78232998312527e-05,
+    "pdg_link": "https://pdglive.lbl.gov/BranchingRatio.action?desig=440&parCode=S041",
+    "measurements": [
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/794094",
+            "text": "Phys.Rev.Lett. <b>102</b>,132001 (2009)",
+            "color": "red",
+            "value": 0.0001847306408244921,
+            "stat_error": 5.250239265538198e-05,
+            "syst_error_pos": 5.385302859351686e-05,
+            "syst_error_neg": -4.555348115374712e-05,
+            "digits": 2,
+            "using": "${\\cal B}(X(3872) \\to \\psi(2S) \\gamma)$",
+            "chi2": 0.0379217694325986
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/1624416",
+            "text": "Phys.Rev.D <b>97</b>,012005 (2018)",
+            "value": 0.00012,
+            "stat_error": 0.00011000000000000002,
+            "syst_error": 1e-05,
+            "digits": 1,
+            "chi2": 0.46357847441432476
+        },
+        {
+            "experiment": "Belle",
+            "link": "https://inspirehep.net/literature/897836",
+            "text": "Phys.Rev.Lett. <b>107</b>,091803 (2011)",
+            "color": "red",
+            "value": 6.70863906152103e-05,
+            "digits": 3,
+            "using": "${\\cal B}(X(3872) \\to \\psi(2S) \\gamma)$"
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/696138",
+            "text": "Phys.Rev.Lett. <b>96</b>,052002 (2006)",
+            "value": 0.00032,
+            "digits": 1
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/781659",
+            "text": "Phys.Rev.D <b>77</b>,111101 (2008)",
+            "color": "red",
+            "latex": "{\\cal B}(B^0 \\to X(3872) K^0) / {\\cal B}(B^+ \\to X(3872) K^+)",
+            "chi2": 0.8938253056374262
+        },
+        {
+            "experiment": "BaBar",
+            "link": "https://inspirehep.net/literature/856587",
+            "text": "Phys.Rev.D <b>82</b>,011101 (2010)",
+            "color": "red",
+            "latex": "{\\cal B}(B^0 \\to X(3872) K^0) / {\\cal B}(B^+ \\to X(3872) K^+)",
+            "chi2": 0.2866648041663616
+        }
+    ],
+    "correlations": [
+        {
+            "type": "fit",
+            "name": "BR_B0_X(3872)_K0",
+            "value": 0.00012527679866817723,
+            "correlation": 0.6831382954875208,
+            "latex": "{\\cal B}(B^0 \\to X(3872) K^0)",
+            "error_pos": 3.924549572501192e-05,
+            "error_neg": -3.0699495215821304e-05,
+            "unit_exp": -4,
+            "digits": 2
+        },
+        {
+            "type": "fit",
+            "name": "BR_B+_X(3872)_K*+",
+            "value": 0.00012462218525431733,
+            "correlation": 0.08938074360663022,
+            "latex": "{\\cal B}(B^+ \\to X(3872) K^*(892)^+)",
+            "error_pos": 0.00028578726828163743,
+            "error_neg": -0.00026937593381687585,
+            "unit_exp": -4,
+            "digits": 1
+        },
+        {
+            "type": "fit",
+            "name": "BR_B0_X(3872)_K*0",
+            "value": -1.0746646230488899e-05,
+            "correlation": 0.013055817087983597,
+            "latex": "{\\cal B}(B^0 \\to X(3872) K^*(892)^0)",
+            "error": 5.609376903558264e-05,
+            "unit_exp": -5,
+            "digits": 1
+        },
+        {
+            "type": "external",
+            "name": "BR_X(3872)_psi2S_gamma",
+            "value": 0.05142622770970468,
+            "correlation": -0.7127247712503297,
+            "latex": "{\\cal B}(X(3872) \\to \\psi(2S) \\gamma)",
+            "error_pos": 0.014635808842227916,
+            "error_neg": -0.012258411685331629,
+            "unit_exp": -2,
+            "digits": 1,
+            "chi2": 0.10324100644244076
+        },
+        {
+            "type": "external",
+            "name": "BR_X(3872)_Jpsi_pi+_pi-",
+            "value": 0.03427151881410926,
+            "correlation": -0.2784960035533654,
+            "latex": "{\\cal B}(X(3872) \\to J/\\psi \\pi^+ \\pi^-)",
+            "error": 0.010391115220147221,
+            "unit_exp": -2,
+            "digits": 1,
+            "chi2": 0.09653869412181398
+        },
+        {
+            "type": "external",
+            "name": "BR_X(3872)_Jpsi_omega",
+            "value": 0.044898379491517815,
+            "correlation": -0.1939722357147759,
+            "latex": "{\\cal B}(X(3872) \\to J/\\psi \\omega(782))",
+            "error": 0.01683671406039336,
+            "unit_exp": -2,
+            "digits": 1,
+            "chi2": 0.008171983432688094
+        },
+        {
+            "type": "external",
+            "name": "BR_X(3872)_Jpsi_gamma",
+            "value": 0.009738814913351915,
+            "correlation": 0.006407086490743668,
+            "latex": "{\\cal B}(X(3872) \\to J/\\psi \\gamma)",
+            "error": 0.003710661622299619,
+            "unit_exp": -3,
+            "digits": 1,
+            "chi2": 0.1889673314309392
+        }
+    ]
+}
