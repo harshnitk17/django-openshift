@@ -6,7 +6,7 @@ import pathlib
 
 def run():
     present_path = pathlib.Path().resolve()
-    dump_path = present_path + "/dump"
+    dump_path = str(present_path) + "/dump"
     for filename in os.listdir(dump_path):
         if filename.endswith(".json") :
             file_path = os.path.join(dump_path, filename)

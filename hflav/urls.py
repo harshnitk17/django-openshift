@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url
+from b2charm.views import health
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', include('b2charm.urls')),
+    url(r'^health$', health),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

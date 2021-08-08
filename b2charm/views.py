@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Parameters, plot_info
+from .models import Parameters, plot_info,PageView
+from django.http import HttpResponse
 import json
 from decimal import Decimal
 import numpy as np
@@ -31,6 +32,10 @@ for prt in combined_particle_list:
     else:
         var_particle_map[prt]=prt
         var_particle_map_inv[prt]=prt
+
+def health(request):
+    """Takes an request as a parameter and gives the count of pageview objects as reponse"""
+    return HttpResponse(PageView.objects.count())
         
 def build_config(data):
     config = {}
